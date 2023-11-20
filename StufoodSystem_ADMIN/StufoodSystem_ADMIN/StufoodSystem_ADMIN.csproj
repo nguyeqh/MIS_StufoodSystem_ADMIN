@@ -73,8 +73,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\AffiliatedSchool.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Ingredient.cs" />
+    <Compile Include="Models\IngredientPerProduct.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderDetail.cs" />
     <Compile Include="Models\PaymentRecord.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Purchase.cs" />
+    <Compile Include="Models\PurchaseDetail.cs" />
     <Compile Include="Models\StaticsValue\PaymentStatus.cs" />
+    <Compile Include="Models\Supplier.cs" />
     <Compile Include="Views\frmLoginAccountant.cs">
       <SubType>Form</SubType>
     </Compile>

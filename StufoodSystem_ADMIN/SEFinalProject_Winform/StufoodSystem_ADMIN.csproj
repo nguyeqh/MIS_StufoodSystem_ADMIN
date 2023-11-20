@@ -72,6 +72,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\AffiliatedSchool.cs" />
     <Compile Include="Models\PaymentRecord.cs" />
     <Compile Include="Models\StaticsValue\PaymentStatus.cs" />
     <Compile Include="Views\frmLoginAccountant.cs">

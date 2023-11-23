@@ -3,7 +3,7 @@ using System;
 
 namespace StufoodSystem_ADMIN.Models
 {
-    internal class PaymentRecord
+    public class PaymentRecord
     {
         public string PaymentId { get; set; } = "";
         public DateTime PaymentDate { get; set; } = DateTime.UtcNow;

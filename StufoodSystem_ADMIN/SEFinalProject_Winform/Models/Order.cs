@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StufoodSystem_ADMIN.Models
 {
-    internal class Order
+    public class Order
     {
         public string orderNumber { get; set; }
         public string orderStatus { get; set; }

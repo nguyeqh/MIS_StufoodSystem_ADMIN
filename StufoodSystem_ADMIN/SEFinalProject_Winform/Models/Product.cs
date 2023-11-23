@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace StufoodSystem_ADMIN.Models
 {
-    internal class Product
+    public class Product
     {
         public string ProductId { get; set; } = "";
         public string ProductName { get; set; } = "";

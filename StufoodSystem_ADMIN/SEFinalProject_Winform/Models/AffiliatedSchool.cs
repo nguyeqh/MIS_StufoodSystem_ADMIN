@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StufoodSystem_ADMIN.Models
 {
-    internal class AffiliatedSchool
+    public class AffiliatedSchool
     {
         public string schoolId { get; set; } = "";
         public string schoolName { get; set; } = "";

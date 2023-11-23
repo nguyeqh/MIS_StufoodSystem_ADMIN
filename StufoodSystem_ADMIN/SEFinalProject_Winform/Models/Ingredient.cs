@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StufoodSystem_ADMIN.Models
 {
-    internal class Ingredient
+    public class Ingredient
     {
         public string ingredientID { get; set; } = "";
         public string ingredientName { get; set; } = "";

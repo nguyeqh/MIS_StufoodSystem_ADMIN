@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StufoodSystem_ADMIN.Models
 {
-    internal class IngredientPerProduct
+    public class IngredientPerProduct
     {
         public Ingredient ingredient { get; set; }
         public double quantity { get; set; }

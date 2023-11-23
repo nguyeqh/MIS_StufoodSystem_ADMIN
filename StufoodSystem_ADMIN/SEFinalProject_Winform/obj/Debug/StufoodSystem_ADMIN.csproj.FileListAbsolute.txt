@@ -1,7 +1,5 @@
 D:\Homework\MIS\MIS_StufoodSystem_ADMIN\StufoodSystem_ADMIN\SEFinalProject_Winform\obj\Debug\StufoodSystem_ADMIN.csproj.AssemblyReference.cache
 D:\Homework\MIS\MIS_StufoodSystem_ADMIN\StufoodSystem_ADMIN\SEFinalProject_Winform\obj\Debug\StufoodSystem_ADMIN.csproj.SuggestedBindingRedirects.cache
-D:\Homework\MIS\MIS_StufoodSystem_ADMIN\StufoodSystem_ADMIN\SEFinalProject_Winform\obj\Debug\StufoodSystem_ADMIN.frmLoginAccountant.resources
-D:\Homework\MIS\MIS_StufoodSystem_ADMIN\StufoodSystem_ADMIN\SEFinalProject_Winform\obj\Debug\StufoodSystem_ADMIN.frmMainForm.resources
 D:\Homework\MIS\MIS_StufoodSystem_ADMIN\StufoodSystem_ADMIN\SEFinalProject_Winform\obj\Debug\StufoodSystem_ADMIN.csproj.GenerateResource.cache
 D:\Homework\MIS\MIS_StufoodSystem_ADMIN\StufoodSystem_ADMIN\SEFinalProject_Winform\obj\Debug\StufoodSystem_ADMIN.csproj.CoreCompileInputs.cache
 D:\Homework\MIS\MIS_StufoodSystem_ADMIN\StufoodSystem_ADMIN\SEFinalProject_Winform\bin\Debug\x86\SqlServerSpatial160.dll
@@ -146,3 +144,5 @@ C:\Users\ACER\Source\Repos\MIS_StufoodSystem_ADMIN\StufoodSystem_ADMIN\SEFinalPr
 C:\Users\ACER\Source\Repos\MIS_StufoodSystem_ADMIN\StufoodSystem_ADMIN\SEFinalProject_Winform\obj\Debug\StufoodSystem_ADMIN.pdb
 C:\Users\ACER\Source\Repos\MIS_StufoodSystem_ADMIN\StufoodSystem_ADMIN\SEFinalProject_Winform\bin\Debug\MaterialSkin.dll
 C:\Users\ACER\Source\Repos\MIS_StufoodSystem_ADMIN\StufoodSystem_ADMIN\SEFinalProject_Winform\obj\Debug\StufoodSystem_ADMIN.Views.fmMain.resources
+D:\Homework\MIS\MIS_StufoodSystem_ADMIN\StufoodSystem_ADMIN\SEFinalProject_Winform\bin\Debug\MaterialSkin.dll
+D:\Homework\MIS\MIS_StufoodSystem_ADMIN\StufoodSystem_ADMIN\SEFinalProject_Winform\obj\Debug\StufoodSystem_ADMIN.Views.fmMain.resources

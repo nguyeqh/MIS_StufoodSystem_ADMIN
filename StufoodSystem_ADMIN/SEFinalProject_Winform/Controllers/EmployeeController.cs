@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,6 +33,72 @@ namespace StufoodSystem_ADMIN.Controllers
 
         }
 
+        public static Employee GetEmployeeByID(String id)
+        {
+            String sSQL = "SELECT * FROM EMPLOYEE;";
+
+            List<Employee> employees = GetEmployeesFromDatabase(strConn, sSQL);
+            Employee foundItem = employees.FirstOrDefault(item => item.employeeID == id);
+
+
+            return foundItem;
+        }
+
+        public static void UpdateEmployee (String id, Employee updateEmployee)
+        {
+            String sSQL = "UPDATE EMPLOYEE SET EMPLOYEENAME = @EmployeeName, PHONE = @Phone, ADDRESS = @Adress, JOB = @Job, POSITION = @Position, " +
+                "EMAIL = @Email, SALARY = @Salary WHERE EMPOLYEEID = @EmpID";
+            SqlConnection conn = new SqlConnection(strConn);
+
+            conn.Open();
+            SqlCommand cmd = new SqlCommand(sSQL, conn);
+            cmd.Parameters.Add(new SqlParameter("@EmpID", updateEmployee.employeeID));
+            cmd.Parameters.Add(new SqlParameter("@EmployeeName", updateEmployee.employeeName));
+            cmd.Parameters.Add(new SqlParameter("@Phone", updateEmployee.phone));
+            cmd.Parameters.Add(new SqlParameter("@Address", updateEmployee.address));
+            cmd.Parameters.Add(new SqlParameter("@Email", updateEmployee.email));
+            cmd.Parameters.Add(new SqlParameter("@Job", updateEmployee.job));
+            cmd.Parameters.Add(new SqlParameter("@Position", updateEmployee.position));
+            cmd.Parameters.Add(new SqlParameter("@Salary", updateEmployee.salary));
+            try
+            {
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error:" + ex.Message);
+            }
+        }
+
+        public static void CreateEmployee(Employee employee)
+        {
+           
+            String sSQL = "INSERT INTO EMPLOYEE (EMPOLYEEID, EMPLOYEENAME, PHONE, ADDRESS, JOB, POSITION, EMAIL, SALARY) " +
+                "VALUES (@EmpID, @EmployeeName, @Phone, @Adress,  @Job, @Position, @Email, @Salary)";
+            SqlConnection conn = new SqlConnection(strConn);
+
+            conn.Open();
+            SqlCommand cmd = new SqlCommand(sSQL, conn);
+            cmd.Parameters.Add(new SqlParameter("@EmpID", employee.employeeID));
+            cmd.Parameters.Add(new SqlParameter("@EmployeeName", employee.employeeName));
+            cmd.Parameters.Add(new SqlParameter("@Phone", employee.phone));
+            cmd.Parameters.Add(new SqlParameter("@Address", employee.address));
+            cmd.Parameters.Add(new SqlParameter("@Email", employee.email));
+            cmd.Parameters.Add(new SqlParameter("@Job", employee.job));
+            cmd.Parameters.Add(new SqlParameter("@Position", employee.position));
+            cmd.Parameters.Add(new SqlParameter("@Salary", employee.salary));
+            try
+            {
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error:" + ex.Message);
+            }
+        
+        }
         //--------------- PRIVATE FUNCTION -------------------- //
 
         static List<Employee> GetEmployeesFromDatabase(string connectionString, string sSQL)

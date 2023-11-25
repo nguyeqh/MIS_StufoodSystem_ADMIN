@@ -12,7 +12,8 @@ namespace StufoodSystem_ADMIN.Models
         public string schoolName { get; set; } = "";
         public string schoolPhone { get; set; } = "";
         public string schoolAddress { get; set; } = "";
-        public int numStudents { get; set; } = 0;
+        public string email { get; set; } = "";
+        public int numberOfStudents { get; set; } = 0;
 
     }
 }

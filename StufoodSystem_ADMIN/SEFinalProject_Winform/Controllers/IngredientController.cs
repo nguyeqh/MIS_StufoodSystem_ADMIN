@@ -60,6 +60,19 @@ namespace StufoodSystem_ADMIN.Controllers
             return result;
         }
 
+        public static List<IngredientPerProduct> GetIngredientsByProduct(String productID)
+        {
+            String sSQL = "SELECT * FROM IngredientPerProduct;";
+
+            List<IngredientPerProduct> ingredients = GetIngredientPerProductFromDatabase(strConn, sSQL);
+            List<IngredientPerProduct> filteredProducts = ingredients.Where(p => p.productId == productID).ToList();
+
+            return filteredProducts;
+
+        }
+
+
+
         public static void UpdateIngredient (String id, Ingredient updateIngredient)
         {
             String sSQL = "UPDATE Ingredient SET IngredientID = @IngredientID, IngredientName = @IngredientName, IngredientDescription = @IngredientDescription, IngredientCategory = @IngredientCategory, IngredientPreservation = @IngredientPreservation, Price = @Price, QuantityAvailable = @QuantityAvailable";
@@ -144,6 +157,43 @@ namespace StufoodSystem_ADMIN.Controllers
                         };
 
                         result.Add(ingredient);
+                    }
+                }
+            }
+
+            return result;
+        }
+
+        static List<IngredientPerProduct> GetIngredientPerProductFromDatabase(string connectionString, string sSQL)
+        {
+            List<IngredientPerProduct> result = new List<IngredientPerProduct>();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SqlDataAdapter adapter = new SqlDataAdapter(sSQL, connection))
+                {
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    // Convert DataTable rows to List<Employee>
+                    foreach (DataRow row in dataTable.Rows)
+                    {
+                        String ingredientID = row["IngredientId"].ToString();
+                        Ingredient ingredientOb = GetIngredientByID(ingredientID);
+
+                        IngredientPerProduct ingredientPerProduct = new IngredientPerProduct
+                        {
+                            IngredientPerProductID = row["IngredientPerProductID "].ToString(),
+                            productId = row["productId"].ToString(),
+                            quantity = Convert.ToInt32(row["Quantity"]),
+                            note = row["Notes"].ToString(),
+                            ingredient = ingredientOb,
+
+                        };
+
+                        result.Add(ingredientPerProduct);
                     }
                 }
             }

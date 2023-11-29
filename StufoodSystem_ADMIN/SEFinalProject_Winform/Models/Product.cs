@@ -16,6 +16,6 @@ namespace StufoodSystem_ADMIN.Models
         public double ProductRating { get; set; } = 0.0;
         public double ProductPrice { get; set; }
         public int quantityAvailable { get; set; }
-        public List<Ingredient> ingredients { get; set; }
+        public List<IngredientPerProduct> ingredients { get; set; }
     }
 }

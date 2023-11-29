@@ -44,6 +44,22 @@ namespace StufoodSystem_ADMIN.Controllers
             return foundItem;
         }
 
+        public static List<Ingredient> GetIngredientByIDs(String idsList)
+        {
+            String sSQL = "SELECT * FROM Ingredient;";
+
+            List<Ingredient> ingredients = GetIngredientsFromDatabase(strConn, sSQL);
+            List<Ingredient> result = new List<Ingredient>();
+            // Split the motherString into an array of substrings
+            string[] substrings = idsList.Split(',');
+            foreach (String id in substrings)
+            {
+                Ingredient foundItem = ingredients.FirstOrDefault(item => item.ingredientID == id);
+                result.Add(foundItem);
+            }
+            return result;
+        }
+
         public static void UpdateIngredient (String id, Ingredient updateIngredient)
         {
             String sSQL = "UPDATE Ingredient SET IngredientID = @IngredientID, IngredientName = @IngredientName, IngredientDescription = @IngredientDescription, IngredientCategory = @IngredientCategory, IngredientPreservation = @IngredientPreservation, Price = @Price, QuantityAvailable = @QuantityAvailable";

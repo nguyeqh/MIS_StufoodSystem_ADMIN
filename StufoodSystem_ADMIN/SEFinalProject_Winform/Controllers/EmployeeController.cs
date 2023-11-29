@@ -52,7 +52,7 @@ namespace StufoodSystem_ADMIN.Controllers
 
             conn.Open();
             SqlCommand cmd = new SqlCommand(sSQL, conn);
-            cmd.Parameters.Add(new SqlParameter("@EmpID", updateEmployee.employeeID));
+            cmd.Parameters.Add(new SqlParameter("@EmpID", id));
             cmd.Parameters.Add(new SqlParameter("@EmployeeName", updateEmployee.employeeName));
             cmd.Parameters.Add(new SqlParameter("@Phone", updateEmployee.phone));
             cmd.Parameters.Add(new SqlParameter("@Address", updateEmployee.address));

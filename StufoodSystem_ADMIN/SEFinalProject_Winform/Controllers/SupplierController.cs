@@ -64,7 +64,7 @@ namespace StufoodSystem_ADMIN.Controllers
 
             conn.Open();
             SqlCommand cmd = new SqlCommand(sSQL, conn);
-            cmd.Parameters.Add(new SqlParameter("@SupplierID", updateSupplier.supplierId));
+            cmd.Parameters.Add(new SqlParameter("@SupplierID", id));
             cmd.Parameters.Add(new SqlParameter("@SupplierName ", updateSupplier.supplierName));
             cmd.Parameters.Add(new SqlParameter("@Phone", updateSupplier.Phone));
             cmd.Parameters.Add(new SqlParameter("@Address", updateSupplier.Address));

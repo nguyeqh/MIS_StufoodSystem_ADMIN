@@ -75,14 +75,14 @@ namespace StufoodSystem_ADMIN.Controllers
 
         public static void UpdateIngredient (String id, Ingredient updateIngredient)
         {
-            String sSQL = "UPDATE Ingredient SET IngredientID = @IngredientID, IngredientName = @IngredientName, IngredientDescription = @IngredientDescription, IngredientCategory = @IngredientCategory, IngredientPreservation = @IngredientPreservation, Price = @Price, QuantityAvailable = @QuantityAvailable";
+            String sSQL = "UPDATE Ingredient SET IngredientName = @IngredientName, IngredientDescription = @IngredientDescription, IngredientCategory = @IngredientCategory, IngredientPreservation = @IngredientPreservation, Price = @Price, QuantityAvailable = @QuantityAvailable WHERE IngredientID = @IngredientID";
 
 
             SqlConnection conn = new SqlConnection(strConn);
 
             conn.Open();
             SqlCommand cmd = new SqlCommand(sSQL, conn);
-            cmd.Parameters.Add(new SqlParameter("@IngredientID", updateIngredient.ingredientID));
+            cmd.Parameters.Add(new SqlParameter("@IngredientID", id));
             cmd.Parameters.Add(new SqlParameter("@IngredientName", updateIngredient.ingredientName));
             cmd.Parameters.Add(new SqlParameter("@IngredientDescription", updateIngredient.ingredientDescription));
             cmd.Parameters.Add(new SqlParameter("@IngredientCategory", updateIngredient.ingredientCategory));

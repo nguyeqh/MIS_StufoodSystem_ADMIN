@@ -293,6 +293,9 @@ namespace StufoodSystem_ADMIN.Views
             }
         }
 
-        
+        private void materialListView2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

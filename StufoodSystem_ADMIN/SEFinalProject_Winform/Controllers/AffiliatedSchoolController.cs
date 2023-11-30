@@ -46,7 +46,7 @@ namespace StufoodSystem_ADMIN.Controllers
 
         public static void UpdateAffiliatedSchool(String id, AffiliatedSchool updateSchool)
         {
-            String sSQL = "UPDATE AffiliatedSchool SET SchoolID = @SchoolID, SchoolName = @SchoolName, Phone = @Phone, Email = @Email, Address = @Address, NumberOfStudents = @NumberOfStudents;";
+            String sSQL = "UPDATE AffiliatedSchool SET SchoolName = @SchoolName, Phone = @Phone, Email = @Email, Address = @Address, NumberOfStudents = @NumberOfStudents WHERE SchoolID = @SchoolID;";
             SqlConnection conn = new SqlConnection(strConn);
 
             conn.Open();
@@ -68,7 +68,7 @@ namespace StufoodSystem_ADMIN.Controllers
             }
         }
 
-        public static void CreateEmployee(AffiliatedSchool school)
+        public static void CreateAffiliatedSchool(AffiliatedSchool school)
         {
 
             String sSQL = "INSERT INTO AffiliatedSchool (SchoolID, SchoolName, Phone, Email, Address, NumberOfStudents)" +
@@ -114,10 +114,10 @@ namespace StufoodSystem_ADMIN.Controllers
                         AffiliatedSchool school = new AffiliatedSchool
                         {
                             schoolId = row["schoolId"].ToString(),
-                            schoolAddress = row["schoolAddress"].ToString(),
+                            schoolAddress = row["Address"].ToString(),
                             schoolName = row["schoolName"].ToString(),
-                            schoolPhone = row["schoolPhone"].ToString(),
-                            email = row["email"].ToString(),
+                            schoolPhone = row["Phone"].ToString(),
+                            email = row["Email"].ToString(),
                             numberOfStudents = Convert.ToInt32(row["numberOfStudents"]),
                         };
 

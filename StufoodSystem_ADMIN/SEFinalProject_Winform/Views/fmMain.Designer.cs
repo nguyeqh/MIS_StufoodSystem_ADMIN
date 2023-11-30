@@ -55,20 +55,6 @@
             this.label76 = new System.Windows.Forms.Label();
             this.materialButton12 = new MaterialSkin.Controls.MaterialButton();
             this.tabPage26 = new System.Windows.Forms.TabPage();
-            this.label83 = new System.Windows.Forms.Label();
-            this.materialTextBox71 = new MaterialSkin.Controls.MaterialTextBox();
-            this.label84 = new System.Windows.Forms.Label();
-            this.materialTextBox72 = new MaterialSkin.Controls.MaterialTextBox();
-            this.label85 = new System.Windows.Forms.Label();
-            this.materialTextBox73 = new MaterialSkin.Controls.MaterialTextBox();
-            this.label86 = new System.Windows.Forms.Label();
-            this.materialTextBox74 = new MaterialSkin.Controls.MaterialTextBox();
-            this.label87 = new System.Windows.Forms.Label();
-            this.materialTextBox75 = new MaterialSkin.Controls.MaterialTextBox();
-            this.label88 = new System.Windows.Forms.Label();
-            this.materialTextBox76 = new MaterialSkin.Controls.MaterialTextBox();
-            this.label89 = new System.Windows.Forms.Label();
-            this.materialButton13 = new MaterialSkin.Controls.MaterialButton();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             this.materialTabControl2 = new MaterialSkin.Controls.MaterialTabControl();
@@ -330,13 +316,33 @@
             this.label120 = new System.Windows.Forms.Label();
             this.label121 = new System.Windows.Forms.Label();
             this.materialButton16 = new MaterialSkin.Controls.MaterialButton();
+            this.schoolListView = new MaterialSkin.Controls.MaterialListView();
+            this.schoolID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.schoolName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.schoolPhone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.schoolEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.schoolAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.numberOfStudents = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.label83 = new System.Windows.Forms.Label();
+            this.label84 = new System.Windows.Forms.Label();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.label85 = new System.Windows.Forms.Label();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.label86 = new System.Windows.Forms.Label();
+            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
+            this.label87 = new System.Windows.Forms.Label();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.label88 = new System.Windows.Forms.Label();
+            this.materialButton13 = new MaterialSkin.Controls.MaterialButton();
             this.materialTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.materialTabControl7.SuspendLayout();
+            this.tabPage24.SuspendLayout();
             this.tabPage25.SuspendLayout();
-            this.tabPage26.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.materialTabControl2.SuspendLayout();
             this.tabPage6.SuspendLayout();
@@ -445,7 +451,7 @@
             this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage4.Size = new System.Drawing.Size(1217, 467);
+            this.tabPage4.Size = new System.Drawing.Size(1217, 545);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Schools";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -456,13 +462,14 @@
             this.materialTabSelector6.CharacterCasing = MaterialSkin.Controls.MaterialTabSelector.CustomCharacterCasing.Normal;
             this.materialTabSelector6.Depth = 0;
             this.materialTabSelector6.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTabSelector6.Location = new System.Drawing.Point(14, 13);
+            this.materialTabSelector6.Location = new System.Drawing.Point(343, 14);
             this.materialTabSelector6.Margin = new System.Windows.Forms.Padding(2);
             this.materialTabSelector6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabSelector6.Name = "materialTabSelector6";
-            this.materialTabSelector6.Size = new System.Drawing.Size(668, 39);
+            this.materialTabSelector6.Size = new System.Drawing.Size(502, 39);
             this.materialTabSelector6.TabIndex = 3;
             this.materialTabSelector6.Text = "materialTabSelector6";
+            this.materialTabSelector6.Click += new System.EventHandler(this.materialTabSelector6_Click);
             // 
             // materialTabControl7
             // 
@@ -476,16 +483,30 @@
             this.materialTabControl7.Multiline = true;
             this.materialTabControl7.Name = "materialTabControl7";
             this.materialTabControl7.SelectedIndex = 0;
-            this.materialTabControl7.Size = new System.Drawing.Size(670, 318);
+            this.materialTabControl7.Size = new System.Drawing.Size(1199, 484);
             this.materialTabControl7.TabIndex = 2;
             // 
             // tabPage24
             // 
+            this.tabPage24.Controls.Add(this.materialButton13);
+            this.tabPage24.Controls.Add(this.textBox19);
+            this.tabPage24.Controls.Add(this.label88);
+            this.tabPage24.Controls.Add(this.richTextBox5);
+            this.tabPage24.Controls.Add(this.label87);
+            this.tabPage24.Controls.Add(this.textBox18);
+            this.tabPage24.Controls.Add(this.label86);
+            this.tabPage24.Controls.Add(this.textBox17);
+            this.tabPage24.Controls.Add(this.label85);
+            this.tabPage24.Controls.Add(this.textBox15);
+            this.tabPage24.Controls.Add(this.textBox16);
+            this.tabPage24.Controls.Add(this.label83);
+            this.tabPage24.Controls.Add(this.label84);
+            this.tabPage24.Controls.Add(this.schoolListView);
             this.tabPage24.Location = new System.Drawing.Point(4, 29);
             this.tabPage24.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage24.Name = "tabPage24";
             this.tabPage24.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage24.Size = new System.Drawing.Size(662, 285);
+            this.tabPage24.Size = new System.Drawing.Size(1191, 451);
             this.tabPage24.TabIndex = 0;
             this.tabPage24.Text = "Lists";
             this.tabPage24.UseVisualStyleBackColor = true;
@@ -510,7 +531,7 @@
             this.tabPage25.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage25.Name = "tabPage25";
             this.tabPage25.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage25.Size = new System.Drawing.Size(662, 285);
+            this.tabPage25.Size = new System.Drawing.Size(1191, 451);
             this.tabPage25.TabIndex = 1;
             this.tabPage25.Text = "Add";
             this.tabPage25.UseVisualStyleBackColor = true;
@@ -714,225 +735,14 @@
             // 
             // tabPage26
             // 
-            this.tabPage26.Controls.Add(this.label83);
-            this.tabPage26.Controls.Add(this.materialTextBox71);
-            this.tabPage26.Controls.Add(this.label84);
-            this.tabPage26.Controls.Add(this.materialTextBox72);
-            this.tabPage26.Controls.Add(this.label85);
-            this.tabPage26.Controls.Add(this.materialTextBox73);
-            this.tabPage26.Controls.Add(this.label86);
-            this.tabPage26.Controls.Add(this.materialTextBox74);
-            this.tabPage26.Controls.Add(this.label87);
-            this.tabPage26.Controls.Add(this.materialTextBox75);
-            this.tabPage26.Controls.Add(this.label88);
-            this.tabPage26.Controls.Add(this.materialTextBox76);
-            this.tabPage26.Controls.Add(this.label89);
-            this.tabPage26.Controls.Add(this.materialButton13);
             this.tabPage26.Location = new System.Drawing.Point(4, 29);
             this.tabPage26.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage26.Name = "tabPage26";
             this.tabPage26.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage26.Size = new System.Drawing.Size(662, 285);
+            this.tabPage26.Size = new System.Drawing.Size(1191, 451);
             this.tabPage26.TabIndex = 2;
             this.tabPage26.Text = "Update";
             this.tabPage26.UseVisualStyleBackColor = true;
-            // 
-            // label83
-            // 
-            this.label83.AutoSize = true;
-            this.label83.Location = new System.Drawing.Point(276, 37);
-            this.label83.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(115, 20);
-            this.label83.TabIndex = 27;
-            this.label83.Text = "Update School";
-            // 
-            // materialTextBox71
-            // 
-            this.materialTextBox71.AnimateReadOnly = false;
-            this.materialTextBox71.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox71.Depth = 0;
-            this.materialTextBox71.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox71.LeadingIcon = null;
-            this.materialTextBox71.Location = new System.Drawing.Point(507, 160);
-            this.materialTextBox71.Margin = new System.Windows.Forms.Padding(2);
-            this.materialTextBox71.MaxLength = 50;
-            this.materialTextBox71.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox71.Multiline = false;
-            this.materialTextBox71.Name = "materialTextBox71";
-            this.materialTextBox71.Size = new System.Drawing.Size(135, 50);
-            this.materialTextBox71.TabIndex = 26;
-            this.materialTextBox71.Text = "";
-            this.materialTextBox71.TrailingIcon = null;
-            // 
-            // label84
-            // 
-            this.label84.AutoSize = true;
-            this.label84.Location = new System.Drawing.Point(367, 180);
-            this.label84.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(149, 20);
-            this.label84.TabIndex = 25;
-            this.label84.Text = "Number of students";
-            // 
-            // materialTextBox72
-            // 
-            this.materialTextBox72.AnimateReadOnly = false;
-            this.materialTextBox72.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox72.Depth = 0;
-            this.materialTextBox72.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox72.LeadingIcon = null;
-            this.materialTextBox72.Location = new System.Drawing.Point(444, 105);
-            this.materialTextBox72.Margin = new System.Windows.Forms.Padding(2);
-            this.materialTextBox72.MaxLength = 50;
-            this.materialTextBox72.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox72.Multiline = false;
-            this.materialTextBox72.Name = "materialTextBox72";
-            this.materialTextBox72.Size = new System.Drawing.Size(198, 50);
-            this.materialTextBox72.TabIndex = 24;
-            this.materialTextBox72.Text = "";
-            this.materialTextBox72.TrailingIcon = null;
-            // 
-            // label85
-            // 
-            this.label85.AutoSize = true;
-            this.label85.Location = new System.Drawing.Point(367, 125);
-            this.label85.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(68, 20);
-            this.label85.TabIndex = 23;
-            this.label85.Text = "Address";
-            // 
-            // materialTextBox73
-            // 
-            this.materialTextBox73.AnimateReadOnly = false;
-            this.materialTextBox73.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox73.Depth = 0;
-            this.materialTextBox73.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox73.LeadingIcon = null;
-            this.materialTextBox73.Location = new System.Drawing.Point(444, 50);
-            this.materialTextBox73.Margin = new System.Windows.Forms.Padding(2);
-            this.materialTextBox73.MaxLength = 50;
-            this.materialTextBox73.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox73.Multiline = false;
-            this.materialTextBox73.Name = "materialTextBox73";
-            this.materialTextBox73.Size = new System.Drawing.Size(198, 50);
-            this.materialTextBox73.TabIndex = 22;
-            this.materialTextBox73.Text = "";
-            this.materialTextBox73.TrailingIcon = null;
-            // 
-            // label86
-            // 
-            this.label86.AutoSize = true;
-            this.label86.Location = new System.Drawing.Point(367, 72);
-            this.label86.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label86.Name = "label86";
-            this.label86.Size = new System.Drawing.Size(48, 20);
-            this.label86.TabIndex = 21;
-            this.label86.Text = "Email";
-            // 
-            // materialTextBox74
-            // 
-            this.materialTextBox74.AnimateReadOnly = false;
-            this.materialTextBox74.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox74.Depth = 0;
-            this.materialTextBox74.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox74.LeadingIcon = null;
-            this.materialTextBox74.Location = new System.Drawing.Point(100, 160);
-            this.materialTextBox74.Margin = new System.Windows.Forms.Padding(2);
-            this.materialTextBox74.MaxLength = 50;
-            this.materialTextBox74.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox74.Multiline = false;
-            this.materialTextBox74.Name = "materialTextBox74";
-            this.materialTextBox74.Size = new System.Drawing.Size(198, 50);
-            this.materialTextBox74.TabIndex = 20;
-            this.materialTextBox74.Text = "";
-            this.materialTextBox74.TrailingIcon = null;
-            // 
-            // label87
-            // 
-            this.label87.AutoSize = true;
-            this.label87.Location = new System.Drawing.Point(23, 180);
-            this.label87.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(55, 20);
-            this.label87.TabIndex = 19;
-            this.label87.Text = "Phone";
-            // 
-            // materialTextBox75
-            // 
-            this.materialTextBox75.AnimateReadOnly = false;
-            this.materialTextBox75.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox75.Depth = 0;
-            this.materialTextBox75.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox75.LeadingIcon = null;
-            this.materialTextBox75.Location = new System.Drawing.Point(100, 105);
-            this.materialTextBox75.Margin = new System.Windows.Forms.Padding(2);
-            this.materialTextBox75.MaxLength = 50;
-            this.materialTextBox75.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox75.Multiline = false;
-            this.materialTextBox75.Name = "materialTextBox75";
-            this.materialTextBox75.Size = new System.Drawing.Size(198, 50);
-            this.materialTextBox75.TabIndex = 18;
-            this.materialTextBox75.Text = "";
-            this.materialTextBox75.TrailingIcon = null;
-            // 
-            // label88
-            // 
-            this.label88.AutoSize = true;
-            this.label88.Location = new System.Drawing.Point(23, 125);
-            this.label88.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(51, 20);
-            this.label88.TabIndex = 17;
-            this.label88.Text = "Name";
-            // 
-            // materialTextBox76
-            // 
-            this.materialTextBox76.AnimateReadOnly = false;
-            this.materialTextBox76.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox76.Depth = 0;
-            this.materialTextBox76.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox76.LeadingIcon = null;
-            this.materialTextBox76.Location = new System.Drawing.Point(100, 50);
-            this.materialTextBox76.Margin = new System.Windows.Forms.Padding(2);
-            this.materialTextBox76.MaxLength = 50;
-            this.materialTextBox76.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox76.Multiline = false;
-            this.materialTextBox76.Name = "materialTextBox76";
-            this.materialTextBox76.Size = new System.Drawing.Size(198, 50);
-            this.materialTextBox76.TabIndex = 16;
-            this.materialTextBox76.Text = "";
-            this.materialTextBox76.TrailingIcon = null;
-            // 
-            // label89
-            // 
-            this.label89.AutoSize = true;
-            this.label89.Location = new System.Drawing.Point(23, 72);
-            this.label89.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(26, 20);
-            this.label89.TabIndex = 15;
-            this.label89.Text = "ID";
-            // 
-            // materialButton13
-            // 
-            this.materialButton13.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton13.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton13.Depth = 0;
-            this.materialButton13.HighEmphasis = true;
-            this.materialButton13.Icon = null;
-            this.materialButton13.Location = new System.Drawing.Point(268, 221);
-            this.materialButton13.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.materialButton13.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton13.Name = "materialButton13";
-            this.materialButton13.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton13.Size = new System.Drawing.Size(138, 36);
-            this.materialButton13.TabIndex = 14;
-            this.materialButton13.Text = "Update School";
-            this.materialButton13.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton13.UseAccentColor = false;
-            this.materialButton13.UseVisualStyleBackColor = true;
             // 
             // tabPage5
             // 
@@ -4553,6 +4363,187 @@
             this.materialButton16.UseVisualStyleBackColor = true;
             this.materialButton16.Click += new System.EventHandler(this.materialButton16_Click);
             // 
+            // schoolListView
+            // 
+            this.schoolListView.AutoSizeTable = false;
+            this.schoolListView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.schoolListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.schoolListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.schoolID,
+            this.schoolName,
+            this.schoolPhone,
+            this.schoolEmail,
+            this.schoolAddress,
+            this.numberOfStudents});
+            this.schoolListView.Depth = 0;
+            this.schoolListView.FullRowSelect = true;
+            this.schoolListView.HideSelection = false;
+            this.schoolListView.Location = new System.Drawing.Point(3, 3);
+            this.schoolListView.MinimumSize = new System.Drawing.Size(200, 100);
+            this.schoolListView.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.schoolListView.MouseState = MaterialSkin.MouseState.OUT;
+            this.schoolListView.Name = "schoolListView";
+            this.schoolListView.OwnerDraw = true;
+            this.schoolListView.Size = new System.Drawing.Size(1183, 201);
+            this.schoolListView.TabIndex = 0;
+            this.schoolListView.UseCompatibleStateImageBehavior = false;
+            this.schoolListView.View = System.Windows.Forms.View.Details;
+            this.schoolListView.SelectedIndexChanged += new System.EventHandler(this.schoolListView_SelectedIndexChanged);
+            // 
+            // schoolID
+            // 
+            this.schoolID.Text = "ID";
+            this.schoolID.Width = 80;
+            // 
+            // schoolName
+            // 
+            this.schoolName.Text = "Name";
+            this.schoolName.Width = 250;
+            // 
+            // schoolPhone
+            // 
+            this.schoolPhone.Text = "Phone";
+            this.schoolPhone.Width = 200;
+            // 
+            // schoolEmail
+            // 
+            this.schoolEmail.Text = "Email";
+            this.schoolEmail.Width = 200;
+            // 
+            // schoolAddress
+            // 
+            this.schoolAddress.Text = "Address";
+            this.schoolAddress.Width = 200;
+            // 
+            // numberOfStudents
+            // 
+            this.numberOfStudents.Text = "Number of Students";
+            this.numberOfStudents.Width = 200;
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(114, 250);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(302, 26);
+            this.textBox15.TabIndex = 67;
+            // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(114, 210);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.ReadOnly = true;
+            this.textBox16.Size = new System.Drawing.Size(145, 26);
+            this.textBox16.TabIndex = 66;
+            // 
+            // label83
+            // 
+            this.label83.AutoSize = true;
+            this.label83.Location = new System.Drawing.Point(44, 256);
+            this.label83.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(51, 20);
+            this.label83.TabIndex = 65;
+            this.label83.Text = "Name";
+            // 
+            // label84
+            // 
+            this.label84.AutoSize = true;
+            this.label84.Location = new System.Drawing.Point(44, 216);
+            this.label84.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label84.Name = "label84";
+            this.label84.Size = new System.Drawing.Size(26, 20);
+            this.label84.TabIndex = 64;
+            this.label84.Text = "ID";
+            // 
+            // textBox17
+            // 
+            this.textBox17.Location = new System.Drawing.Point(114, 292);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(302, 26);
+            this.textBox17.TabIndex = 69;
+            // 
+            // label85
+            // 
+            this.label85.AutoSize = true;
+            this.label85.Location = new System.Drawing.Point(44, 298);
+            this.label85.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label85.Name = "label85";
+            this.label85.Size = new System.Drawing.Size(55, 20);
+            this.label85.TabIndex = 68;
+            this.label85.Text = "Phone";
+            // 
+            // textBox18
+            // 
+            this.textBox18.Location = new System.Drawing.Point(114, 335);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(302, 26);
+            this.textBox18.TabIndex = 71;
+            // 
+            // label86
+            // 
+            this.label86.AutoSize = true;
+            this.label86.Location = new System.Drawing.Point(44, 341);
+            this.label86.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label86.Name = "label86";
+            this.label86.Size = new System.Drawing.Size(48, 20);
+            this.label86.TabIndex = 70;
+            this.label86.Text = "Email";
+            // 
+            // richTextBox5
+            // 
+            this.richTextBox5.Location = new System.Drawing.Point(670, 250);
+            this.richTextBox5.Name = "richTextBox5";
+            this.richTextBox5.Size = new System.Drawing.Size(302, 78);
+            this.richTextBox5.TabIndex = 73;
+            this.richTextBox5.Text = "";
+            // 
+            // label87
+            // 
+            this.label87.AutoSize = true;
+            this.label87.Location = new System.Drawing.Point(582, 253);
+            this.label87.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(68, 20);
+            this.label87.TabIndex = 72;
+            this.label87.Text = "Address";
+            // 
+            // textBox19
+            // 
+            this.textBox19.Location = new System.Drawing.Point(670, 210);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(302, 26);
+            this.textBox19.TabIndex = 75;
+            // 
+            // label88
+            // 
+            this.label88.AutoSize = true;
+            this.label88.Location = new System.Drawing.Point(513, 216);
+            this.label88.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(152, 20);
+            this.label88.TabIndex = 74;
+            this.label88.Text = "Number of Students";
+            // 
+            // materialButton13
+            // 
+            this.materialButton13.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton13.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton13.Depth = 0;
+            this.materialButton13.HighEmphasis = true;
+            this.materialButton13.Icon = null;
+            this.materialButton13.Location = new System.Drawing.Point(1010, 380);
+            this.materialButton13.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton13.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton13.Name = "materialButton13";
+            this.materialButton13.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton13.Size = new System.Drawing.Size(138, 36);
+            this.materialButton13.TabIndex = 76;
+            this.materialButton13.Text = "Update school";
+            this.materialButton13.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton13.UseAccentColor = false;
+            this.materialButton13.UseVisualStyleBackColor = true;
+            this.materialButton13.Click += new System.EventHandler(this.materialButton13_Click);
+            // 
             // fmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4571,10 +4562,10 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.materialTabControl7.ResumeLayout(false);
+            this.tabPage24.ResumeLayout(false);
+            this.tabPage24.PerformLayout();
             this.tabPage25.ResumeLayout(false);
             this.tabPage25.PerformLayout();
-            this.tabPage26.ResumeLayout(false);
-            this.tabPage26.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.materialTabControl2.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
@@ -4761,20 +4752,6 @@
         private System.Windows.Forms.Label label76;
         private MaterialSkin.Controls.MaterialButton materialButton12;
         private System.Windows.Forms.TabPage tabPage26;
-        private System.Windows.Forms.Label label83;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox71;
-        private System.Windows.Forms.Label label84;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox72;
-        private System.Windows.Forms.Label label85;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox73;
-        private System.Windows.Forms.Label label86;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox74;
-        private System.Windows.Forms.Label label87;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox75;
-        private System.Windows.Forms.Label label88;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox76;
-        private System.Windows.Forms.Label label89;
-        private MaterialSkin.Controls.MaterialButton materialButton13;
         private System.Windows.Forms.TabPage tabPage30;
         private System.Windows.Forms.TabPage tabPage32;
         private System.Windows.Forms.RichTextBox richTextBox1;
@@ -4920,5 +4897,25 @@
         private System.Windows.Forms.Label label120;
         private System.Windows.Forms.Label label121;
         private MaterialSkin.Controls.MaterialButton materialButton16;
+        private MaterialSkin.Controls.MaterialListView schoolListView;
+        private System.Windows.Forms.ColumnHeader schoolID;
+        private System.Windows.Forms.ColumnHeader schoolName;
+        private System.Windows.Forms.ColumnHeader schoolPhone;
+        private System.Windows.Forms.ColumnHeader schoolEmail;
+        private System.Windows.Forms.ColumnHeader schoolAddress;
+        private System.Windows.Forms.ColumnHeader numberOfStudents;
+        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.Label label86;
+        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.Label label85;
+        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.Label label83;
+        private System.Windows.Forms.Label label84;
+        private MaterialSkin.Controls.MaterialButton materialButton13;
+        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.Label label88;
+        private System.Windows.Forms.RichTextBox richTextBox5;
+        private System.Windows.Forms.Label label87;
     }
 }

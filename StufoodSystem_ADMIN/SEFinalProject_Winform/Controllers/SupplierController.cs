@@ -25,7 +25,7 @@ namespace StufoodSystem_ADMIN.Controllers
         {
             conn = new SqlConnection(strConn);
             conn.Open();
-            String sSQL = "SELECT * FROM Supplier";
+            String sSQL = "SELECT * FROM Suppliers;";
             List<Supplier> suppliers = GetSuppliersFromDatabase(strConn, sSQL);
       
             conn.Close();
@@ -35,7 +35,7 @@ namespace StufoodSystem_ADMIN.Controllers
 
         public static Supplier GetSupplierByID(String id)
         {
-            String sSQL = "SELECT * FROM Supplier;";
+            String sSQL = "SELECT * FROM Suppliers;";
 
             List<Supplier> suppliers = GetSuppliersFromDatabase(strConn, sSQL);
             Supplier foundItem = suppliers.FirstOrDefault(item => item.supplierId == id);
@@ -58,7 +58,7 @@ namespace StufoodSystem_ADMIN.Controllers
                 }
             }
 
-            String sSQL = "UPDATE Supplier SET SupplierName  = @SupplierName , ADDRESS = @Address, Phone  = @Phone, IngredientProvided = @IngredientProvided, " +
+            String sSQL = "UPDATE Suppliers SET SupplierName  = @SupplierName , ADDRESS = @Address, Phone  = @Phone, IngredientProvided = @IngredientProvided, " +
                 "EMAIL = @Email, Rate = @Rate WHERE SupplierID = @SupplierID";
             SqlConnection conn = new SqlConnection(strConn);
 
@@ -96,7 +96,7 @@ namespace StufoodSystem_ADMIN.Controllers
                 }
             }
 
-            String sSQL = "INSERT INTO Supplier (SupplierID, SupplierName, PHONE, ADDRESS, Rate, IngredientProvided, EMAIL) " +
+            String sSQL = "INSERT INTO Suppliers (SupplierID, SupplierName, PHONE, ADDRESS, Rate, IngredientProvided, EMAIL) " +
                 "VALUES (@SupplierID, @SupplierName, @Phone, @Adress,  @Rate, @IngredientProvided, @Email)";
             SqlConnection conn = new SqlConnection(strConn);
 

@@ -218,13 +218,19 @@ namespace StufoodSystem_ADMIN.Views
                 textBox24.Clear();
                 richTextBox6.Clear();
 
-                LoadEmployees();
+                LoadAffiliatedSchools();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Có lỗi khi xử lý!");
                 throw new Exception("Error:" + ex.Message);
             }
+        }
+
+        //LOAD SUPPLIERS
+        private void materialTabSelector4_Click(object sender, EventArgs e)
+        {
+            LoadSuppliers();
         }
 
         //------------------------- FUNCTION ----------------- //
@@ -266,6 +272,24 @@ namespace StufoodSystem_ADMIN.Views
                 item.SubItems.Add(school.numberOfStudents.ToString()); //5
 
                 schoolListView.Items.Add(item);
+            }
+        }
+
+        private void LoadSuppliers()
+        {
+            List<Supplier> suppliers = SupplierController.GetAllSupplier();
+            supplierListView.Items.Clear();
+
+            foreach(Supplier supplier in suppliers)
+            {
+                ListViewItem item = new ListViewItem(supplier.supplierId); //0
+                item.SubItems.Add(supplier.supplierName);//1
+                item.SubItems.Add(supplier.Phone); //2
+                item.SubItems.Add(supplier.Email); //3
+                item.SubItems.Add(supplier.Address);//4
+                item.SubItems.Add(supplier.rate.ToString()); //5
+
+                supplierListView.Items.Add(item);
             }
         }
 

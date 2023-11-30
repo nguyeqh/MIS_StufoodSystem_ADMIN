@@ -74,8 +74,8 @@ namespace StufoodSystem_ADMIN.Controllers
         public static void CreateEmployee(Employee employee)
         {
            
-            String sSQL = "INSERT INTO EMPLOYEE (EMPOLYEEID, EMPLOYEENAME, PHONE, ADDRESS, JOB, POSITION, EMAIL, SALARY) " +
-                "VALUES (@EmpID, @EmployeeName, @Phone, @Adress,  @Job, @Position, @Email, @Salary)";
+            String sSQL = "INSERT INTO EMPLOYEE (EmployeeID, EMPLOYEENAME, PHONE, ADDRESS, JOB, POSITION, EMAIL, SALARY) " +
+                "VALUES (@EmpID, @EmployeeName, @Phone, @Address, @Job, @Position, @Email, @Salary)";
             SqlConnection conn = new SqlConnection(strConn);
 
             conn.Open();

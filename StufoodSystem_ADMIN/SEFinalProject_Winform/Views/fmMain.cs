@@ -32,6 +32,7 @@ namespace StufoodSystem_ADMIN.Views
                 MaterialSkin.TextShade.BLACK);
         }
 
+        //load employee list
         private void materialTabSelector7_Click(object sender, EventArgs e)
         {
             List<Employee> employees = EmployeeController.GetAllEmployee();
@@ -59,7 +60,41 @@ namespace StufoodSystem_ADMIN.Views
 
         }
 
-        
+        //ADD NEW EMPLOYEE
+        private void materialButton14_Click(object sender, EventArgs e)
+        {
+            Employee newEmployee = new Employee();
 
+            newEmployee.employeeID = textBox1.Text;
+            newEmployee.employeeName = textBox2.Text;
+            newEmployee.email = textBox3.Text;
+            newEmployee.phone = textBox4.Text;
+            newEmployee.address = richTextBox3.Text.ToString();
+            newEmployee.job = textBox5.Text;
+            newEmployee.position = textBox6.Text;
+            newEmployee.salary = Convert.ToDouble(textBox7.Text);
+
+            try
+            {
+
+                EmployeeController.CreateEmployee(newEmployee);
+                MessageBox.Show("Thêm nhân viên thành công!");
+                textBox1.Clear();
+                textBox2.Clear();
+                textBox3.Clear();
+                textBox4.Clear();
+                textBox5.Clear();
+                textBox6.Clear();
+                textBox7.Clear();
+                richTextBox3.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Có lỗi khi xử lý!");
+                throw new Exception("Error:" + ex.Message);
+            }
+
+           
+        }
     }
 }

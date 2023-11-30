@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
@@ -41,13 +42,15 @@ namespace StufoodSystem_ADMIN.Controllers
                         {
                             String employeeID = reader["employeeId"].ToString();
                             String schoolID = reader["SchoolID"].ToString();
+                            String orderID = reader["orderNumber"].ToString();
 
                             Employee employee = EmployeeController.GetEmployeeByID(employeeID);
                             AffiliatedSchool school = AffiliatedSchoolController.GetAffliatedSchoolByID(schoolID);
+                            List<OrderDetail> orderDetails = GetOrderDetailByOrderId(orderID);
 
                             Order order = new Order
                             {
-                                orderNumber = reader["orderNumber"].ToString(),
+                                orderNumber = orderID,
                                 dateOrdered = Convert.ToDateTime(reader["DateOrdered"]),
                                 dateReceived = Convert.ToDateTime(reader["DateReceived"]),
                                 orderStatus = reader["orderStatus"].ToString(),
@@ -56,10 +59,10 @@ namespace StufoodSystem_ADMIN.Controllers
                                 //Thêm các trường khác của bảng Order
                                 affiliatedSchool = school,
                                 employee = employee,
+                                orderDetails = orderDetails,
                             };
 
                             
-
                             orders.Add(order);
                         }
                     }
@@ -111,20 +114,22 @@ namespace StufoodSystem_ADMIN.Controllers
             }
         }
 
-        public static void CreateEmployee(Employee employee)
+        public static void CreateOrder(Order order)
         {
-           
-            String sSQL = "INSERT INTO EMPLOYEE (EMPOLYEEID, EMPLOYEENAME, PHONE, ADDRESS, JOB, POSITION, EMAIL, SALARY) " +
-                "VALUES (@EmpID, @EmployeeName, @Phone, @Adress,  @Job, @Position, @Email, @Salary)";
+            String employeeIDString = order.employee.employeeID;
+            String schoolID = order.affiliatedSchool.schoolId;
+
+            String sSQL = "INSERT INTO Order (OrderNumber, OrderStatus, DateOrdered, DateReceived, OrderTotal, EmployeeID, SchoolID) " +
+                "VALUES (@OrderNumber, @OrderStatus, @DateOrdered, @DateReceived,  @OrderTotal, @EmployeeID, @SchoolID)";
             SqlConnection conn = new SqlConnection(strConn);
 
             conn.Open();
             SqlCommand cmd = new SqlCommand(sSQL, conn);
-            cmd.Parameters.Add(new SqlParameter("@OrderNumber", updateOrder.orderNumber));
-            cmd.Parameters.Add(new SqlParameter("@OrderStatus", updateOrder.orderStatus));
-            cmd.Parameters.Add(new SqlParameter("@DateOrdered", updateOrder.dateOrdered));
-            cmd.Parameters.Add(new SqlParameter("@DateReceived", updateOrder.dateReceived));
-            cmd.Parameters.Add(new SqlParameter("@OrderTotal", updateOrder.orderTotal));
+            cmd.Parameters.Add(new SqlParameter("@OrderNumber", order.orderNumber));
+            cmd.Parameters.Add(new SqlParameter("@OrderStatus", order.orderStatus));
+            cmd.Parameters.Add(new SqlParameter("@DateOrdered", order.dateOrdered));
+            cmd.Parameters.Add(new SqlParameter("@DateReceived", order.dateReceived));
+            cmd.Parameters.Add(new SqlParameter("@OrderTotal", order.orderTotal));
             cmd.Parameters.Add(new SqlParameter("@EmployeeID", employeeIDString));
             cmd.Parameters.Add(new SqlParameter("@SchoolID", schoolID));
             try
@@ -140,9 +145,9 @@ namespace StufoodSystem_ADMIN.Controllers
         }
         //--------------- PRIVATE FUNCTION -------------------- //
 
-        static List<Employee> GetEmployeesFromDatabase(string connectionString, string sSQL)
+        static List<Order> GetOrdersFromDatabase(string connectionString, string sSQL)
         {
-            List<Employee> result = new List<Employee>();
+            List<Order> result = new List<Order>();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -156,24 +161,109 @@ namespace StufoodSystem_ADMIN.Controllers
                     // Convert DataTable rows to List<Employee>
                     foreach (DataRow row in dataTable.Rows)
                     {
-                        Employee employee = new Employee
+                        String employeeID = row["employeeId"].ToString();
+                        String schoolID = row["SchoolID"].ToString();
+
+                        Employee employee = EmployeeController.GetEmployeeByID(employeeID);
+                        AffiliatedSchool school = AffiliatedSchoolController.GetAffliatedSchoolByID(schoolID);
+
+
+                        Order order = new Order
                         {
-                            employeeID = row["employeeID"].ToString(),
-                            employeeName = row["employeeName"].ToString(),
-                            phone = row["phone"].ToString(),
-                            address = row["address"].ToString(),
-                            job = row["job"].ToString(),
-                            position = row["position"].ToString(),
-                            email = row["email"].ToString(),
-                            salary = Convert.ToDouble(row["salary"])
+                            orderNumber = row["orderNumber"].ToString(),
+                            dateOrdered = Convert.ToDateTime(row["DateOrdered"]),
+                            dateReceived = Convert.ToDateTime(row["DateReceived"]),
+                            orderStatus = row["orderStatus"].ToString(),
+                            orderTotal = Convert.ToInt32(row["orderTotal"]),
+
+                            //Thêm các trường khác của bảng Order
+                            affiliatedSchool = school,
+                            employee = employee,
                         };
 
-                        result.Add(employee);
+                        result.Add(order);
                     }
                 }
             }
 
             return result;
+        }
+
+        //----------------- ORDER DETAIL ZONE ------------------ //
+        public static List<OrderDetail> GetOrderDetailByOrderId(String orderID)
+        {
+            List<OrderDetail> orderDetails = new List<OrderDetail>();
+            using (conn)
+            {
+                conn.Open();
+
+                //Get order Detail normally
+                string sqlQuery = "SELECT * FROM OrderDetail WHERE OrderNumber = @OrderNumber";
+                using (SqlCommand command = new SqlCommand(sqlQuery, conn))
+                {
+                    command.Parameters.AddWithValue("@OrderNumber", orderID);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            String productID = reader["ProductNumber"].ToString();
+
+                            Product product1 = ProductController.GetProductByID(productID);
+
+
+                            OrderDetail orderDetail = new OrderDetail
+                            {
+                                orderDetailNumber = reader["OrderDetailID"].ToString(),
+                                orderNumber = reader["OrderNumber"].ToString(),
+                                quantity = Convert.ToInt32(reader["Quantity"]),
+                                discountPercent = 0,
+                                product = product1,
+
+                            };
+
+
+
+                            orderDetails.Add(orderDetail);
+                        }
+                    }
+                }
+
+                //Get order detail with discount - special order
+                sqlQuery = "SELECT * FROM SpecialOrderDetails WHERE OrderNumber = @OrderNumber";
+                using (SqlCommand command = new SqlCommand(sqlQuery, conn))
+                {
+                    command.Parameters.AddWithValue("@OrderNumber", orderID);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            String productID = reader["ProductNumber"].ToString();
+                            Product product1 = ProductController.GetProductByID(productID);
+
+                            OrderDetail orderDetail = new OrderDetail
+                            {
+                                orderDetailNumber = reader["OrderDetailID"].ToString(),
+                                orderNumber = reader["OrderNumber"].ToString(),
+                                quantity = Convert.ToInt32(reader["Quantity"]),
+                                discountPercent = Convert.ToDouble(reader["DiscountPercent"]),
+                                product = product1,
+
+                            };
+
+
+
+                            orderDetails.Add(orderDetail);
+                        }
+                    }
+                }
+            }
+
+            conn.Close();
+
+
+            return orderDetails;
         }
     }
 }

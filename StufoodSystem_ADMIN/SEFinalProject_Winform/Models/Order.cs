@@ -10,12 +10,12 @@ namespace StufoodSystem_ADMIN.Models
     {
         public string orderNumber { get; set; }
         public string orderStatus { get; set; }
-        public DateTime orderDate { get; set; }
-        public DateTime receivedDate { get; set; }
+        public DateTime dateOrdered { get; set; }
+        public DateTime dateReceived { get; set; }
         public int orderTotal { get; set; }
         public Employee employee { get; set; }
         public AffiliatedSchool affiliatedSchool { get; set; }
-        public List<OrderDetail> orders { get; set; }
-        public List<PaymentRecord> payment { get; set; }
+        public List<OrderDetail> orderDetails { get; set; }
+        public List<PaymentRecord> paymentRecords { get; set; }
     }
 }

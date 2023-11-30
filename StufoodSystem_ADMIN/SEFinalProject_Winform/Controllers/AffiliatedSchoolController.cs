@@ -72,7 +72,7 @@ namespace StufoodSystem_ADMIN.Controllers
         {
 
             String sSQL = "INSERT INTO AffiliatedSchool (SchoolID, SchoolName, Phone, Email, Address, NumberOfStudents)" +
-                "VALUES (@SchoolId, @SchoolName, @Phone, @Email, @Adress, @NumberOfStudents);";
+                "VALUES (@SchoolId, @SchoolName, @Phone, @Email, @Address, @NumberOfStudents);";
             SqlConnection conn = new SqlConnection(strConn);
 
             conn.Open();

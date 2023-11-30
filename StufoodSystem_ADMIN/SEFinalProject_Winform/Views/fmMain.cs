@@ -194,6 +194,39 @@ namespace StufoodSystem_ADMIN.Views
             }
         }
 
+        //ADD NEW SCHOOL
+        private void materialButton12_Click(object sender, EventArgs e)
+        {
+            AffiliatedSchool newSchool = new AffiliatedSchool();
+
+            newSchool.schoolId = textBox20.Text;
+            newSchool.schoolName = textBox21.Text;
+            newSchool.schoolPhone = textBox22.Text;
+            newSchool.email = textBox23.Text;
+            newSchool.numberOfStudents = Convert.ToInt32(textBox24.Text);
+            newSchool.schoolAddress = richTextBox6.Text;
+
+            try
+            {
+
+                AffiliatedSchoolController.CreateAffiliatedSchool(newSchool);
+                MessageBox.Show("Thêm trường học liên kết thành công!");
+                textBox20.Clear();
+                textBox21.Clear();
+                textBox22.Clear();
+                textBox23.Clear();
+                textBox24.Clear();
+                richTextBox6.Clear();
+
+                LoadEmployees();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Có lỗi khi xử lý!");
+                throw new Exception("Error:" + ex.Message);
+            }
+        }
+
         //------------------------- FUNCTION ----------------- //
         private void LoadEmployees()
         {

@@ -58,7 +58,7 @@ namespace StufoodSystem_ADMIN.Controllers
                 }
             }
 
-            String sSQL = "UPDATE Supplier SET SupplierName  = @SupplierName , ADDRESS = @Adress, Phone  = @Phone, IngredientProvided = @IngredientProvided, " +
+            String sSQL = "UPDATE Supplier SET SupplierName  = @SupplierName , ADDRESS = @Address, Phone  = @Phone, IngredientProvided = @IngredientProvided, " +
                 "EMAIL = @Email, Rate = @Rate WHERE SupplierID = @SupplierID";
             SqlConnection conn = new SqlConnection(strConn);
 

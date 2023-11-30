@@ -90,7 +90,7 @@ namespace StufoodSystem_ADMIN.Controllers
             String employeeIDString = updateOrder.employee.employeeID;
             String schoolID = updateOrder.affiliatedSchool.schoolId;
 
-            String sSQL = "UPDATE EMPLOYEE SET OrderStatus = @OrderStatus, DateOrdered = @DateOrdered, DateReceived = @DateReceived , OrderTotal = @OrderTotal, EmployeeID = @EmployeeID, " +
+            String sSQL = "UPDATE Order1 SET OrderStatus = @OrderStatus, DateOrdered = @DateOrdered, DateReceived = @DateReceived , OrderTotal = @OrderTotal, EmployeeID = @EmployeeID, " +
                 "SchoolID = @SchoolID WHERE OrderNumber = @OrderNumber";
             SqlConnection conn = new SqlConnection(strConn);
 
@@ -119,7 +119,7 @@ namespace StufoodSystem_ADMIN.Controllers
             String employeeIDString = order.employee.employeeID;
             String schoolID = order.affiliatedSchool.schoolId;
 
-            String sSQL = "INSERT INTO Order (OrderNumber, OrderStatus, DateOrdered, DateReceived, OrderTotal, EmployeeID, SchoolID) " +
+            String sSQL = "INSERT INTO Order1 (OrderNumber, OrderStatus, DateOrdered, DateReceived, OrderTotal, EmployeeID, SchoolID) " +
                 "VALUES (@OrderNumber, @OrderStatus, @DateOrdered, @DateReceived,  @OrderTotal, @EmployeeID, @SchoolID)";
             SqlConnection conn = new SqlConnection(strConn);
 

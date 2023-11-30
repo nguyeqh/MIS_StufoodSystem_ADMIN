@@ -46,8 +46,8 @@ namespace StufoodSystem_ADMIN.Controllers
 
         public static void UpdateEmployee (String id, Employee updateEmployee)
         {
-            String sSQL = "UPDATE EMPLOYEE SET EMPLOYEENAME = @EmployeeName, PHONE = @Phone, ADDRESS = @Adress, JOB = @Job, POSITION = @Position, " +
-                "EMAIL = @Email, SALARY = @Salary WHERE EMPOLYEEID = @EmpID";
+            String sSQL = "UPDATE EMPLOYEE SET EMPLOYEENAME = @EmployeeName, PHONE = @Phone, ADDRESS = @Address, JOB = @Job, POSITION = @Position, " +
+                "EMAIL = @Email, SALARY = @Salary WHERE EMPLOYEEID = @EmpID";
             SqlConnection conn = new SqlConnection(strConn);
 
             conn.Open();

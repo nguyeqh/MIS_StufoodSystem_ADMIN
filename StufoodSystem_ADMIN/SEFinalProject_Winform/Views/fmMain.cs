@@ -35,29 +35,29 @@ namespace StufoodSystem_ADMIN.Views
         //load employee list
         private void materialTabSelector7_Click(object sender, EventArgs e)
         {
-            List<Employee> employees = EmployeeController.GetAllEmployee();
-
-            employeeListView.Items.Clear();
-            employeeListView.AllowDrop = true;
-
-            foreach (Employee employee in employees)
-            {
-                ListViewItem item = new ListViewItem(employee.employeeID);
-                item.SubItems.Add(employee.employeeName);
-                item.SubItems.Add(employee.phone);
-                item.SubItems.Add(employee.address);
-                item.SubItems.Add(employee.job);
-                item.SubItems.Add(employee.position);
-                item.SubItems.Add(employee.email);
-                item.SubItems.Add(employee.salary.ToString());
-
-                employeeListView.Items.Add(item);
-            }
+            LoadEmployees();
         }
 
+
+        //LOAD EMPLOYEE TO FIELDS
         private void employeeListView_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // Check if there is a selected item
+            if (employeeListView.SelectedItems.Count > 0)
+            {
+                // Access data from the selected row
+                ListViewItem selectedRow = employeeListView.SelectedItems[0];
 
+                textBox14.Text = selectedRow.SubItems[0].Text; //id
+                textBox13.Text = selectedRow.SubItems[1].Text; //name
+                textBox12.Text = selectedRow.SubItems[6].Text; //email
+                textBox11.Text = selectedRow.SubItems[2].Text; //phone
+                textBox10.Text = selectedRow.SubItems[4].Text; //job
+                textBox9.Text = selectedRow.SubItems[5].Text; //position
+                textBox8.Text = selectedRow.SubItems[7].Text; //salary
+                richTextBox4.Text = selectedRow.SubItems[3].Text; //address
+
+            }
         }
 
         //ADD NEW EMPLOYEE
@@ -87,14 +87,76 @@ namespace StufoodSystem_ADMIN.Views
                 textBox6.Clear();
                 textBox7.Clear();
                 richTextBox3.Clear();
+
+                LoadEmployees();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Có lỗi khi xử lý!");
                 throw new Exception("Error:" + ex.Message);
             }
-
            
+        }
+
+        //UPDATE EMPLOYEE
+        private void materialButton16_Click(object sender, EventArgs e)
+        {
+            Employee newEmployee = new Employee();
+
+            newEmployee.employeeID = textBox14.Text;
+            newEmployee.employeeName = textBox13.Text;
+            newEmployee.email = textBox12.Text;
+            newEmployee.phone = textBox11.Text;
+            newEmployee.address = richTextBox4.Text.ToString();
+            newEmployee.job = textBox10.Text;
+            newEmployee.position = textBox9.Text;
+            newEmployee.salary = Convert.ToDouble(textBox8.Text);
+
+            try
+            {
+
+                EmployeeController.UpdateEmployee(newEmployee.employeeID, newEmployee);
+                MessageBox.Show("Chỉnh sửa thông tin nhân viên thành công!");
+                textBox14.Clear();
+                textBox12.Clear();
+                textBox13.Clear();
+                textBox11.Clear();
+                textBox10.Clear();
+                textBox9.Clear();
+                textBox8.Clear();
+                richTextBox4.Clear();
+
+                LoadEmployees();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Có lỗi khi xử lý!");
+                throw new Exception("Error:" + ex.Message);
+            }
+        }
+    
+    
+        //------------------------- FUNCTION ----------------- //
+        private void LoadEmployees()
+        {
+            List<Employee> employees = EmployeeController.GetAllEmployee();
+
+            employeeListView.Items.Clear();
+            employeeListView.AllowDrop = true;
+
+            foreach (Employee employee in employees)
+            {
+                ListViewItem item = new ListViewItem(employee.employeeID); //0
+                item.SubItems.Add(employee.employeeName); //1
+                item.SubItems.Add(employee.phone); //2
+                item.SubItems.Add(employee.address); //3
+                item.SubItems.Add(employee.job); //4
+                item.SubItems.Add(employee.position); //5
+                item.SubItems.Add(employee.email); //6
+                item.SubItems.Add(employee.salary.ToString()); //7
+
+                employeeListView.Items.Add(item);
+            }
         }
     }
 }

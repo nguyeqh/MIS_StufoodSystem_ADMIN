@@ -114,19 +114,18 @@ namespace StufoodSystem_ADMIN.Controllers
                     // Convert DataTable rows to List<Employee>
                     foreach (DataRow row in dataTable.Rows)
                     {
-                        string productID = row["ProductId"].ToString();
-                        List<IngredientPerProduct> ingredientList = IngredientController.GetIngredientsByProduct(productID);
-
+                        string productID = row["ProductNumber"].ToString();
+                        
                         Product product = new Product
                         {
-                            ProductId = row["ProductId"].ToString(),
+                            ProductId = productID,
                             ProductDescription = row["ProductDescription"].ToString(),
-                            ProductPrice = Convert.ToDouble(row["ProductPrice"]),
+                            ProductPrice = Convert.ToDouble(row["Price"]),
                             ProductRating = Convert.ToDouble(row["ProductRating"]),
                             ProductCategory = row["ProductCategory"].ToString(),
                             ProductName = row["ProductName"].ToString(),
                             quantityAvailable = Convert.ToInt32(row["quantityAvailable"]),
-                            ingredients = ingredientList,
+                           
                         };
 
                         result.Add(product);

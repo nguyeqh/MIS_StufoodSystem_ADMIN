@@ -99,7 +99,7 @@ namespace StufoodSystem_ADMIN.Views
                 MessageBox.Show("Có lỗi khi xử lý!");
                 throw new Exception("Error:" + ex.Message);
             }
-           
+
         }
 
         //UPDATE EMPLOYEE
@@ -183,9 +183,9 @@ namespace StufoodSystem_ADMIN.Views
 
                 AffiliatedSchoolController.UpdateAffiliatedSchool(newSchool.schoolId, newSchool);
                 MessageBox.Show("Chỉnh sửa thông tin trường học thành công!");
-                textBox16.Clear(); 
-                textBox15.Clear(); 
-                textBox17.Clear(); 
+                textBox16.Clear();
+                textBox15.Clear();
+                textBox17.Clear();
                 textBox18.Clear();
                 textBox19.Clear(); //number of student
                 richTextBox5.Clear(); //address
@@ -244,7 +244,7 @@ namespace StufoodSystem_ADMIN.Views
             {
                 checkedListBox1.Items.Add(item.ingredientID + ": " + item.ingredientName);
             }
-            
+
         }
 
         //LOAD SUPPLIER TO FIELDS
@@ -264,9 +264,9 @@ namespace StufoodSystem_ADMIN.Views
                 textBox28.Text = selectedRow.SubItems[3].Text; //email
                 richTextBox7.Text = selectedRow.SubItems[4].Text; //address
                 textBox29.Text = selectedRow.SubItems[5].Text; //rate
-               
+
                 supplierIngredListView.Items.Clear();
-               
+
                 Supplier supplier = SupplierController.GetSupplierByID(supplierID);
                 ingredientOfSupplier = supplier;
                 foreach (Ingredient ingredient in supplier.ingredientProvided)
@@ -284,7 +284,7 @@ namespace StufoodSystem_ADMIN.Views
         //UPDATE INGREDIENT TO SUPPLIERS
         private void materialButton10_Click(object sender, EventArgs e)
         {
-          if (ingredientOfSupplier != null)
+            if (ingredientOfSupplier != null)
             {
                 IngredientCollectionCheckbox ingredientCollectionCheckbox = new IngredientCollectionCheckbox(ingredientOfSupplier);
                 ingredientCollectionCheckbox.ShowDialog();
@@ -377,7 +377,7 @@ namespace StufoodSystem_ADMIN.Views
             newSupplier.Address = richTextBox2.Text;
 
             List<Ingredient> ingredientProvided = new List<Ingredient>();
-            foreach(String item in resultList)
+            foreach (String item in resultList)
             {
                 Ingredient ingredient = IngredientController.GetIngredientByID(item);
                 ingredientProvided.Add(ingredient);
@@ -508,7 +508,9 @@ namespace StufoodSystem_ADMIN.Views
         private void materialTabSelector1_Click(object sender, EventArgs e)
         {
             resultList = new List<string>();
+            LoadProducts();
         }
+
         //add new product
         private void materialButton2_Click(object sender, EventArgs e)
         {
@@ -535,7 +537,77 @@ namespace StufoodSystem_ADMIN.Views
                 textBox53.Clear();
                 richTextBox9.Clear(); //address
 
-                
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Có lỗi khi xử lý!");
+                throw new Exception("Error:" + ex.Message);
+            }
+        }
+
+        //LOAD PRODUCT TO FIELDS
+        private void productListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Check if there is a selected item
+            if (productListView.SelectedItems.Count > 0)
+            {
+                // Access data from the selected row
+                ListViewItem selectedRow = productListView.SelectedItems[0];
+
+                textBox50.Text = selectedRow.SubItems[0].Text; //id
+                textBox54.Text = selectedRow.SubItems[1].Text; //name
+                richTextBox10.Text = selectedRow.SubItems[2].Text; //description
+                textBox55.Text = selectedRow.SubItems[3].Text; //category
+                textBox58.Text = selectedRow.SubItems[4].Text; //rating
+                textBox57.Text = selectedRow.SubItems[5].Text; //price
+                textBox56.Text = selectedRow.SubItems[6].Text; //quantity
+
+                IngredientProductListView.Items.Clear();
+
+                List<IngredientPerProduct> ingredientPers = IngredientController.GetIngredientsByProduct(selectedRow.SubItems[0].Text);
+           
+                foreach (IngredientPerProduct ingredient in ingredientPers)
+                {
+                    ListViewItem item = new ListViewItem(ingredient.IngredientPerProductID); //0
+                    item.SubItems.Add(ingredient.ingredient.ingredientName); //1
+                    item.SubItems.Add(ingredient.quantity.ToString()); //2
+                    item.SubItems.Add(ingredient.note);//3
+
+                    IngredientProductListView.Items.Add(item);
+
+                }
+
+            }
+        }
+
+        //UPDDATE PRODUCT
+        private void materialButton3_Click(object sender, EventArgs e)
+        {
+            Product newProduct = new Product();
+
+            newProduct.ProductId = textBox50.Text;
+            newProduct.ProductName = textBox54.Text;
+            newProduct.ProductCategory = textBox55.Text;
+            newProduct.ProductDescription = richTextBox10.Text;
+            newProduct.ProductPrice = Convert.ToDouble(textBox57.Text);
+            newProduct.quantityAvailable = Convert.ToInt32(textBox56.Text);
+            newProduct.ProductRating = Convert.ToDouble(textBox58.Text);
+
+            try
+            {
+
+                ProductController.UpdateProduct(newProduct.ProductId, newProduct);
+                MessageBox.Show("Chỉnh sửa thông tin sản phẩm thành công!");
+                textBox50.Clear();
+                textBox54.Clear();
+                textBox55.Clear();
+                textBox56.Clear();
+                textBox57.Clear();
+                textBox58.Clear();
+                richTextBox10.Clear(); //address
+
+                LoadProducts();
             }
             catch (Exception ex)
             {
@@ -573,7 +645,7 @@ namespace StufoodSystem_ADMIN.Views
 
             schoolListView.Items.Clear();
 
-            foreach(AffiliatedSchool school in schools)
+            foreach (AffiliatedSchool school in schools)
             {
                 ListViewItem item = new ListViewItem(school.schoolId); //0
                 item.SubItems.Add(school.schoolName); //1
@@ -591,7 +663,7 @@ namespace StufoodSystem_ADMIN.Views
             List<Supplier> suppliers = SupplierController.GetAllSupplier();
             supplierListView.Items.Clear();
 
-            foreach(Supplier supplier in suppliers)
+            foreach (Supplier supplier in suppliers)
             {
                 ListViewItem item = new ListViewItem(supplier.supplierId); //0
                 item.SubItems.Add(supplier.supplierName);//1
@@ -609,7 +681,7 @@ namespace StufoodSystem_ADMIN.Views
             List<Ingredient> ingredients = IngredientController.GetAllIgredient();
             ingredientListView.Items.Clear();
 
-            foreach(Ingredient ingredient in ingredients)
+            foreach (Ingredient ingredient in ingredients)
             {
                 ListViewItem item = new ListViewItem(ingredient.ingredientID); //0
                 item.SubItems.Add(ingredient.ingredientName); //1
@@ -622,6 +694,27 @@ namespace StufoodSystem_ADMIN.Views
                 ingredientListView.Items.Add(item);
 
             }
+        }
+
+        private void LoadProducts()
+        {
+            List<Product> products = ProductController.GetAllProduct();
+            productListView.Items.Clear();
+
+            foreach (Product product in products)
+            {
+                ListViewItem item = new ListViewItem(product.ProductId); //0
+                item.SubItems.Add(product.ProductName); //1
+                item.SubItems.Add(product.ProductDescription);//2
+                item.SubItems.Add(product.ProductCategory);//3
+                item.SubItems.Add(product.ProductRating.ToString());//4
+                item.SubItems.Add(product.ProductPrice.ToString());//5
+                item.SubItems.Add(product.quantityAvailable.ToString());//6
+
+                productListView.Items.Add(item);
+
+            }
+
         }
 
         

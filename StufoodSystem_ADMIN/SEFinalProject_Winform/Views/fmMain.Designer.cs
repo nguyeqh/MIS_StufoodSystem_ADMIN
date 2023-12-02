@@ -166,6 +166,27 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.IngredientProductListView = new MaterialSkin.Controls.MaterialListView();
+            this.IngredientPerProductID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.IngredientNameProduct = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.IngrdeintProductQuantity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.IngredientCookNote = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.richTextBox10 = new System.Windows.Forms.RichTextBox();
+            this.textBox58 = new System.Windows.Forms.TextBox();
+            this.textBox57 = new System.Windows.Forms.TextBox();
+            this.textBox56 = new System.Windows.Forms.TextBox();
+            this.textBox55 = new System.Windows.Forms.TextBox();
+            this.textBox54 = new System.Windows.Forms.TextBox();
+            this.textBox50 = new System.Windows.Forms.TextBox();
+            this.productListView = new MaterialSkin.Controls.MaterialListView();
+            this.productID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ProductName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ProductDescription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ProductCategory = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ProductRating = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ProductPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.productQuantity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -178,6 +199,15 @@
             this.materialTabSelector2 = new MaterialSkin.Controls.MaterialTabSelector();
             this.materialTabControl3 = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage13 = new System.Windows.Forms.TabPage();
+            this.orderListView = new MaterialSkin.Controls.MaterialListView();
+            this.OrderID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.OrderStatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DateOrdered = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DateReceived = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.OrderTotal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.EmployeeIDOrder = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.OrderSchoolID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label19 = new System.Windows.Forms.Label();
             this.tabPage14 = new System.Windows.Forms.TabPage();
             this.label35 = new System.Windows.Forms.Label();
             this.materialTextBox17 = new MaterialSkin.Controls.MaterialTextBox();
@@ -194,21 +224,7 @@
             this.label23 = new System.Windows.Forms.Label();
             this.materialButton6 = new MaterialSkin.Controls.MaterialButton();
             this.tabPage15 = new System.Windows.Forms.TabPage();
-            this.label40 = new System.Windows.Forms.Label();
-            this.materialTextBox33 = new MaterialSkin.Controls.MaterialTextBox();
-            this.label38 = new System.Windows.Forms.Label();
-            this.materialTextBox34 = new MaterialSkin.Controls.MaterialTextBox();
-            this.label39 = new System.Windows.Forms.Label();
-            this.materialTextBox31 = new MaterialSkin.Controls.MaterialTextBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.materialTextBox32 = new MaterialSkin.Controls.MaterialTextBox();
-            this.label37 = new System.Windows.Forms.Label();
             this.materialButton4 = new MaterialSkin.Controls.MaterialButton();
-            this.materialTextBox19 = new MaterialSkin.Controls.MaterialTextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.materialTextBox18 = new MaterialSkin.Controls.MaterialTextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.tabPage30 = new System.Windows.Forms.TabPage();
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.materialTabSelector3 = new MaterialSkin.Controls.MaterialTabSelector();
             this.materialTabControl4 = new MaterialSkin.Controls.MaterialTabControl();
@@ -245,6 +261,10 @@
             this.materialButton7 = new MaterialSkin.Controls.MaterialButton();
             this.tabPage32 = new System.Windows.Forms.TabPage();
             this.tabPage22 = new System.Windows.Forms.TabPage();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox59 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tabPage11 = new System.Windows.Forms.TabPage();
             this.materialTabSelector5 = new MaterialSkin.Controls.MaterialTabSelector();
@@ -335,27 +355,40 @@
             this.label53 = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
             this.materialButton8 = new MaterialSkin.Controls.MaterialButton();
-            this.label11 = new System.Windows.Forms.Label();
-            this.productListView = new MaterialSkin.Controls.MaterialListView();
-            this.textBox50 = new System.Windows.Forms.TextBox();
-            this.textBox54 = new System.Windows.Forms.TextBox();
-            this.textBox55 = new System.Windows.Forms.TextBox();
-            this.textBox56 = new System.Windows.Forms.TextBox();
-            this.textBox57 = new System.Windows.Forms.TextBox();
-            this.textBox58 = new System.Windows.Forms.TextBox();
-            this.richTextBox10 = new System.Windows.Forms.RichTextBox();
-            this.IngredientProductListView = new MaterialSkin.Controls.MaterialListView();
-            this.productID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ProductName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ProductDescription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ProductCategory = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ProductRating = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ProductPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.productQuantity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.IngredientPerProductID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.IngredientNameProduct = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.IngrdeintProductQuantity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.IngredientCookNote = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.textBox62 = new System.Windows.Forms.TextBox();
+            this.textBox63 = new System.Windows.Forms.TextBox();
+            this.textBox64 = new System.Windows.Forms.TextBox();
+            this.label63 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label65 = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
+            this.textBox65 = new System.Windows.Forms.TextBox();
+            this.textBox66 = new System.Windows.Forms.TextBox();
+            this.textBox67 = new System.Windows.Forms.TextBox();
+            this.textBox68 = new System.Windows.Forms.TextBox();
+            this.label68 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
+            this.orderDetailListView = new MaterialSkin.Controls.MaterialListView();
+            this.materialListView2 = new MaterialSkin.Controls.MaterialListView();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.textBox69 = new System.Windows.Forms.TextBox();
+            this.textBox70 = new System.Windows.Forms.TextBox();
+            this.textBox71 = new System.Windows.Forms.TextBox();
+            this.textBox72 = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.textBox73 = new System.Windows.Forms.TextBox();
+            this.textBox74 = new System.Windows.Forms.TextBox();
+            this.textBox75 = new System.Windows.Forms.TextBox();
+            this.label109 = new System.Windows.Forms.Label();
+            this.orderDetailID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ProductNumberOD = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.QuantityOD = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.materialTabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.materialTabControl8.SuspendLayout();
@@ -373,12 +406,14 @@
             this.tabPage7.SuspendLayout();
             this.tabPage9.SuspendLayout();
             this.materialTabControl3.SuspendLayout();
+            this.tabPage13.SuspendLayout();
             this.tabPage14.SuspendLayout();
             this.tabPage15.SuspendLayout();
             this.tabPage10.SuspendLayout();
             this.materialTabControl4.SuspendLayout();
             this.tabPage12.SuspendLayout();
             this.tabPage16.SuspendLayout();
+            this.tabPage22.SuspendLayout();
             this.tabPage11.SuspendLayout();
             this.materialTabControl5.SuspendLayout();
             this.tabPage18.SuspendLayout();
@@ -1958,6 +1993,175 @@
             this.tabPage7.Text = "Update Product";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
+            // IngredientProductListView
+            // 
+            this.IngredientProductListView.AutoSizeTable = false;
+            this.IngredientProductListView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.IngredientProductListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.IngredientProductListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.IngredientPerProductID,
+            this.IngredientNameProduct,
+            this.IngrdeintProductQuantity,
+            this.IngredientCookNote});
+            this.IngredientProductListView.Depth = 0;
+            this.IngredientProductListView.FullRowSelect = true;
+            this.IngredientProductListView.HideSelection = false;
+            this.IngredientProductListView.Location = new System.Drawing.Point(585, 264);
+            this.IngredientProductListView.MinimumSize = new System.Drawing.Size(200, 100);
+            this.IngredientProductListView.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.IngredientProductListView.MouseState = MaterialSkin.MouseState.OUT;
+            this.IngredientProductListView.Name = "IngredientProductListView";
+            this.IngredientProductListView.OwnerDraw = true;
+            this.IngredientProductListView.Size = new System.Drawing.Size(586, 142);
+            this.IngredientProductListView.TabIndex = 51;
+            this.IngredientProductListView.UseCompatibleStateImageBehavior = false;
+            this.IngredientProductListView.View = System.Windows.Forms.View.Details;
+            // 
+            // IngredientPerProductID
+            // 
+            this.IngredientPerProductID.Text = "ID";
+            this.IngredientPerProductID.Width = 80;
+            // 
+            // IngredientNameProduct
+            // 
+            this.IngredientNameProduct.Text = "Ingredient";
+            this.IngredientNameProduct.Width = 200;
+            // 
+            // IngrdeintProductQuantity
+            // 
+            this.IngrdeintProductQuantity.Text = "Quantity";
+            this.IngrdeintProductQuantity.Width = 100;
+            // 
+            // IngredientCookNote
+            // 
+            this.IngredientCookNote.Text = "Notes";
+            this.IngredientCookNote.Width = 200;
+            // 
+            // richTextBox10
+            // 
+            this.richTextBox10.Location = new System.Drawing.Point(98, 356);
+            this.richTextBox10.Name = "richTextBox10";
+            this.richTextBox10.Size = new System.Drawing.Size(191, 96);
+            this.richTextBox10.TabIndex = 50;
+            this.richTextBox10.Text = "";
+            // 
+            // textBox58
+            // 
+            this.textBox58.Location = new System.Drawing.Point(395, 322);
+            this.textBox58.Name = "textBox58";
+            this.textBox58.Size = new System.Drawing.Size(163, 26);
+            this.textBox58.TabIndex = 49;
+            // 
+            // textBox57
+            // 
+            this.textBox57.Location = new System.Drawing.Point(395, 285);
+            this.textBox57.Name = "textBox57";
+            this.textBox57.Size = new System.Drawing.Size(163, 26);
+            this.textBox57.TabIndex = 48;
+            // 
+            // textBox56
+            // 
+            this.textBox56.Location = new System.Drawing.Point(395, 247);
+            this.textBox56.Name = "textBox56";
+            this.textBox56.Size = new System.Drawing.Size(163, 26);
+            this.textBox56.TabIndex = 47;
+            // 
+            // textBox55
+            // 
+            this.textBox55.Location = new System.Drawing.Point(78, 313);
+            this.textBox55.Name = "textBox55";
+            this.textBox55.Size = new System.Drawing.Size(211, 26);
+            this.textBox55.TabIndex = 46;
+            // 
+            // textBox54
+            // 
+            this.textBox54.Location = new System.Drawing.Point(78, 279);
+            this.textBox54.Name = "textBox54";
+            this.textBox54.Size = new System.Drawing.Size(211, 26);
+            this.textBox54.TabIndex = 45;
+            // 
+            // textBox50
+            // 
+            this.textBox50.AllowDrop = true;
+            this.textBox50.Location = new System.Drawing.Point(78, 247);
+            this.textBox50.Name = "textBox50";
+            this.textBox50.ReadOnly = true;
+            this.textBox50.Size = new System.Drawing.Size(163, 26);
+            this.textBox50.TabIndex = 44;
+            // 
+            // productListView
+            // 
+            this.productListView.AutoSizeTable = false;
+            this.productListView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.productListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.productListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.productID,
+            this.ProductName,
+            this.ProductDescription,
+            this.ProductCategory,
+            this.ProductRating,
+            this.ProductPrice,
+            this.productQuantity});
+            this.productListView.Depth = 0;
+            this.productListView.FullRowSelect = true;
+            this.productListView.HideSelection = false;
+            this.productListView.Location = new System.Drawing.Point(0, 0);
+            this.productListView.MinimumSize = new System.Drawing.Size(200, 100);
+            this.productListView.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.productListView.MouseState = MaterialSkin.MouseState.OUT;
+            this.productListView.Name = "productListView";
+            this.productListView.OwnerDraw = true;
+            this.productListView.Size = new System.Drawing.Size(1197, 233);
+            this.productListView.TabIndex = 43;
+            this.productListView.UseCompatibleStateImageBehavior = false;
+            this.productListView.View = System.Windows.Forms.View.Details;
+            this.productListView.SelectedIndexChanged += new System.EventHandler(this.productListView_SelectedIndexChanged);
+            // 
+            // productID
+            // 
+            this.productID.Text = "ID";
+            this.productID.Width = 100;
+            // 
+            // ProductName
+            // 
+            this.ProductName.Text = "Name";
+            this.ProductName.Width = 200;
+            // 
+            // ProductDescription
+            // 
+            this.ProductDescription.Text = "Description";
+            this.ProductDescription.Width = 200;
+            // 
+            // ProductCategory
+            // 
+            this.ProductCategory.Text = "Category";
+            this.ProductCategory.Width = 200;
+            // 
+            // ProductRating
+            // 
+            this.ProductRating.Text = "Rating";
+            this.ProductRating.Width = 150;
+            // 
+            // ProductPrice
+            // 
+            this.ProductPrice.Text = "Price";
+            this.ProductPrice.Width = 150;
+            // 
+            // productQuantity
+            // 
+            this.productQuantity.Text = "Quantity";
+            this.productQuantity.Width = 150;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(581, 241);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(81, 20);
+            this.label11.TabIndex = 42;
+            this.label11.Text = "Ingredient";
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -2068,20 +2272,20 @@
             this.materialTabSelector2.CharacterCasing = MaterialSkin.Controls.MaterialTabSelector.CustomCharacterCasing.Normal;
             this.materialTabSelector2.Depth = 0;
             this.materialTabSelector2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTabSelector2.Location = new System.Drawing.Point(4, 15);
+            this.materialTabSelector2.Location = new System.Drawing.Point(267, 8);
             this.materialTabSelector2.Margin = new System.Windows.Forms.Padding(2);
             this.materialTabSelector2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabSelector2.Name = "materialTabSelector2";
-            this.materialTabSelector2.Size = new System.Drawing.Size(488, 27);
+            this.materialTabSelector2.Size = new System.Drawing.Size(530, 27);
             this.materialTabSelector2.TabIndex = 1;
             this.materialTabSelector2.Text = "materialTabSelector2";
+            this.materialTabSelector2.Click += new System.EventHandler(this.materialTabSelector2_Click);
             // 
             // materialTabControl3
             // 
             this.materialTabControl3.Controls.Add(this.tabPage13);
             this.materialTabControl3.Controls.Add(this.tabPage14);
             this.materialTabControl3.Controls.Add(this.tabPage15);
-            this.materialTabControl3.Controls.Add(this.tabPage30);
             this.materialTabControl3.Depth = 0;
             this.materialTabControl3.Location = new System.Drawing.Point(4, 39);
             this.materialTabControl3.Margin = new System.Windows.Forms.Padding(2);
@@ -2089,19 +2293,108 @@
             this.materialTabControl3.Multiline = true;
             this.materialTabControl3.Name = "materialTabControl3";
             this.materialTabControl3.SelectedIndex = 0;
-            this.materialTabControl3.Size = new System.Drawing.Size(664, 270);
+            this.materialTabControl3.Size = new System.Drawing.Size(1196, 432);
             this.materialTabControl3.TabIndex = 0;
             // 
             // tabPage13
             // 
+            this.tabPage13.Controls.Add(this.orderDetailListView);
+            this.tabPage13.Controls.Add(this.label69);
+            this.tabPage13.Controls.Add(this.label68);
+            this.tabPage13.Controls.Add(this.textBox68);
+            this.tabPage13.Controls.Add(this.textBox67);
+            this.tabPage13.Controls.Add(this.textBox66);
+            this.tabPage13.Controls.Add(this.textBox65);
+            this.tabPage13.Controls.Add(this.label67);
+            this.tabPage13.Controls.Add(this.label66);
+            this.tabPage13.Controls.Add(this.label65);
+            this.tabPage13.Controls.Add(this.label64);
+            this.tabPage13.Controls.Add(this.label63);
+            this.tabPage13.Controls.Add(this.textBox64);
+            this.tabPage13.Controls.Add(this.textBox63);
+            this.tabPage13.Controls.Add(this.textBox62);
+            this.tabPage13.Controls.Add(this.orderListView);
+            this.tabPage13.Controls.Add(this.label19);
             this.tabPage13.Location = new System.Drawing.Point(4, 29);
             this.tabPage13.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage13.Name = "tabPage13";
             this.tabPage13.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage13.Size = new System.Drawing.Size(656, 237);
+            this.tabPage13.Size = new System.Drawing.Size(1188, 399);
             this.tabPage13.TabIndex = 0;
             this.tabPage13.Text = "Lists";
             this.tabPage13.UseVisualStyleBackColor = true;
+            // 
+            // orderListView
+            // 
+            this.orderListView.AutoSizeTable = false;
+            this.orderListView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.orderListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.orderListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.OrderID,
+            this.OrderStatus,
+            this.DateOrdered,
+            this.DateReceived,
+            this.OrderTotal,
+            this.EmployeeIDOrder,
+            this.OrderSchoolID});
+            this.orderListView.Depth = 0;
+            this.orderListView.FullRowSelect = true;
+            this.orderListView.HideSelection = false;
+            this.orderListView.Location = new System.Drawing.Point(47, 5);
+            this.orderListView.MinimumSize = new System.Drawing.Size(200, 100);
+            this.orderListView.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.orderListView.MouseState = MaterialSkin.MouseState.OUT;
+            this.orderListView.Name = "orderListView";
+            this.orderListView.OwnerDraw = true;
+            this.orderListView.Size = new System.Drawing.Size(1058, 161);
+            this.orderListView.TabIndex = 1;
+            this.orderListView.UseCompatibleStateImageBehavior = false;
+            this.orderListView.View = System.Windows.Forms.View.Details;
+            this.orderListView.SelectedIndexChanged += new System.EventHandler(this.orderListView_SelectedIndexChanged);
+            // 
+            // OrderID
+            // 
+            this.OrderID.Text = "ID";
+            this.OrderID.Width = 80;
+            // 
+            // OrderStatus
+            // 
+            this.OrderStatus.Text = "Status";
+            this.OrderStatus.Width = 150;
+            // 
+            // DateOrdered
+            // 
+            this.DateOrdered.Text = "Order Date";
+            this.DateOrdered.Width = 150;
+            // 
+            // DateReceived
+            // 
+            this.DateReceived.Text = "Receive Date";
+            this.DateReceived.Width = 150;
+            // 
+            // OrderTotal
+            // 
+            this.OrderTotal.Text = "Total";
+            this.OrderTotal.Width = 80;
+            // 
+            // EmployeeIDOrder
+            // 
+            this.EmployeeIDOrder.Text = "Employee";
+            this.EmployeeIDOrder.Width = 200;
+            // 
+            // OrderSchoolID
+            // 
+            this.OrderSchoolID.Text = "School";
+            this.OrderSchoolID.Width = 200;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(43, 193);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(70, 20);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "Order ID";
             // 
             // tabPage14
             // 
@@ -2123,7 +2416,7 @@
             this.tabPage14.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage14.Name = "tabPage14";
             this.tabPage14.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage14.Size = new System.Drawing.Size(656, 237);
+            this.tabPage14.Size = new System.Drawing.Size(1188, 399);
             this.tabPage14.TabIndex = 1;
             this.tabPage14.Text = "Create";
             this.tabPage14.UseVisualStyleBackColor = true;
@@ -2327,150 +2620,31 @@
             // 
             // tabPage15
             // 
-            this.tabPage15.Controls.Add(this.label40);
-            this.tabPage15.Controls.Add(this.materialTextBox33);
-            this.tabPage15.Controls.Add(this.label38);
-            this.tabPage15.Controls.Add(this.materialTextBox34);
-            this.tabPage15.Controls.Add(this.label39);
-            this.tabPage15.Controls.Add(this.materialTextBox31);
-            this.tabPage15.Controls.Add(this.label36);
-            this.tabPage15.Controls.Add(this.materialTextBox32);
-            this.tabPage15.Controls.Add(this.label37);
-            this.tabPage15.Controls.Add(this.materialButton4);
-            this.tabPage15.Controls.Add(this.materialTextBox19);
-            this.tabPage15.Controls.Add(this.label22);
-            this.tabPage15.Controls.Add(this.materialTextBox18);
+            this.tabPage15.Controls.Add(this.materialListView2);
             this.tabPage15.Controls.Add(this.label21);
+            this.tabPage15.Controls.Add(this.label22);
+            this.tabPage15.Controls.Add(this.textBox69);
+            this.tabPage15.Controls.Add(this.textBox70);
+            this.tabPage15.Controls.Add(this.textBox71);
+            this.tabPage15.Controls.Add(this.textBox72);
+            this.tabPage15.Controls.Add(this.label36);
+            this.tabPage15.Controls.Add(this.label37);
+            this.tabPage15.Controls.Add(this.label38);
+            this.tabPage15.Controls.Add(this.label39);
+            this.tabPage15.Controls.Add(this.label40);
+            this.tabPage15.Controls.Add(this.textBox73);
+            this.tabPage15.Controls.Add(this.textBox74);
+            this.tabPage15.Controls.Add(this.textBox75);
+            this.tabPage15.Controls.Add(this.label109);
+            this.tabPage15.Controls.Add(this.materialButton4);
             this.tabPage15.Location = new System.Drawing.Point(4, 29);
             this.tabPage15.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage15.Name = "tabPage15";
             this.tabPage15.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage15.Size = new System.Drawing.Size(656, 237);
+            this.tabPage15.Size = new System.Drawing.Size(1188, 399);
             this.tabPage15.TabIndex = 2;
             this.tabPage15.Text = "Update";
             this.tabPage15.UseVisualStyleBackColor = true;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(251, 13);
-            this.label40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(106, 20);
-            this.label40.TabIndex = 22;
-            this.label40.Text = "Update Order";
-            // 
-            // materialTextBox33
-            // 
-            this.materialTextBox33.AnimateReadOnly = false;
-            this.materialTextBox33.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox33.Depth = 0;
-            this.materialTextBox33.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox33.LeadingIcon = null;
-            this.materialTextBox33.Location = new System.Drawing.Point(388, 36);
-            this.materialTextBox33.Margin = new System.Windows.Forms.Padding(2);
-            this.materialTextBox33.MaxLength = 50;
-            this.materialTextBox33.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox33.Multiline = false;
-            this.materialTextBox33.Name = "materialTextBox33";
-            this.materialTextBox33.Size = new System.Drawing.Size(170, 50);
-            this.materialTextBox33.TabIndex = 21;
-            this.materialTextBox33.Text = "";
-            this.materialTextBox33.TrailingIcon = null;
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(310, 57);
-            this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(60, 20);
-            this.label38.TabIndex = 20;
-            this.label38.Text = "label38";
-            // 
-            // materialTextBox34
-            // 
-            this.materialTextBox34.AnimateReadOnly = false;
-            this.materialTextBox34.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox34.Depth = 0;
-            this.materialTextBox34.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox34.LeadingIcon = null;
-            this.materialTextBox34.Location = new System.Drawing.Point(94, 36);
-            this.materialTextBox34.Margin = new System.Windows.Forms.Padding(2);
-            this.materialTextBox34.MaxLength = 50;
-            this.materialTextBox34.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox34.Multiline = false;
-            this.materialTextBox34.Name = "materialTextBox34";
-            this.materialTextBox34.Size = new System.Drawing.Size(170, 50);
-            this.materialTextBox34.TabIndex = 19;
-            this.materialTextBox34.Text = "";
-            this.materialTextBox34.TrailingIcon = null;
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(16, 57);
-            this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(60, 20);
-            this.label39.TabIndex = 18;
-            this.label39.Text = "label39";
-            // 
-            // materialTextBox31
-            // 
-            this.materialTextBox31.AnimateReadOnly = false;
-            this.materialTextBox31.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox31.Depth = 0;
-            this.materialTextBox31.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox31.LeadingIcon = null;
-            this.materialTextBox31.Location = new System.Drawing.Point(388, 134);
-            this.materialTextBox31.Margin = new System.Windows.Forms.Padding(2);
-            this.materialTextBox31.MaxLength = 50;
-            this.materialTextBox31.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox31.Multiline = false;
-            this.materialTextBox31.Name = "materialTextBox31";
-            this.materialTextBox31.Size = new System.Drawing.Size(170, 50);
-            this.materialTextBox31.TabIndex = 17;
-            this.materialTextBox31.Text = "";
-            this.materialTextBox31.TrailingIcon = null;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(310, 155);
-            this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(60, 20);
-            this.label36.TabIndex = 16;
-            this.label36.Text = "label36";
-            // 
-            // materialTextBox32
-            // 
-            this.materialTextBox32.AnimateReadOnly = false;
-            this.materialTextBox32.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox32.Depth = 0;
-            this.materialTextBox32.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox32.LeadingIcon = null;
-            this.materialTextBox32.Location = new System.Drawing.Point(388, 81);
-            this.materialTextBox32.Margin = new System.Windows.Forms.Padding(2);
-            this.materialTextBox32.MaxLength = 50;
-            this.materialTextBox32.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox32.Multiline = false;
-            this.materialTextBox32.Name = "materialTextBox32";
-            this.materialTextBox32.Size = new System.Drawing.Size(170, 50);
-            this.materialTextBox32.TabIndex = 15;
-            this.materialTextBox32.Text = "";
-            this.materialTextBox32.TrailingIcon = null;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(310, 102);
-            this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(60, 20);
-            this.label37.TabIndex = 14;
-            this.label37.Text = "label37";
             // 
             // materialButton4
             // 
@@ -2479,7 +2653,7 @@
             this.materialButton4.Depth = 0;
             this.materialButton4.HighEmphasis = true;
             this.materialButton4.Icon = null;
-            this.materialButton4.Location = new System.Drawing.Point(247, 194);
+            this.materialButton4.Location = new System.Drawing.Point(1034, 338);
             this.materialButton4.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.materialButton4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton4.Name = "materialButton4";
@@ -2490,73 +2664,6 @@
             this.materialButton4.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.materialButton4.UseAccentColor = false;
             this.materialButton4.UseVisualStyleBackColor = true;
-            // 
-            // materialTextBox19
-            // 
-            this.materialTextBox19.AnimateReadOnly = false;
-            this.materialTextBox19.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox19.Depth = 0;
-            this.materialTextBox19.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox19.LeadingIcon = null;
-            this.materialTextBox19.Location = new System.Drawing.Point(94, 134);
-            this.materialTextBox19.Margin = new System.Windows.Forms.Padding(2);
-            this.materialTextBox19.MaxLength = 50;
-            this.materialTextBox19.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox19.Multiline = false;
-            this.materialTextBox19.Name = "materialTextBox19";
-            this.materialTextBox19.Size = new System.Drawing.Size(170, 50);
-            this.materialTextBox19.TabIndex = 5;
-            this.materialTextBox19.Text = "";
-            this.materialTextBox19.TrailingIcon = null;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(16, 155);
-            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(60, 20);
-            this.label22.TabIndex = 4;
-            this.label22.Text = "label22";
-            // 
-            // materialTextBox18
-            // 
-            this.materialTextBox18.AnimateReadOnly = false;
-            this.materialTextBox18.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox18.Depth = 0;
-            this.materialTextBox18.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox18.LeadingIcon = null;
-            this.materialTextBox18.Location = new System.Drawing.Point(94, 81);
-            this.materialTextBox18.Margin = new System.Windows.Forms.Padding(2);
-            this.materialTextBox18.MaxLength = 50;
-            this.materialTextBox18.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox18.Multiline = false;
-            this.materialTextBox18.Name = "materialTextBox18";
-            this.materialTextBox18.Size = new System.Drawing.Size(170, 50);
-            this.materialTextBox18.TabIndex = 3;
-            this.materialTextBox18.Text = "";
-            this.materialTextBox18.TrailingIcon = null;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(16, 102);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(60, 20);
-            this.label21.TabIndex = 2;
-            this.label21.Text = "label21";
-            // 
-            // tabPage30
-            // 
-            this.tabPage30.Location = new System.Drawing.Point(4, 29);
-            this.tabPage30.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage30.Name = "tabPage30";
-            this.tabPage30.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage30.Size = new System.Drawing.Size(656, 237);
-            this.tabPage30.TabIndex = 3;
-            this.tabPage30.Text = "Order Detail";
-            this.tabPage30.UseVisualStyleBackColor = true;
             // 
             // tabPage10
             // 
@@ -3070,6 +3177,10 @@
             // 
             // tabPage22
             // 
+            this.tabPage22.Controls.Add(this.comboBox1);
+            this.tabPage22.Controls.Add(this.label10);
+            this.tabPage22.Controls.Add(this.textBox59);
+            this.tabPage22.Controls.Add(this.label3);
             this.tabPage22.ImageKey = "icons8-import-100.png";
             this.tabPage22.Location = new System.Drawing.Point(4, 39);
             this.tabPage22.Name = "tabPage22";
@@ -3078,6 +3189,40 @@
             this.tabPage22.TabIndex = 5;
             this.tabPage22.Text = "Ingredient for Product";
             this.tabPage22.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(113, 80);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(193, 28);
+            this.comboBox1.TabIndex = 32;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(30, 88);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(64, 20);
+            this.label10.TabIndex = 31;
+            this.label10.Text = "Product";
+            // 
+            // textBox59
+            // 
+            this.textBox59.Location = new System.Drawing.Point(113, 30);
+            this.textBox59.Name = "textBox59";
+            this.textBox59.Size = new System.Drawing.Size(193, 26);
+            this.textBox59.TabIndex = 30;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(68, 36);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(26, 20);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "ID";
             // 
             // imageList1
             // 
@@ -4023,174 +4168,297 @@
             this.materialButton8.UseVisualStyleBackColor = true;
             this.materialButton8.Click += new System.EventHandler(this.materialButton8_Click);
             // 
-            // label11
+            // textBox62
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(581, 241);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(81, 20);
-            this.label11.TabIndex = 42;
-            this.label11.Text = "Ingredient";
+            this.textBox62.Location = new System.Drawing.Point(119, 187);
+            this.textBox62.Name = "textBox62";
+            this.textBox62.ReadOnly = true;
+            this.textBox62.Size = new System.Drawing.Size(113, 26);
+            this.textBox62.TabIndex = 7;
             // 
-            // productListView
+            // textBox63
             // 
-            this.productListView.AutoSizeTable = false;
-            this.productListView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.productListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.productListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.productID,
-            this.ProductName,
-            this.ProductDescription,
-            this.ProductCategory,
-            this.ProductRating,
-            this.ProductPrice,
-            this.productQuantity});
-            this.productListView.Depth = 0;
-            this.productListView.FullRowSelect = true;
-            this.productListView.HideSelection = false;
-            this.productListView.Location = new System.Drawing.Point(0, 0);
-            this.productListView.MinimumSize = new System.Drawing.Size(200, 100);
-            this.productListView.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.productListView.MouseState = MaterialSkin.MouseState.OUT;
-            this.productListView.Name = "productListView";
-            this.productListView.OwnerDraw = true;
-            this.productListView.Size = new System.Drawing.Size(1197, 233);
-            this.productListView.TabIndex = 43;
-            this.productListView.UseCompatibleStateImageBehavior = false;
-            this.productListView.View = System.Windows.Forms.View.Details;
-            this.productListView.SelectedIndexChanged += new System.EventHandler(this.productListView_SelectedIndexChanged);
+            this.textBox63.Location = new System.Drawing.Point(119, 216);
+            this.textBox63.Name = "textBox63";
+            this.textBox63.Size = new System.Drawing.Size(189, 26);
+            this.textBox63.TabIndex = 8;
             // 
-            // textBox50
+            // textBox64
             // 
-            this.textBox50.AllowDrop = true;
-            this.textBox50.Location = new System.Drawing.Point(78, 247);
-            this.textBox50.Name = "textBox50";
-            this.textBox50.ReadOnly = true;
-            this.textBox50.Size = new System.Drawing.Size(163, 26);
-            this.textBox50.TabIndex = 44;
+            this.textBox64.Location = new System.Drawing.Point(119, 245);
+            this.textBox64.Name = "textBox64";
+            this.textBox64.Size = new System.Drawing.Size(189, 26);
+            this.textBox64.TabIndex = 9;
             // 
-            // textBox54
+            // label63
             // 
-            this.textBox54.Location = new System.Drawing.Point(78, 279);
-            this.textBox54.Name = "textBox54";
-            this.textBox54.Size = new System.Drawing.Size(211, 26);
-            this.textBox54.TabIndex = 45;
+            this.label63.AutoSize = true;
+            this.label63.Location = new System.Drawing.Point(57, 222);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(56, 20);
+            this.label63.TabIndex = 10;
+            this.label63.Text = "Status";
             // 
-            // textBox55
+            // label64
             // 
-            this.textBox55.Location = new System.Drawing.Point(78, 313);
-            this.textBox55.Name = "textBox55";
-            this.textBox55.Size = new System.Drawing.Size(211, 26);
-            this.textBox55.TabIndex = 46;
+            this.label64.AutoSize = true;
+            this.label64.Location = new System.Drawing.Point(25, 248);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(88, 20);
+            this.label64.TabIndex = 11;
+            this.label64.Text = "Order Date";
             // 
-            // textBox56
+            // label65
             // 
-            this.textBox56.Location = new System.Drawing.Point(395, 247);
-            this.textBox56.Name = "textBox56";
-            this.textBox56.Size = new System.Drawing.Size(163, 26);
-            this.textBox56.TabIndex = 47;
+            this.label65.AutoSize = true;
+            this.label65.Location = new System.Drawing.Point(8, 279);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(105, 20);
+            this.label65.TabIndex = 12;
+            this.label65.Text = "Receive Date";
             // 
-            // textBox57
+            // label66
             // 
-            this.textBox57.Location = new System.Drawing.Point(395, 285);
-            this.textBox57.Name = "textBox57";
-            this.textBox57.Size = new System.Drawing.Size(163, 26);
-            this.textBox57.TabIndex = 48;
+            this.label66.AutoSize = true;
+            this.label66.Location = new System.Drawing.Point(69, 311);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(44, 20);
+            this.label66.TabIndex = 13;
+            this.label66.Text = "Total";
             // 
-            // textBox58
+            // label67
             // 
-            this.textBox58.Location = new System.Drawing.Point(395, 322);
-            this.textBox58.Name = "textBox58";
-            this.textBox58.Size = new System.Drawing.Size(163, 26);
-            this.textBox58.TabIndex = 49;
+            this.label67.AutoSize = true;
+            this.label67.Location = new System.Drawing.Point(34, 340);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(79, 20);
+            this.label67.TabIndex = 14;
+            this.label67.Text = "Employee";
             // 
-            // richTextBox10
+            // textBox65
             // 
-            this.richTextBox10.Location = new System.Drawing.Point(98, 356);
-            this.richTextBox10.Name = "richTextBox10";
-            this.richTextBox10.Size = new System.Drawing.Size(191, 96);
-            this.richTextBox10.TabIndex = 50;
-            this.richTextBox10.Text = "";
+            this.textBox65.Location = new System.Drawing.Point(119, 276);
+            this.textBox65.Name = "textBox65";
+            this.textBox65.Size = new System.Drawing.Size(189, 26);
+            this.textBox65.TabIndex = 15;
             // 
-            // IngredientProductListView
+            // textBox66
             // 
-            this.IngredientProductListView.AutoSizeTable = false;
-            this.IngredientProductListView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.IngredientProductListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.IngredientProductListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.IngredientPerProductID,
-            this.IngredientNameProduct,
-            this.IngrdeintProductQuantity,
-            this.IngredientCookNote});
-            this.IngredientProductListView.Depth = 0;
-            this.IngredientProductListView.FullRowSelect = true;
-            this.IngredientProductListView.HideSelection = false;
-            this.IngredientProductListView.Location = new System.Drawing.Point(585, 264);
-            this.IngredientProductListView.MinimumSize = new System.Drawing.Size(200, 100);
-            this.IngredientProductListView.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.IngredientProductListView.MouseState = MaterialSkin.MouseState.OUT;
-            this.IngredientProductListView.Name = "IngredientProductListView";
-            this.IngredientProductListView.OwnerDraw = true;
-            this.IngredientProductListView.Size = new System.Drawing.Size(586, 142);
-            this.IngredientProductListView.TabIndex = 51;
-            this.IngredientProductListView.UseCompatibleStateImageBehavior = false;
-            this.IngredientProductListView.View = System.Windows.Forms.View.Details;
+            this.textBox66.Location = new System.Drawing.Point(119, 305);
+            this.textBox66.Name = "textBox66";
+            this.textBox66.Size = new System.Drawing.Size(189, 26);
+            this.textBox66.TabIndex = 16;
             // 
-            // productID
+            // textBox67
             // 
-            this.productID.Text = "ID";
-            this.productID.Width = 100;
+            this.textBox67.Location = new System.Drawing.Point(119, 337);
+            this.textBox67.Name = "textBox67";
+            this.textBox67.Size = new System.Drawing.Size(189, 26);
+            this.textBox67.TabIndex = 17;
             // 
-            // ProductName
+            // textBox68
             // 
-            this.ProductName.Text = "Name";
-            this.ProductName.Width = 200;
+            this.textBox68.Location = new System.Drawing.Point(119, 367);
+            this.textBox68.Name = "textBox68";
+            this.textBox68.Size = new System.Drawing.Size(189, 26);
+            this.textBox68.TabIndex = 18;
             // 
-            // ProductDescription
+            // label68
             // 
-            this.ProductDescription.Text = "Description";
-            this.ProductDescription.Width = 200;
+            this.label68.AutoSize = true;
+            this.label68.Location = new System.Drawing.Point(55, 370);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(58, 20);
+            this.label68.TabIndex = 19;
+            this.label68.Text = "School";
             // 
-            // ProductCategory
+            // label69
             // 
-            this.ProductCategory.Text = "Category";
-            this.ProductCategory.Width = 200;
+            this.label69.AutoSize = true;
+            this.label69.Location = new System.Drawing.Point(453, 187);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(102, 20);
+            this.label69.TabIndex = 20;
+            this.label69.Text = "Order Details";
             // 
-            // ProductRating
+            // orderDetailListView
             // 
-            this.ProductRating.Text = "Rating";
-            this.ProductRating.Width = 150;
+            this.orderDetailListView.AutoSizeTable = false;
+            this.orderDetailListView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.orderDetailListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.orderDetailListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.orderDetailID,
+            this.ProductNumberOD,
+            this.QuantityOD});
+            this.orderDetailListView.Depth = 0;
+            this.orderDetailListView.FullRowSelect = true;
+            this.orderDetailListView.HideSelection = false;
+            this.orderDetailListView.Location = new System.Drawing.Point(457, 216);
+            this.orderDetailListView.MinimumSize = new System.Drawing.Size(200, 100);
+            this.orderDetailListView.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.orderDetailListView.MouseState = MaterialSkin.MouseState.OUT;
+            this.orderDetailListView.Name = "orderDetailListView";
+            this.orderDetailListView.OwnerDraw = true;
+            this.orderDetailListView.Size = new System.Drawing.Size(502, 174);
+            this.orderDetailListView.TabIndex = 21;
+            this.orderDetailListView.UseCompatibleStateImageBehavior = false;
+            this.orderDetailListView.View = System.Windows.Forms.View.Details;
             // 
-            // ProductPrice
+            // materialListView2
             // 
-            this.ProductPrice.Text = "Price";
-            this.ProductPrice.Width = 150;
+            this.materialListView2.AutoSizeTable = false;
+            this.materialListView2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialListView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.materialListView2.Depth = 0;
+            this.materialListView2.FullRowSelect = true;
+            this.materialListView2.HideSelection = false;
+            this.materialListView2.Location = new System.Drawing.Point(408, 49);
+            this.materialListView2.MinimumSize = new System.Drawing.Size(200, 100);
+            this.materialListView2.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialListView2.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialListView2.Name = "materialListView2";
+            this.materialListView2.OwnerDraw = true;
+            this.materialListView2.Size = new System.Drawing.Size(496, 136);
+            this.materialListView2.TabIndex = 37;
+            this.materialListView2.UseCompatibleStateImageBehavior = false;
+            this.materialListView2.View = System.Windows.Forms.View.Details;
             // 
-            // productQuantity
+            // label21
             // 
-            this.productQuantity.Text = "Quantity";
-            this.productQuantity.Width = 150;
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(404, 20);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(102, 20);
+            this.label21.TabIndex = 36;
+            this.label21.Text = "Order Details";
             // 
-            // IngredientPerProductID
+            // label22
             // 
-            this.IngredientPerProductID.Text = "ID";
-            this.IngredientPerProductID.Width = 80;
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(56, 203);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(58, 20);
+            this.label22.TabIndex = 35;
+            this.label22.Text = "School";
             // 
-            // IngredientNameProduct
+            // textBox69
             // 
-            this.IngredientNameProduct.Text = "Ingredient";
-            this.IngredientNameProduct.Width = 200;
+            this.textBox69.Location = new System.Drawing.Point(120, 200);
+            this.textBox69.Name = "textBox69";
+            this.textBox69.Size = new System.Drawing.Size(189, 26);
+            this.textBox69.TabIndex = 34;
             // 
-            // IngrdeintProductQuantity
+            // textBox70
             // 
-            this.IngrdeintProductQuantity.Text = "Quantity";
-            this.IngrdeintProductQuantity.Width = 100;
+            this.textBox70.Location = new System.Drawing.Point(120, 170);
+            this.textBox70.Name = "textBox70";
+            this.textBox70.Size = new System.Drawing.Size(189, 26);
+            this.textBox70.TabIndex = 33;
             // 
-            // IngredientCookNote
+            // textBox71
             // 
-            this.IngredientCookNote.Text = "Notes";
-            this.IngredientCookNote.Width = 200;
+            this.textBox71.Location = new System.Drawing.Point(120, 138);
+            this.textBox71.Name = "textBox71";
+            this.textBox71.Size = new System.Drawing.Size(189, 26);
+            this.textBox71.TabIndex = 32;
+            // 
+            // textBox72
+            // 
+            this.textBox72.Location = new System.Drawing.Point(120, 109);
+            this.textBox72.Name = "textBox72";
+            this.textBox72.Size = new System.Drawing.Size(189, 26);
+            this.textBox72.TabIndex = 31;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(35, 173);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(79, 20);
+            this.label36.TabIndex = 30;
+            this.label36.Text = "Employee";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(70, 144);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(44, 20);
+            this.label37.TabIndex = 29;
+            this.label37.Text = "Total";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(9, 112);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(105, 20);
+            this.label38.TabIndex = 28;
+            this.label38.Text = "Receive Date";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(26, 81);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(88, 20);
+            this.label39.TabIndex = 27;
+            this.label39.Text = "Order Date";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(58, 55);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(56, 20);
+            this.label40.TabIndex = 26;
+            this.label40.Text = "Status";
+            // 
+            // textBox73
+            // 
+            this.textBox73.Location = new System.Drawing.Point(120, 78);
+            this.textBox73.Name = "textBox73";
+            this.textBox73.Size = new System.Drawing.Size(189, 26);
+            this.textBox73.TabIndex = 25;
+            // 
+            // textBox74
+            // 
+            this.textBox74.Location = new System.Drawing.Point(120, 49);
+            this.textBox74.Name = "textBox74";
+            this.textBox74.Size = new System.Drawing.Size(189, 26);
+            this.textBox74.TabIndex = 24;
+            // 
+            // textBox75
+            // 
+            this.textBox75.Location = new System.Drawing.Point(120, 20);
+            this.textBox75.Name = "textBox75";
+            this.textBox75.ReadOnly = true;
+            this.textBox75.Size = new System.Drawing.Size(113, 26);
+            this.textBox75.TabIndex = 23;
+            // 
+            // label109
+            // 
+            this.label109.AutoSize = true;
+            this.label109.Location = new System.Drawing.Point(44, 26);
+            this.label109.Name = "label109";
+            this.label109.Size = new System.Drawing.Size(70, 20);
+            this.label109.TabIndex = 22;
+            this.label109.Text = "Order ID";
+            // 
+            // orderDetailID
+            // 
+            this.orderDetailID.Text = "ID";
+            this.orderDetailID.Width = 80;
+            // 
+            // ProductNumberOD
+            // 
+            this.ProductNumberOD.Text = "Product";
+            this.ProductNumberOD.Width = 200;
+            // 
+            // QuantityOD
+            // 
+            this.QuantityOD.Text = "Quantity";
+            this.QuantityOD.Width = 150;
             // 
             // fmMain
             // 
@@ -4229,6 +4497,8 @@
             this.tabPage7.PerformLayout();
             this.tabPage9.ResumeLayout(false);
             this.materialTabControl3.ResumeLayout(false);
+            this.tabPage13.ResumeLayout(false);
+            this.tabPage13.PerformLayout();
             this.tabPage14.ResumeLayout(false);
             this.tabPage14.PerformLayout();
             this.tabPage15.ResumeLayout(false);
@@ -4239,6 +4509,8 @@
             this.tabPage12.PerformLayout();
             this.tabPage16.ResumeLayout(false);
             this.tabPage16.PerformLayout();
+            this.tabPage22.ResumeLayout(false);
+            this.tabPage22.PerformLayout();
             this.tabPage11.ResumeLayout(false);
             this.materialTabControl5.ResumeLayout(false);
             this.tabPage18.ResumeLayout(false);
@@ -4288,10 +4560,6 @@
         private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.TabPage tabPage12;
         private System.Windows.Forms.TabPage tabPage16;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox19;
-        private System.Windows.Forms.Label label22;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox18;
-        private System.Windows.Forms.Label label21;
         private MaterialSkin.Controls.MaterialButton materialButton4;
         private MaterialSkin.Controls.MaterialButton materialButton5;
         private System.Windows.Forms.Label label33;
@@ -4330,15 +4598,6 @@
         private System.Windows.Forms.Label label23;
         private MaterialSkin.Controls.MaterialButton materialButton6;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label40;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox33;
-        private System.Windows.Forms.Label label38;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox34;
-        private System.Windows.Forms.Label label39;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox31;
-        private System.Windows.Forms.Label label36;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox32;
-        private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label41;
         private MaterialSkin.Controls.MaterialTextBox materialTextBox35;
         private System.Windows.Forms.Label label42;
@@ -4371,7 +4630,6 @@
         private MaterialSkin.Controls.MaterialTabControl materialTabControl7;
         private System.Windows.Forms.TabPage tabPage24;
         private System.Windows.Forms.TabPage tabPage26;
-        private System.Windows.Forms.TabPage tabPage30;
         private System.Windows.Forms.TabPage tabPage32;
         private System.Windows.Forms.Label label108;
         private System.Windows.Forms.Label label111;
@@ -4583,5 +4841,52 @@
         private System.Windows.Forms.ColumnHeader ProductPrice;
         private System.Windows.Forms.ColumnHeader productQuantity;
         private System.Windows.Forms.Label label11;
+        private MaterialSkin.Controls.MaterialListView orderListView;
+        private System.Windows.Forms.ColumnHeader OrderID;
+        private System.Windows.Forms.ColumnHeader OrderStatus;
+        private System.Windows.Forms.ColumnHeader DateOrdered;
+        private System.Windows.Forms.ColumnHeader DateReceived;
+        private System.Windows.Forms.ColumnHeader OrderTotal;
+        private System.Windows.Forms.ColumnHeader EmployeeIDOrder;
+        private System.Windows.Forms.ColumnHeader OrderSchoolID;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox59;
+        private System.Windows.Forms.Label label3;
+        private MaterialSkin.Controls.MaterialListView orderDetailListView;
+        private System.Windows.Forms.ColumnHeader orderDetailID;
+        private System.Windows.Forms.ColumnHeader ProductNumberOD;
+        private System.Windows.Forms.ColumnHeader QuantityOD;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.Label label68;
+        private System.Windows.Forms.TextBox textBox68;
+        private System.Windows.Forms.TextBox textBox67;
+        private System.Windows.Forms.TextBox textBox66;
+        private System.Windows.Forms.TextBox textBox65;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.TextBox textBox64;
+        private System.Windows.Forms.TextBox textBox63;
+        private System.Windows.Forms.TextBox textBox62;
+        private MaterialSkin.Controls.MaterialListView materialListView2;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox textBox69;
+        private System.Windows.Forms.TextBox textBox70;
+        private System.Windows.Forms.TextBox textBox71;
+        private System.Windows.Forms.TextBox textBox72;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.TextBox textBox73;
+        private System.Windows.Forms.TextBox textBox74;
+        private System.Windows.Forms.TextBox textBox75;
+        private System.Windows.Forms.Label label109;
     }
 }

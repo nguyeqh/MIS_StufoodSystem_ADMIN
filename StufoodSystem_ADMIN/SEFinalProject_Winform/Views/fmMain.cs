@@ -616,6 +616,46 @@ namespace StufoodSystem_ADMIN.Views
             }
         }
 
+        //---orders---------------------------
+        //LOAD ORDER LIST OF MONTH
+        private void materialTabSelector2_Click(object sender, EventArgs e)
+        {
+            LoadOrders();
+        }
+        //Load order inform to fields
+        private void orderListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (orderListView.SelectedItems.Count > 0)
+            {
+                // Access data from the selected row
+                ListViewItem selectedRow = orderListView.SelectedItems[0];
+
+                textBox62.Text = selectedRow.SubItems[0].Text; //id
+                textBox63.Text = selectedRow.SubItems[1].Text; //status
+                textBox64.Text = selectedRow.SubItems[2].Text; //order date
+                textBox65.Text = selectedRow.SubItems[3].Text; //received date
+                textBox66.Text = selectedRow.SubItems[4].Text; //total
+                textBox67.Text = selectedRow.SubItems[5].Text; //employee
+                textBox68.Text = selectedRow.SubItems[6].Text; //school
+
+                orderDetailListView.Items.Clear();
+
+                List<OrderDetail> orderDetails = OrderController.GetOrderDetailByOrderId(selectedRow.SubItems[0].Text);
+
+                foreach (OrderDetail orderDetail in orderDetails)
+                {
+                    ListViewItem item = new ListViewItem(orderDetail.orderDetailNumber); //0
+                    item.SubItems.Add(orderDetail.product.ProductName); //1
+                    item.SubItems.Add(orderDetail.quantity.ToString()); //2
+
+                    orderDetailListView.Items.Add(item);
+
+                }
+
+            }
+        }
+
+
         //------------------------- FUNCTION ----------------- //
         private void LoadEmployees()
         {
@@ -717,6 +757,29 @@ namespace StufoodSystem_ADMIN.Views
 
         }
 
-        
+        private void LoadOrders()
+        {
+            List<Order> orders = OrderController.GetAllOrder();
+            orderListView.Items.Clear();
+
+            foreach (Order order in orders)
+            {
+                Employee employee = order.employee;
+                AffiliatedSchool school = order.affiliatedSchool;
+
+                ListViewItem item = new ListViewItem(order.orderNumber); //0
+                item.SubItems.Add(order.orderStatus); //1
+                item.SubItems.Add(order.dateOrdered.ToString());//2
+                item.SubItems.Add(order.dateReceived.ToString());//3
+                item.SubItems.Add(order.orderTotal.ToString());//4
+                item.SubItems.Add(employee.employeeName);//5
+                item.SubItems.Add(school.schoolName);//6
+
+                orderListView.Items.Add(item);
+
+            }
+        }
+
+       
     }
 }

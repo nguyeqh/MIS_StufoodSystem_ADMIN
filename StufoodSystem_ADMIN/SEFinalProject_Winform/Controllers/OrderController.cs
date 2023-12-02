@@ -74,6 +74,14 @@ namespace StufoodSystem_ADMIN.Controllers
 
         }
 
+        public static List<Order> GetAllOrder()
+        {
+            String sSQL = "SELECT * FROM ORDER1;";
+
+            List<Order> order = GetOrdersFromDatabase(strConn, sSQL);
+            return order;
+        }
+
         public static Order GetOrderByID(String id)
         {
             String sSQL = "SELECT * FROM ORDER1;";
@@ -193,75 +201,42 @@ namespace StufoodSystem_ADMIN.Controllers
         public static List<OrderDetail> GetOrderDetailByOrderId(String orderID)
         {
             List<OrderDetail> orderDetails = new List<OrderDetail>();
-            using (conn)
+            using (SqlConnection connection = new SqlConnection(strConn))
             {
-                conn.Open();
+                connection.Open();
 
                 //Get order Detail normally
                 string sqlQuery = "SELECT * FROM OrderDetail WHERE OrderNumber = @OrderNumber";
-                using (SqlCommand command = new SqlCommand(sqlQuery, conn))
+                SqlCommand command = new SqlCommand(sqlQuery, connection);
+                command.Parameters.AddWithValue("@OrderNumber", orderID);
+                SqlDataReader reader = command.ExecuteReader();
+                    
+                while (reader.Read())
                 {
-                    command.Parameters.AddWithValue("@OrderNumber", orderID);
+                    String productID = reader["ProductNumber"].ToString();
 
-                    using (SqlDataReader reader = command.ExecuteReader())
+                    Product product1 = ProductController.GetProductByID(productID);
+
+
+                    OrderDetail orderDetail = new OrderDetail
                     {
-                        while (reader.Read())
-                        {
-                            String productID = reader["ProductNumber"].ToString();
+                        orderDetailNumber = reader["OrderDetailID"].ToString(),
+                        orderNumber = reader["OrderNumber"].ToString(),
+                        quantity = Convert.ToInt32(reader["Quantity"]),
+                        discountPercent = 0,
+                        product = product1,
 
-                            Product product1 = ProductController.GetProductByID(productID);
-
-
-                            OrderDetail orderDetail = new OrderDetail
-                            {
-                                orderDetailNumber = reader["OrderDetailID"].ToString(),
-                                orderNumber = reader["OrderNumber"].ToString(),
-                                quantity = Convert.ToInt32(reader["Quantity"]),
-                                discountPercent = 0,
-                                product = product1,
-
-                            };
+                    };
 
 
 
-                            orderDetails.Add(orderDetail);
-                        }
-                    }
+                    orderDetails.Add(orderDetail);
                 }
-
-                //Get order detail with discount - special order
-                sqlQuery = "SELECT * FROM SpecialOrderDetails WHERE OrderNumber = @OrderNumber";
-                using (SqlCommand command = new SqlCommand(sqlQuery, conn))
-                {
-                    command.Parameters.AddWithValue("@OrderNumber", orderID);
-
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            String productID = reader["ProductNumber"].ToString();
-                            Product product1 = ProductController.GetProductByID(productID);
-
-                            OrderDetail orderDetail = new OrderDetail
-                            {
-                                orderDetailNumber = reader["OrderDetailID"].ToString(),
-                                orderNumber = reader["OrderNumber"].ToString(),
-                                quantity = Convert.ToInt32(reader["Quantity"]),
-                                discountPercent = Convert.ToDouble(reader["DiscountPercent"]),
-                                product = product1,
-
-                            };
+                reader.Close();
 
 
-
-                            orderDetails.Add(orderDetail);
-                        }
-                    }
-                }
+                connection.Close();
             }
-
-            conn.Close();
-
 
             return orderDetails;
         }

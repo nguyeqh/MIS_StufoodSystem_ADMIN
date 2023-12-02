@@ -233,6 +233,66 @@ namespace StufoodSystem_ADMIN.Views
             LoadSuppliers();
         }
 
+        //LOAD INGREDIENTS
+        private void materialTabSelector5_Click(object sender, EventArgs e)
+        {
+            LoadIngredients();
+        }
+
+        //LOAD INGREDIENT TO FIELDS
+        private void materialListView2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Check if there is a selected item
+            if (ingredientListView.SelectedItems.Count > 0)
+            {
+                // Access data from the selected row
+                ListViewItem selectedRow = ingredientListView.SelectedItems[0];
+
+                textBox33.Text = selectedRow.SubItems[0].Text; //id
+                textBox32.Text = selectedRow.SubItems[1].Text; //name
+                textBox31.Text = selectedRow.SubItems[3].Text; //category
+                textBox30.Text = selectedRow.SubItems[4].Text; //perservation
+                textBox34.Text = selectedRow.SubItems[5].Text; //price
+                textBox35.Text = selectedRow.SubItems[6].Text; //quantity
+                richTextBox8.Text = selectedRow.SubItems[2].Text; //description
+
+            }
+        }
+
+        //UPDATE INGREDIENTS
+        private void materialButton17_Click(object sender, EventArgs e)
+        {
+            Ingredient newIngred = new Ingredient();
+
+            newIngred.ingredientID = textBox33.Text;
+            newIngred.ingredientName = textBox32.Text;
+            newIngred.ingredientCategory = textBox31.Text;
+            newIngred.ingredientPreservation = textBox30.Text;
+            newIngred.price = Convert.ToDouble(textBox34.Text);
+            newIngred.quantityAvailable = Convert.ToInt32(textBox35.Text);
+            newIngred.ingredientDescription = richTextBox8.Text;
+
+            try
+            {
+
+                IngredientController.UpdateIngredient(newIngred.ingredientID, newIngred);
+                MessageBox.Show("Chỉnh sửa thông tin nguyên liệu thành công!");
+                textBox30.Clear();
+                textBox31.Clear();
+                textBox32.Clear();
+                textBox33.Clear();
+                textBox34.Clear();
+                textBox35.Clear();
+                richTextBox8.Clear(); //address
+
+                LoadIngredients();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Có lỗi khi xử lý!");
+                throw new Exception("Error:" + ex.Message);
+            }
+        }
         //------------------------- FUNCTION ----------------- //
         private void LoadEmployees()
         {
@@ -293,9 +353,24 @@ namespace StufoodSystem_ADMIN.Views
             }
         }
 
-        private void materialListView2_SelectedIndexChanged(object sender, EventArgs e)
+        private void LoadIngredients()
         {
+            List<Ingredient> ingredients = IngredientController.GetAllIgredient();
+            ingredientListView.Items.Clear();
 
+            foreach(Ingredient ingredient in ingredients)
+            {
+                ListViewItem item = new ListViewItem(ingredient.ingredientID); //0
+                item.SubItems.Add(ingredient.ingredientName); //1
+                item.SubItems.Add(ingredient.ingredientDescription);//2
+                item.SubItems.Add(ingredient.ingredientCategory);//3
+                item.SubItems.Add(ingredient.ingredientPreservation);//4
+                item.SubItems.Add(ingredient.price.ToString());//5
+                item.SubItems.Add(ingredient.quantityAvailable.ToString());//6
+
+                ingredientListView.Items.Add(item);
+
+            }
         }
     }
 }

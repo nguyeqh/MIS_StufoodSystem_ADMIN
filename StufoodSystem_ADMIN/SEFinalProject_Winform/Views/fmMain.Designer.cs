@@ -199,6 +199,24 @@
             this.materialTabSelector2 = new MaterialSkin.Controls.MaterialTabSelector();
             this.materialTabControl3 = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage13 = new System.Windows.Forms.TabPage();
+            this.orderDetailListView = new MaterialSkin.Controls.MaterialListView();
+            this.orderDetailID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ProductNumberOD = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.QuantityOD = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label69 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
+            this.textBox68 = new System.Windows.Forms.TextBox();
+            this.textBox67 = new System.Windows.Forms.TextBox();
+            this.textBox66 = new System.Windows.Forms.TextBox();
+            this.textBox65 = new System.Windows.Forms.TextBox();
+            this.label67 = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.label65 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.textBox64 = new System.Windows.Forms.TextBox();
+            this.textBox63 = new System.Windows.Forms.TextBox();
+            this.textBox62 = new System.Windows.Forms.TextBox();
             this.orderListView = new MaterialSkin.Controls.MaterialListView();
             this.OrderID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.OrderStatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -224,6 +242,34 @@
             this.label23 = new System.Windows.Forms.Label();
             this.materialButton6 = new MaterialSkin.Controls.MaterialButton();
             this.tabPage15 = new System.Windows.Forms.TabPage();
+            this.materialButton18 = new MaterialSkin.Controls.MaterialButton();
+            this.comboBoxProduct = new System.Windows.Forms.ComboBox();
+            this.textBox75 = new System.Windows.Forms.TextBox();
+            this.label126 = new System.Windows.Forms.Label();
+            this.label125 = new System.Windows.Forms.Label();
+            this.textBox60 = new System.Windows.Forms.TextBox();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.orderDetailListViewUpdate = new MaterialSkin.Controls.MaterialListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.comboBoxOrders = new System.Windows.Forms.ComboBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.textBox69 = new System.Windows.Forms.TextBox();
+            this.textBox70 = new System.Windows.Forms.TextBox();
+            this.textBox71 = new System.Windows.Forms.TextBox();
+            this.textBox72 = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.textBox73 = new System.Windows.Forms.TextBox();
+            this.textBox74 = new System.Windows.Forms.TextBox();
+            this.label109 = new System.Windows.Forms.Label();
             this.materialButton4 = new MaterialSkin.Controls.MaterialButton();
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.materialTabSelector3 = new MaterialSkin.Controls.MaterialTabSelector();
@@ -355,52 +401,6 @@
             this.label53 = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
             this.materialButton8 = new MaterialSkin.Controls.MaterialButton();
-            this.textBox62 = new System.Windows.Forms.TextBox();
-            this.textBox63 = new System.Windows.Forms.TextBox();
-            this.textBox64 = new System.Windows.Forms.TextBox();
-            this.label63 = new System.Windows.Forms.Label();
-            this.label64 = new System.Windows.Forms.Label();
-            this.label65 = new System.Windows.Forms.Label();
-            this.label66 = new System.Windows.Forms.Label();
-            this.label67 = new System.Windows.Forms.Label();
-            this.textBox65 = new System.Windows.Forms.TextBox();
-            this.textBox66 = new System.Windows.Forms.TextBox();
-            this.textBox67 = new System.Windows.Forms.TextBox();
-            this.textBox68 = new System.Windows.Forms.TextBox();
-            this.label68 = new System.Windows.Forms.Label();
-            this.label69 = new System.Windows.Forms.Label();
-            this.orderDetailListView = new MaterialSkin.Controls.MaterialListView();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.textBox69 = new System.Windows.Forms.TextBox();
-            this.textBox70 = new System.Windows.Forms.TextBox();
-            this.textBox71 = new System.Windows.Forms.TextBox();
-            this.textBox72 = new System.Windows.Forms.TextBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.textBox73 = new System.Windows.Forms.TextBox();
-            this.textBox74 = new System.Windows.Forms.TextBox();
-            this.label109 = new System.Windows.Forms.Label();
-            this.orderDetailID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ProductNumberOD = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.QuantityOD = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.comboBoxOrders = new System.Windows.Forms.ComboBox();
-            this.orderDetailListViewUpdate = new MaterialSkin.Controls.MaterialListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label48 = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
-            this.textBox60 = new System.Windows.Forms.TextBox();
-            this.label125 = new System.Windows.Forms.Label();
-            this.textBox75 = new System.Windows.Forms.TextBox();
-            this.label126 = new System.Windows.Forms.Label();
-            this.comboBoxProduct = new System.Windows.Forms.ComboBox();
-            this.materialButton18 = new MaterialSkin.Controls.MaterialButton();
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.materialTabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.materialTabControl8.SuspendLayout();
@@ -2336,6 +2336,157 @@
             this.tabPage13.Text = "Lists";
             this.tabPage13.UseVisualStyleBackColor = true;
             // 
+            // orderDetailListView
+            // 
+            this.orderDetailListView.AutoSizeTable = false;
+            this.orderDetailListView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.orderDetailListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.orderDetailListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.orderDetailID,
+            this.ProductNumberOD,
+            this.QuantityOD});
+            this.orderDetailListView.Depth = 0;
+            this.orderDetailListView.FullRowSelect = true;
+            this.orderDetailListView.HideSelection = false;
+            this.orderDetailListView.Location = new System.Drawing.Point(457, 216);
+            this.orderDetailListView.MinimumSize = new System.Drawing.Size(200, 100);
+            this.orderDetailListView.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.orderDetailListView.MouseState = MaterialSkin.MouseState.OUT;
+            this.orderDetailListView.Name = "orderDetailListView";
+            this.orderDetailListView.OwnerDraw = true;
+            this.orderDetailListView.Size = new System.Drawing.Size(502, 174);
+            this.orderDetailListView.TabIndex = 21;
+            this.orderDetailListView.UseCompatibleStateImageBehavior = false;
+            this.orderDetailListView.View = System.Windows.Forms.View.Details;
+            // 
+            // orderDetailID
+            // 
+            this.orderDetailID.Text = "ID";
+            this.orderDetailID.Width = 80;
+            // 
+            // ProductNumberOD
+            // 
+            this.ProductNumberOD.Text = "Product";
+            this.ProductNumberOD.Width = 200;
+            // 
+            // QuantityOD
+            // 
+            this.QuantityOD.Text = "Quantity";
+            this.QuantityOD.Width = 150;
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Location = new System.Drawing.Point(453, 187);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(102, 20);
+            this.label69.TabIndex = 20;
+            this.label69.Text = "Order Details";
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Location = new System.Drawing.Point(55, 370);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(58, 20);
+            this.label68.TabIndex = 19;
+            this.label68.Text = "School";
+            // 
+            // textBox68
+            // 
+            this.textBox68.Location = new System.Drawing.Point(119, 367);
+            this.textBox68.Name = "textBox68";
+            this.textBox68.Size = new System.Drawing.Size(189, 26);
+            this.textBox68.TabIndex = 18;
+            // 
+            // textBox67
+            // 
+            this.textBox67.Location = new System.Drawing.Point(119, 337);
+            this.textBox67.Name = "textBox67";
+            this.textBox67.Size = new System.Drawing.Size(189, 26);
+            this.textBox67.TabIndex = 17;
+            // 
+            // textBox66
+            // 
+            this.textBox66.Location = new System.Drawing.Point(119, 305);
+            this.textBox66.Name = "textBox66";
+            this.textBox66.Size = new System.Drawing.Size(189, 26);
+            this.textBox66.TabIndex = 16;
+            // 
+            // textBox65
+            // 
+            this.textBox65.Location = new System.Drawing.Point(119, 276);
+            this.textBox65.Name = "textBox65";
+            this.textBox65.Size = new System.Drawing.Size(189, 26);
+            this.textBox65.TabIndex = 15;
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Location = new System.Drawing.Point(34, 340);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(79, 20);
+            this.label67.TabIndex = 14;
+            this.label67.Text = "Employee";
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Location = new System.Drawing.Point(69, 311);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(44, 20);
+            this.label66.TabIndex = 13;
+            this.label66.Text = "Total";
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Location = new System.Drawing.Point(8, 279);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(105, 20);
+            this.label65.TabIndex = 12;
+            this.label65.Text = "Receive Date";
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Location = new System.Drawing.Point(25, 248);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(88, 20);
+            this.label64.TabIndex = 11;
+            this.label64.Text = "Order Date";
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Location = new System.Drawing.Point(57, 222);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(56, 20);
+            this.label63.TabIndex = 10;
+            this.label63.Text = "Status";
+            // 
+            // textBox64
+            // 
+            this.textBox64.Location = new System.Drawing.Point(119, 245);
+            this.textBox64.Name = "textBox64";
+            this.textBox64.Size = new System.Drawing.Size(189, 26);
+            this.textBox64.TabIndex = 9;
+            // 
+            // textBox63
+            // 
+            this.textBox63.Location = new System.Drawing.Point(119, 216);
+            this.textBox63.Name = "textBox63";
+            this.textBox63.Size = new System.Drawing.Size(189, 26);
+            this.textBox63.TabIndex = 8;
+            // 
+            // textBox62
+            // 
+            this.textBox62.Location = new System.Drawing.Point(119, 187);
+            this.textBox62.Name = "textBox62";
+            this.textBox62.ReadOnly = true;
+            this.textBox62.Size = new System.Drawing.Size(113, 26);
+            this.textBox62.TabIndex = 7;
+            // 
             // orderListView
             // 
             this.orderListView.AutoSizeTable = false;
@@ -2666,6 +2817,255 @@
             this.tabPage15.Text = "Update";
             this.tabPage15.UseVisualStyleBackColor = true;
             // 
+            // materialButton18
+            // 
+            this.materialButton18.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton18.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton18.Depth = 0;
+            this.materialButton18.HighEmphasis = true;
+            this.materialButton18.Icon = null;
+            this.materialButton18.Location = new System.Drawing.Point(687, 235);
+            this.materialButton18.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton18.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton18.Name = "materialButton18";
+            this.materialButton18.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton18.Size = new System.Drawing.Size(64, 36);
+            this.materialButton18.TabIndex = 48;
+            this.materialButton18.Text = "NEXT";
+            this.materialButton18.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton18.UseAccentColor = false;
+            this.materialButton18.UseVisualStyleBackColor = true;
+            this.materialButton18.Click += new System.EventHandler(this.materialButton18_Click);
+            // 
+            // comboBoxProduct
+            // 
+            this.comboBoxProduct.FormattingEnabled = true;
+            this.comboBoxProduct.Location = new System.Drawing.Point(577, 314);
+            this.comboBoxProduct.Name = "comboBoxProduct";
+            this.comboBoxProduct.Size = new System.Drawing.Size(174, 28);
+            this.comboBoxProduct.TabIndex = 47;
+            // 
+            // textBox75
+            // 
+            this.textBox75.Location = new System.Drawing.Point(577, 348);
+            this.textBox75.Name = "textBox75";
+            this.textBox75.Size = new System.Drawing.Size(174, 26);
+            this.textBox75.TabIndex = 46;
+            // 
+            // label126
+            // 
+            this.label126.AutoSize = true;
+            this.label126.Location = new System.Drawing.Point(446, 354);
+            this.label126.Name = "label126";
+            this.label126.Size = new System.Drawing.Size(68, 20);
+            this.label126.TabIndex = 45;
+            this.label126.Text = "Quantity";
+            // 
+            // label125
+            // 
+            this.label125.AutoSize = true;
+            this.label125.Location = new System.Drawing.Point(446, 322);
+            this.label125.Name = "label125";
+            this.label125.Size = new System.Drawing.Size(64, 20);
+            this.label125.TabIndex = 43;
+            this.label125.Text = "Product";
+            // 
+            // textBox60
+            // 
+            this.textBox60.Location = new System.Drawing.Point(577, 284);
+            this.textBox60.Name = "textBox60";
+            this.textBox60.Size = new System.Drawing.Size(174, 26);
+            this.textBox60.TabIndex = 42;
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Location = new System.Drawing.Point(446, 290);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(115, 20);
+            this.label62.TabIndex = 41;
+            this.label62.Text = "Order Detail ID";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(415, 243);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(99, 20);
+            this.label48.TabIndex = 40;
+            this.label48.Text = "Thêm chi tiết";
+            // 
+            // orderDetailListViewUpdate
+            // 
+            this.orderDetailListViewUpdate.AutoSizeTable = false;
+            this.orderDetailListViewUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.orderDetailListViewUpdate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.orderDetailListViewUpdate.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.orderDetailListViewUpdate.Depth = 0;
+            this.orderDetailListViewUpdate.FullRowSelect = true;
+            this.orderDetailListViewUpdate.HideSelection = false;
+            this.orderDetailListViewUpdate.Location = new System.Drawing.Point(408, 52);
+            this.orderDetailListViewUpdate.MinimumSize = new System.Drawing.Size(200, 100);
+            this.orderDetailListViewUpdate.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.orderDetailListViewUpdate.MouseState = MaterialSkin.MouseState.OUT;
+            this.orderDetailListViewUpdate.Name = "orderDetailListViewUpdate";
+            this.orderDetailListViewUpdate.OwnerDraw = true;
+            this.orderDetailListViewUpdate.Size = new System.Drawing.Size(587, 174);
+            this.orderDetailListViewUpdate.TabIndex = 39;
+            this.orderDetailListViewUpdate.UseCompatibleStateImageBehavior = false;
+            this.orderDetailListViewUpdate.View = System.Windows.Forms.View.Details;
+            this.orderDetailListViewUpdate.SelectedIndexChanged += new System.EventHandler(this.orderDetailListViewUpdate_SelectedIndexChanged);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "ID";
+            this.columnHeader1.Width = 80;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Product";
+            this.columnHeader2.Width = 200;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Quantity";
+            this.columnHeader3.Width = 150;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Product ID";
+            this.columnHeader4.Width = 150;
+            // 
+            // comboBoxOrders
+            // 
+            this.comboBoxOrders.FormattingEnabled = true;
+            this.comboBoxOrders.Location = new System.Drawing.Point(120, 18);
+            this.comboBoxOrders.Name = "comboBoxOrders";
+            this.comboBoxOrders.Size = new System.Drawing.Size(164, 28);
+            this.comboBoxOrders.TabIndex = 38;
+            this.comboBoxOrders.SelectedIndexChanged += new System.EventHandler(this.comboBoxOrders_SelectedIndexChanged);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(404, 20);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(102, 20);
+            this.label21.TabIndex = 36;
+            this.label21.Text = "Order Details";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(56, 203);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(58, 20);
+            this.label22.TabIndex = 35;
+            this.label22.Text = "School";
+            // 
+            // textBox69
+            // 
+            this.textBox69.Location = new System.Drawing.Point(120, 200);
+            this.textBox69.Name = "textBox69";
+            this.textBox69.ReadOnly = true;
+            this.textBox69.Size = new System.Drawing.Size(189, 26);
+            this.textBox69.TabIndex = 34;
+            // 
+            // textBox70
+            // 
+            this.textBox70.Location = new System.Drawing.Point(120, 170);
+            this.textBox70.Name = "textBox70";
+            this.textBox70.ReadOnly = true;
+            this.textBox70.Size = new System.Drawing.Size(189, 26);
+            this.textBox70.TabIndex = 33;
+            // 
+            // textBox71
+            // 
+            this.textBox71.Location = new System.Drawing.Point(120, 138);
+            this.textBox71.Name = "textBox71";
+            this.textBox71.Size = new System.Drawing.Size(189, 26);
+            this.textBox71.TabIndex = 32;
+            // 
+            // textBox72
+            // 
+            this.textBox72.Location = new System.Drawing.Point(120, 109);
+            this.textBox72.Name = "textBox72";
+            this.textBox72.Size = new System.Drawing.Size(189, 26);
+            this.textBox72.TabIndex = 31;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(35, 173);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(79, 20);
+            this.label36.TabIndex = 30;
+            this.label36.Text = "Employee";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(70, 144);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(44, 20);
+            this.label37.TabIndex = 29;
+            this.label37.Text = "Total";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(9, 112);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(105, 20);
+            this.label38.TabIndex = 28;
+            this.label38.Text = "Receive Date";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(26, 81);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(88, 20);
+            this.label39.TabIndex = 27;
+            this.label39.Text = "Order Date";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(58, 55);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(56, 20);
+            this.label40.TabIndex = 26;
+            this.label40.Text = "Status";
+            // 
+            // textBox73
+            // 
+            this.textBox73.Location = new System.Drawing.Point(120, 78);
+            this.textBox73.Name = "textBox73";
+            this.textBox73.ReadOnly = true;
+            this.textBox73.Size = new System.Drawing.Size(189, 26);
+            this.textBox73.TabIndex = 25;
+            // 
+            // textBox74
+            // 
+            this.textBox74.Location = new System.Drawing.Point(120, 49);
+            this.textBox74.Name = "textBox74";
+            this.textBox74.Size = new System.Drawing.Size(189, 26);
+            this.textBox74.TabIndex = 24;
+            // 
+            // label109
+            // 
+            this.label109.AutoSize = true;
+            this.label109.Location = new System.Drawing.Point(44, 26);
+            this.label109.Name = "label109";
+            this.label109.Size = new System.Drawing.Size(70, 20);
+            this.label109.TabIndex = 22;
+            this.label109.Text = "Order ID";
+            // 
             // materialButton4
             // 
             this.materialButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -2684,6 +3084,7 @@
             this.materialButton4.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.materialButton4.UseAccentColor = false;
             this.materialButton4.UseVisualStyleBackColor = true;
+            this.materialButton4.Click += new System.EventHandler(this.materialButton4_Click);
             // 
             // tabPage10
             // 
@@ -4187,404 +4588,6 @@
             this.materialButton8.UseAccentColor = false;
             this.materialButton8.UseVisualStyleBackColor = true;
             this.materialButton8.Click += new System.EventHandler(this.materialButton8_Click);
-            // 
-            // textBox62
-            // 
-            this.textBox62.Location = new System.Drawing.Point(119, 187);
-            this.textBox62.Name = "textBox62";
-            this.textBox62.ReadOnly = true;
-            this.textBox62.Size = new System.Drawing.Size(113, 26);
-            this.textBox62.TabIndex = 7;
-            // 
-            // textBox63
-            // 
-            this.textBox63.Location = new System.Drawing.Point(119, 216);
-            this.textBox63.Name = "textBox63";
-            this.textBox63.Size = new System.Drawing.Size(189, 26);
-            this.textBox63.TabIndex = 8;
-            // 
-            // textBox64
-            // 
-            this.textBox64.Location = new System.Drawing.Point(119, 245);
-            this.textBox64.Name = "textBox64";
-            this.textBox64.Size = new System.Drawing.Size(189, 26);
-            this.textBox64.TabIndex = 9;
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(57, 222);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(56, 20);
-            this.label63.TabIndex = 10;
-            this.label63.Text = "Status";
-            // 
-            // label64
-            // 
-            this.label64.AutoSize = true;
-            this.label64.Location = new System.Drawing.Point(25, 248);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(88, 20);
-            this.label64.TabIndex = 11;
-            this.label64.Text = "Order Date";
-            // 
-            // label65
-            // 
-            this.label65.AutoSize = true;
-            this.label65.Location = new System.Drawing.Point(8, 279);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(105, 20);
-            this.label65.TabIndex = 12;
-            this.label65.Text = "Receive Date";
-            // 
-            // label66
-            // 
-            this.label66.AutoSize = true;
-            this.label66.Location = new System.Drawing.Point(69, 311);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(44, 20);
-            this.label66.TabIndex = 13;
-            this.label66.Text = "Total";
-            // 
-            // label67
-            // 
-            this.label67.AutoSize = true;
-            this.label67.Location = new System.Drawing.Point(34, 340);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(79, 20);
-            this.label67.TabIndex = 14;
-            this.label67.Text = "Employee";
-            // 
-            // textBox65
-            // 
-            this.textBox65.Location = new System.Drawing.Point(119, 276);
-            this.textBox65.Name = "textBox65";
-            this.textBox65.Size = new System.Drawing.Size(189, 26);
-            this.textBox65.TabIndex = 15;
-            // 
-            // textBox66
-            // 
-            this.textBox66.Location = new System.Drawing.Point(119, 305);
-            this.textBox66.Name = "textBox66";
-            this.textBox66.Size = new System.Drawing.Size(189, 26);
-            this.textBox66.TabIndex = 16;
-            // 
-            // textBox67
-            // 
-            this.textBox67.Location = new System.Drawing.Point(119, 337);
-            this.textBox67.Name = "textBox67";
-            this.textBox67.Size = new System.Drawing.Size(189, 26);
-            this.textBox67.TabIndex = 17;
-            // 
-            // textBox68
-            // 
-            this.textBox68.Location = new System.Drawing.Point(119, 367);
-            this.textBox68.Name = "textBox68";
-            this.textBox68.Size = new System.Drawing.Size(189, 26);
-            this.textBox68.TabIndex = 18;
-            // 
-            // label68
-            // 
-            this.label68.AutoSize = true;
-            this.label68.Location = new System.Drawing.Point(55, 370);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(58, 20);
-            this.label68.TabIndex = 19;
-            this.label68.Text = "School";
-            // 
-            // label69
-            // 
-            this.label69.AutoSize = true;
-            this.label69.Location = new System.Drawing.Point(453, 187);
-            this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(102, 20);
-            this.label69.TabIndex = 20;
-            this.label69.Text = "Order Details";
-            // 
-            // orderDetailListView
-            // 
-            this.orderDetailListView.AutoSizeTable = false;
-            this.orderDetailListView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.orderDetailListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.orderDetailListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.orderDetailID,
-            this.ProductNumberOD,
-            this.QuantityOD});
-            this.orderDetailListView.Depth = 0;
-            this.orderDetailListView.FullRowSelect = true;
-            this.orderDetailListView.HideSelection = false;
-            this.orderDetailListView.Location = new System.Drawing.Point(457, 216);
-            this.orderDetailListView.MinimumSize = new System.Drawing.Size(200, 100);
-            this.orderDetailListView.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.orderDetailListView.MouseState = MaterialSkin.MouseState.OUT;
-            this.orderDetailListView.Name = "orderDetailListView";
-            this.orderDetailListView.OwnerDraw = true;
-            this.orderDetailListView.Size = new System.Drawing.Size(502, 174);
-            this.orderDetailListView.TabIndex = 21;
-            this.orderDetailListView.UseCompatibleStateImageBehavior = false;
-            this.orderDetailListView.View = System.Windows.Forms.View.Details;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(404, 20);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(102, 20);
-            this.label21.TabIndex = 36;
-            this.label21.Text = "Order Details";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(56, 203);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(58, 20);
-            this.label22.TabIndex = 35;
-            this.label22.Text = "School";
-            // 
-            // textBox69
-            // 
-            this.textBox69.Location = new System.Drawing.Point(120, 200);
-            this.textBox69.Name = "textBox69";
-            this.textBox69.Size = new System.Drawing.Size(189, 26);
-            this.textBox69.TabIndex = 34;
-            // 
-            // textBox70
-            // 
-            this.textBox70.Location = new System.Drawing.Point(120, 170);
-            this.textBox70.Name = "textBox70";
-            this.textBox70.Size = new System.Drawing.Size(189, 26);
-            this.textBox70.TabIndex = 33;
-            // 
-            // textBox71
-            // 
-            this.textBox71.Location = new System.Drawing.Point(120, 138);
-            this.textBox71.Name = "textBox71";
-            this.textBox71.Size = new System.Drawing.Size(189, 26);
-            this.textBox71.TabIndex = 32;
-            // 
-            // textBox72
-            // 
-            this.textBox72.Location = new System.Drawing.Point(120, 109);
-            this.textBox72.Name = "textBox72";
-            this.textBox72.Size = new System.Drawing.Size(189, 26);
-            this.textBox72.TabIndex = 31;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(35, 173);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(79, 20);
-            this.label36.TabIndex = 30;
-            this.label36.Text = "Employee";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(70, 144);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(44, 20);
-            this.label37.TabIndex = 29;
-            this.label37.Text = "Total";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(9, 112);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(105, 20);
-            this.label38.TabIndex = 28;
-            this.label38.Text = "Receive Date";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(26, 81);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(88, 20);
-            this.label39.TabIndex = 27;
-            this.label39.Text = "Order Date";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(58, 55);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(56, 20);
-            this.label40.TabIndex = 26;
-            this.label40.Text = "Status";
-            // 
-            // textBox73
-            // 
-            this.textBox73.Location = new System.Drawing.Point(120, 78);
-            this.textBox73.Name = "textBox73";
-            this.textBox73.Size = new System.Drawing.Size(189, 26);
-            this.textBox73.TabIndex = 25;
-            // 
-            // textBox74
-            // 
-            this.textBox74.Location = new System.Drawing.Point(120, 49);
-            this.textBox74.Name = "textBox74";
-            this.textBox74.Size = new System.Drawing.Size(189, 26);
-            this.textBox74.TabIndex = 24;
-            // 
-            // label109
-            // 
-            this.label109.AutoSize = true;
-            this.label109.Location = new System.Drawing.Point(44, 26);
-            this.label109.Name = "label109";
-            this.label109.Size = new System.Drawing.Size(70, 20);
-            this.label109.TabIndex = 22;
-            this.label109.Text = "Order ID";
-            // 
-            // orderDetailID
-            // 
-            this.orderDetailID.Text = "ID";
-            this.orderDetailID.Width = 80;
-            // 
-            // ProductNumberOD
-            // 
-            this.ProductNumberOD.Text = "Product";
-            this.ProductNumberOD.Width = 200;
-            // 
-            // QuantityOD
-            // 
-            this.QuantityOD.Text = "Quantity";
-            this.QuantityOD.Width = 150;
-            // 
-            // comboBoxOrders
-            // 
-            this.comboBoxOrders.FormattingEnabled = true;
-            this.comboBoxOrders.Location = new System.Drawing.Point(120, 18);
-            this.comboBoxOrders.Name = "comboBoxOrders";
-            this.comboBoxOrders.Size = new System.Drawing.Size(164, 28);
-            this.comboBoxOrders.TabIndex = 38;
-            this.comboBoxOrders.SelectedIndexChanged += new System.EventHandler(this.comboBoxOrders_SelectedIndexChanged);
-            // 
-            // orderDetailListViewUpdate
-            // 
-            this.orderDetailListViewUpdate.AutoSizeTable = false;
-            this.orderDetailListViewUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.orderDetailListViewUpdate.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.orderDetailListViewUpdate.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
-            this.orderDetailListViewUpdate.Depth = 0;
-            this.orderDetailListViewUpdate.FullRowSelect = true;
-            this.orderDetailListViewUpdate.HideSelection = false;
-            this.orderDetailListViewUpdate.Location = new System.Drawing.Point(408, 52);
-            this.orderDetailListViewUpdate.MinimumSize = new System.Drawing.Size(200, 100);
-            this.orderDetailListViewUpdate.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.orderDetailListViewUpdate.MouseState = MaterialSkin.MouseState.OUT;
-            this.orderDetailListViewUpdate.Name = "orderDetailListViewUpdate";
-            this.orderDetailListViewUpdate.OwnerDraw = true;
-            this.orderDetailListViewUpdate.Size = new System.Drawing.Size(587, 174);
-            this.orderDetailListViewUpdate.TabIndex = 39;
-            this.orderDetailListViewUpdate.UseCompatibleStateImageBehavior = false;
-            this.orderDetailListViewUpdate.View = System.Windows.Forms.View.Details;
-            this.orderDetailListViewUpdate.SelectedIndexChanged += new System.EventHandler(this.orderDetailListViewUpdate_SelectedIndexChanged);
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "ID";
-            this.columnHeader1.Width = 80;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Product";
-            this.columnHeader2.Width = 200;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Quantity";
-            this.columnHeader3.Width = 150;
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(415, 243);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(99, 20);
-            this.label48.TabIndex = 40;
-            this.label48.Text = "Thêm chi tiết";
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(446, 290);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(115, 20);
-            this.label62.TabIndex = 41;
-            this.label62.Text = "Order Detail ID";
-            // 
-            // textBox60
-            // 
-            this.textBox60.Location = new System.Drawing.Point(577, 284);
-            this.textBox60.Name = "textBox60";
-            this.textBox60.Size = new System.Drawing.Size(174, 26);
-            this.textBox60.TabIndex = 42;
-            // 
-            // label125
-            // 
-            this.label125.AutoSize = true;
-            this.label125.Location = new System.Drawing.Point(446, 322);
-            this.label125.Name = "label125";
-            this.label125.Size = new System.Drawing.Size(64, 20);
-            this.label125.TabIndex = 43;
-            this.label125.Text = "Product";
-            // 
-            // textBox75
-            // 
-            this.textBox75.Location = new System.Drawing.Point(577, 348);
-            this.textBox75.Name = "textBox75";
-            this.textBox75.Size = new System.Drawing.Size(174, 26);
-            this.textBox75.TabIndex = 46;
-            // 
-            // label126
-            // 
-            this.label126.AutoSize = true;
-            this.label126.Location = new System.Drawing.Point(446, 354);
-            this.label126.Name = "label126";
-            this.label126.Size = new System.Drawing.Size(68, 20);
-            this.label126.TabIndex = 45;
-            this.label126.Text = "Quantity";
-            // 
-            // comboBoxProduct
-            // 
-            this.comboBoxProduct.FormattingEnabled = true;
-            this.comboBoxProduct.Location = new System.Drawing.Point(577, 314);
-            this.comboBoxProduct.Name = "comboBoxProduct";
-            this.comboBoxProduct.Size = new System.Drawing.Size(174, 28);
-            this.comboBoxProduct.TabIndex = 47;
-            // 
-            // materialButton18
-            // 
-            this.materialButton18.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton18.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton18.Depth = 0;
-            this.materialButton18.HighEmphasis = true;
-            this.materialButton18.Icon = null;
-            this.materialButton18.Location = new System.Drawing.Point(687, 235);
-            this.materialButton18.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton18.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton18.Name = "materialButton18";
-            this.materialButton18.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton18.Size = new System.Drawing.Size(64, 36);
-            this.materialButton18.TabIndex = 48;
-            this.materialButton18.Text = "NEXT";
-            this.materialButton18.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton18.UseAccentColor = false;
-            this.materialButton18.UseVisualStyleBackColor = true;
-            this.materialButton18.Click += new System.EventHandler(this.materialButton18_Click);
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.DisplayIndex = 1;
-            this.columnHeader4.Text = "Product ID";
-            this.columnHeader4.Width = 150;
             // 
             // fmMain
             // 

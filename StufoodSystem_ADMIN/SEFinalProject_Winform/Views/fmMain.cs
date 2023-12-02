@@ -734,6 +734,32 @@ namespace StufoodSystem_ADMIN.Views
 
 
         }
+
+        //update order
+        private void materialButton4_Click(object sender, EventArgs e)
+        {
+            String orderID = comboBoxOrders.Text;
+            Order order = OrderController.GetOrderByID(orderID);
+
+            order.orderTotal = Convert.ToInt32(textBox71.Text);
+            order.orderStatus = textBox74.Text;
+            order.dateReceived= Convert.ToDateTime(textBox72.Text);
+
+            try
+            {
+                OrderController.UpdateOrder(order.orderNumber, order);
+
+                MessageBox.Show("Chỉnh sửa đơn hàng thàn công!");
+
+                LoadOrderSingle();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Có lỗi khi xử lý!");
+                throw new Exception("Error:" + ex.Message);
+            }
+
+        }
         //------------------------- FUNCTION ----------------- //
         private void LoadEmployees()
         {
@@ -894,6 +920,7 @@ namespace StufoodSystem_ADMIN.Views
 
             }
         }
-       
+
+ 
     }
 }

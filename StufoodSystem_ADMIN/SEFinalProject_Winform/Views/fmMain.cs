@@ -20,6 +20,9 @@ namespace StufoodSystem_ADMIN.Views
         readonly MaterialSkin.MaterialSkinManager materialSkinManager;
         String strConn = ConfigurationManager.ConnectionStrings["MySQLConnection"].ConnectionString;
         SqlConnection conn;
+
+        Supplier ingredientOfSupplier = new Supplier();
+
         public fmMain()
         {
             InitializeComponent();
@@ -256,6 +259,7 @@ namespace StufoodSystem_ADMIN.Views
                 supplierIngredListView.Items.Clear();
                
                 Supplier supplier = SupplierController.GetSupplierByID(supplierID);
+                ingredientOfSupplier = supplier;
                 foreach (Ingredient ingredient in supplier.ingredientProvided)
                 {
                     ListViewItem item = new ListViewItem(ingredient.ingredientID); //0
@@ -267,6 +271,20 @@ namespace StufoodSystem_ADMIN.Views
                 }
             }
         }
+
+        //ADD INGREDIENT TO SUPPLIERS
+        private void materialButton10_Click(object sender, EventArgs e)
+        {
+          if (ingredientOfSupplier != null)
+            {
+                IngredientCollectionCheckbox ingredientCollectionCheckbox = new IngredientCollectionCheckbox(ingredientOfSupplier);
+                ingredientCollectionCheckbox.ShowDialog();
+
+                LoadSuppliers();
+            }
+        }
+
+        //--- ingredients-----------------
         //LOAD INGREDIENTS
         private void materialTabSelector5_Click(object sender, EventArgs e)
         {
@@ -442,7 +460,6 @@ namespace StufoodSystem_ADMIN.Views
 
             }
         }
-
-
+        
     }
 }

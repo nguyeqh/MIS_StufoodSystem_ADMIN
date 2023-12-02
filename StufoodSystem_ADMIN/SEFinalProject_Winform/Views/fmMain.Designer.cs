@@ -340,6 +340,7 @@
             this.textBox40 = new System.Windows.Forms.TextBox();
             this.textBox41 = new System.Windows.Forms.TextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.materialButton10 = new MaterialSkin.Controls.MaterialButton();
             this.materialTabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.materialTabControl8.SuspendLayout();
@@ -3672,6 +3673,7 @@
             // 
             // tabPage20
             // 
+            this.tabPage20.Controls.Add(this.materialButton10);
             this.tabPage20.Controls.Add(this.supplierIngredListView);
             this.tabPage20.Controls.Add(this.richTextBox7);
             this.tabPage20.Controls.Add(this.textBox29);
@@ -4227,6 +4229,26 @@
             this.richTextBox1.TabIndex = 63;
             this.richTextBox1.Text = "";
             // 
+            // materialButton10
+            // 
+            this.materialButton10.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton10.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton10.Depth = 0;
+            this.materialButton10.HighEmphasis = true;
+            this.materialButton10.Icon = null;
+            this.materialButton10.Location = new System.Drawing.Point(684, 322);
+            this.materialButton10.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton10.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton10.Name = "materialButton10";
+            this.materialButton10.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton10.Size = new System.Drawing.Size(64, 36);
+            this.materialButton10.TabIndex = 59;
+            this.materialButton10.Text = "Add";
+            this.materialButton10.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton10.UseAccentColor = false;
+            this.materialButton10.UseVisualStyleBackColor = true;
+            this.materialButton10.Click += new System.EventHandler(this.materialButton10_Click);
+            // 
             // fmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4602,5 +4624,6 @@
         private System.Windows.Forms.TextBox textBox38;
         private System.Windows.Forms.TextBox textBox37;
         private System.Windows.Forms.TextBox textBox36;
+        private MaterialSkin.Controls.MaterialButton materialButton10;
     }
 }

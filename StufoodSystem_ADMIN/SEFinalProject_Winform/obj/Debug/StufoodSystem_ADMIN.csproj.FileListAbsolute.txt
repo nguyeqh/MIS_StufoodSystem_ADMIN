@@ -146,3 +146,4 @@ C:\Users\ACER\Source\Repos\MIS_StufoodSystem_ADMIN\StufoodSystem_ADMIN\SEFinalPr
 C:\Users\ACER\Source\Repos\MIS_StufoodSystem_ADMIN\StufoodSystem_ADMIN\SEFinalProject_Winform\obj\Debug\StufoodSystem_ADMIN.Views.fmMain.resources
 D:\Homework\MIS\MIS_StufoodSystem_ADMIN\StufoodSystem_ADMIN\SEFinalProject_Winform\bin\Debug\MaterialSkin.dll
 D:\Homework\MIS\MIS_StufoodSystem_ADMIN\StufoodSystem_ADMIN\SEFinalProject_Winform\obj\Debug\StufoodSystem_ADMIN.Views.fmMain.resources
+D:\Homework\MIS\MIS_StufoodSystem_ADMIN\StufoodSystem_ADMIN\SEFinalProject_Winform\obj\Debug\StufoodSystem_ADMIN.Views.IngredientCollectionCheckbox.resources

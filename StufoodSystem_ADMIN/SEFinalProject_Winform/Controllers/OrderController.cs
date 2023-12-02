@@ -122,6 +122,30 @@ namespace StufoodSystem_ADMIN.Controllers
             }
         }
 
+        public static void UpdateOrderDetail(String id, OrderDetail updateOrderDetail)
+        {
+            String productID = updateOrderDetail.product.ProductId;
+
+            String sSQL = "UPDATE OrderDetail SET ProductNumber = @ProductNumber, Quantity = @Quantity " +
+                "WHERE OrderDetailID = @OrderDetailID";
+            SqlConnection conn = new SqlConnection(strConn);
+
+            conn.Open();
+            SqlCommand cmd = new SqlCommand(sSQL, conn);
+            cmd.Parameters.Add(new SqlParameter("@OrderDetailID", id));
+            cmd.Parameters.Add(new SqlParameter("@ProductNumber", updateOrderDetail.product.ProductId));
+            cmd.Parameters.Add(new SqlParameter("@Quantity", updateOrderDetail.quantity));
+            try
+            {
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error:" + ex.Message);
+            }
+        }
+
         public static void CreateOrder(Order order)
         {
             String employeeIDString = order.employee.employeeID;
@@ -150,6 +174,33 @@ namespace StufoodSystem_ADMIN.Controllers
                 throw new Exception("Error:" + ex.Message);
             }
         
+        }
+
+        public static void CreateOrderDetail(OrderDetail orderDetail)
+        {
+            String productId = orderDetail.product.ProductId;
+
+            String sSQL = "INSERT INTO OrderDetail (OrderDetailID, OrderNumber, ProductNumber, Quantity) " +
+                "VALUES (@OrderDetailID, @OrderNumber, @ProductNumber, @Quantity)";
+            SqlConnection conn = new SqlConnection(strConn);
+
+            conn.Open();
+            SqlCommand cmd = new SqlCommand(sSQL, conn);
+            cmd.Parameters.Add(new SqlParameter("@OrderNumber", orderDetail.orderNumber));
+            cmd.Parameters.Add(new SqlParameter("@ProductNumber", productId));
+            cmd.Parameters.Add(new SqlParameter("@Quantity", orderDetail.quantity));
+            cmd.Parameters.Add(new SqlParameter("@OrderDetailID", orderDetail.orderDetailNumber));
+            
+            try
+            {
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error:" + ex.Message);
+            }
+
         }
         //--------------- PRIVATE FUNCTION -------------------- //
 

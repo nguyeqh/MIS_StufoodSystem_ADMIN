@@ -23,6 +23,7 @@ namespace StufoodSystem_ADMIN.Views
 
         Supplier ingredientOfSupplier = new Supplier();
         List<String> resultList = new List<String>();
+        bool orderDetailUpdated = false;
 
         public fmMain()
         {
@@ -638,10 +639,9 @@ namespace StufoodSystem_ADMIN.Views
                 textBox67.Text = selectedRow.SubItems[5].Text; //employee
                 textBox68.Text = selectedRow.SubItems[6].Text; //school
 
-                orderDetailListView.Items.Clear();
-
+               
                 List<OrderDetail> orderDetails = OrderController.GetOrderDetailByOrderId(selectedRow.SubItems[0].Text);
-
+                orderDetailListView.Items.Clear();
                 foreach (OrderDetail orderDetail in orderDetails)
                 {
                     ListViewItem item = new ListViewItem(orderDetail.orderDetailNumber); //0
@@ -655,7 +655,85 @@ namespace StufoodSystem_ADMIN.Views
             }
         }
 
+        //load order inform to update fields
+        private void comboBoxOrders_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadOrderSingle();
+        }
 
+        //update order detail
+        private void orderDetailListViewUpdate_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+            if (orderDetailListViewUpdate.SelectedItems.Count > 0)
+            {
+                orderDetailUpdated = true;
+                textBox60.ReadOnly = true;
+                // Access data from the selected row
+                ListViewItem selectedRow = orderDetailListViewUpdate.SelectedItems[0];
+                
+                textBox60.Text = selectedRow.SubItems[0].Text; //id
+                comboBoxProduct.Text = selectedRow.SubItems[1].Text + ": " + selectedRow.SubItems[2].Text; //product
+                textBox75.Text = selectedRow.SubItems[3].Text; //quantity
+
+            }
+        }
+        //create order detail
+        private void materialButton18_Click(object sender, EventArgs e)
+        {
+            String orderID = comboBoxOrders.Text;
+            String productInfor = comboBoxProduct.Text;
+            String productID = "";
+
+            int indexOfColon = productInfor.IndexOf(':');
+            if (indexOfColon != -1)
+            {
+                productID = productInfor.Substring(0, indexOfColon);
+            }
+
+            Product product = ProductController.GetProductByID(productID);
+            OrderDetail orderDetail = new OrderDetail();
+
+            orderDetail.product = product;
+            orderDetail.quantity = Convert.ToInt32(textBox75.Text);
+            orderDetail.orderNumber = orderID;
+            orderDetail.orderDetailNumber = textBox60.Text;
+
+
+            try
+            {
+                if (orderDetailUpdated)
+                {
+                    OrderController.UpdateOrderDetail(orderDetail.orderDetailNumber, orderDetail);
+                    textBox60.Clear();
+                    textBox75.Clear();
+
+                    orderDetailUpdated = false;
+                    textBox60.ReadOnly = false;
+
+                    LoadOrderSingle();
+                } else
+                {
+                    OrderController.CreateOrderDetail(orderDetail);
+                    textBox60.Clear();
+                    textBox75.Clear();
+
+                    orderDetailUpdated = false;
+                    textBox60.ReadOnly = false;
+
+                    LoadOrderSingle();
+                }
+
+               
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Có lỗi khi xử lý!");
+                throw new Exception("Error:" + ex.Message);
+            }
+
+
+        }
         //------------------------- FUNCTION ----------------- //
         private void LoadEmployees()
         {
@@ -761,6 +839,7 @@ namespace StufoodSystem_ADMIN.Views
         {
             List<Order> orders = OrderController.GetAllOrder();
             orderListView.Items.Clear();
+            comboBoxOrders.Items.Clear();
 
             foreach (Order order in orders)
             {
@@ -776,10 +855,45 @@ namespace StufoodSystem_ADMIN.Views
                 item.SubItems.Add(school.schoolName);//6
 
                 orderListView.Items.Add(item);
+                comboBoxOrders.Items.Add(order.orderNumber);
 
+            }
+
+            List<Product> products = ProductController.GetAllProduct();
+            comboBoxProduct.Items.Clear();
+            foreach(Product product in products)
+            {
+                comboBoxProduct.Items.Add(product.ProductId + ": " + product.ProductName);
             }
         }
 
+        private void LoadOrderSingle()
+        {
+            String orderID = comboBoxOrders.Text;
+            Order order = OrderController.GetOrderByID(orderID);
+
+            textBox74.Text = order.orderStatus;
+            textBox73.Text = order.dateOrdered.ToString();
+            textBox72.Text = order.dateReceived.ToString();
+            textBox71.Text = order.orderTotal.ToString();
+            textBox70.Text = order.employee.employeeName;
+            textBox69.Text = order.affiliatedSchool.schoolName;
+
+
+            List<OrderDetail> orderDetails = OrderController.GetOrderDetailByOrderId(orderID);
+            orderDetailListViewUpdate.Items.Clear();
+
+            foreach (OrderDetail orderDetail in orderDetails)
+            {
+                ListViewItem item = new ListViewItem(orderDetail.orderDetailNumber); //0
+                item.SubItems.Add(orderDetail.product.ProductId);
+                item.SubItems.Add(orderDetail.product.ProductName); //1
+                item.SubItems.Add(orderDetail.quantity.ToString()); //2
+
+                orderDetailListViewUpdate.Items.Add(item);
+
+            }
+        }
        
     }
 }

@@ -150,9 +150,6 @@
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             this.materialTabControl2 = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.label10 = new System.Windows.Forms.Label();
-            this.materialTextBox210 = new MaterialSkin.Controls.MaterialTextBox2();
-            this.materialMultiLineTextBox1 = new MaterialSkin.Controls.MaterialMultiLineTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label111 = new System.Windows.Forms.Label();
             this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
@@ -340,6 +337,14 @@
             this.textBox46 = new System.Windows.Forms.TextBox();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.textBox47 = new System.Windows.Forms.TextBox();
+            this.textBox48 = new System.Windows.Forms.TextBox();
+            this.textBox49 = new System.Windows.Forms.TextBox();
+            this.textBox51 = new System.Windows.Forms.TextBox();
+            this.textBox52 = new System.Windows.Forms.TextBox();
+            this.textBox53 = new System.Windows.Forms.TextBox();
+            this.richTextBox9 = new System.Windows.Forms.RichTextBox();
+            this.tabPage22 = new System.Windows.Forms.TabPage();
             this.materialTabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.materialTabControl8.SuspendLayout();
@@ -1726,7 +1731,8 @@
             this.materialTabSelector1.Name = "materialTabSelector1";
             this.materialTabSelector1.Size = new System.Drawing.Size(1213, 39);
             this.materialTabSelector1.TabIndex = 1;
-            this.materialTabSelector1.Text = "materialTabSelector1";
+            this.materialTabSelector1.Text = "Ingredient for product";
+            this.materialTabSelector1.Click += new System.EventHandler(this.materialTabSelector1_Click);
             // 
             // materialTabControl2
             // 
@@ -1734,6 +1740,7 @@
             this.materialTabControl2.Controls.Add(this.tabPage7);
             this.materialTabControl2.Controls.Add(this.tabPage9);
             this.materialTabControl2.Controls.Add(this.tabPage10);
+            this.materialTabControl2.Controls.Add(this.tabPage22);
             this.materialTabControl2.Depth = 0;
             this.materialTabControl2.ImageList = this.imageList1;
             this.materialTabControl2.Location = new System.Drawing.Point(5, 39);
@@ -1747,9 +1754,13 @@
             // 
             // tabPage6
             // 
-            this.tabPage6.Controls.Add(this.label10);
-            this.tabPage6.Controls.Add(this.materialTextBox210);
-            this.tabPage6.Controls.Add(this.materialMultiLineTextBox1);
+            this.tabPage6.Controls.Add(this.richTextBox9);
+            this.tabPage6.Controls.Add(this.textBox53);
+            this.tabPage6.Controls.Add(this.textBox52);
+            this.tabPage6.Controls.Add(this.textBox51);
+            this.tabPage6.Controls.Add(this.textBox49);
+            this.tabPage6.Controls.Add(this.textBox48);
+            this.tabPage6.Controls.Add(this.textBox47);
             this.tabPage6.Controls.Add(this.label7);
             this.tabPage6.Controls.Add(this.label111);
             this.tabPage6.Controls.Add(this.materialButton2);
@@ -1767,65 +1778,10 @@
             this.tabPage6.Text = "Add";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(344, 190);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(81, 20);
-            this.label10.TabIndex = 26;
-            this.label10.Text = "Ingredient";
-            // 
-            // materialTextBox210
-            // 
-            this.materialTextBox210.AnimateReadOnly = false;
-            this.materialTextBox210.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.materialTextBox210.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.materialTextBox210.Depth = 0;
-            this.materialTextBox210.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox210.HideSelection = true;
-            this.materialTextBox210.LeadingIcon = null;
-            this.materialTextBox210.Location = new System.Drawing.Point(422, 171);
-            this.materialTextBox210.Margin = new System.Windows.Forms.Padding(2);
-            this.materialTextBox210.MaxLength = 32767;
-            this.materialTextBox210.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox210.Name = "materialTextBox210";
-            this.materialTextBox210.PasswordChar = '\0';
-            this.materialTextBox210.PrefixSuffixText = null;
-            this.materialTextBox210.ReadOnly = false;
-            this.materialTextBox210.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.materialTextBox210.SelectedText = "";
-            this.materialTextBox210.SelectionLength = 0;
-            this.materialTextBox210.SelectionStart = 0;
-            this.materialTextBox210.ShortcutsEnabled = true;
-            this.materialTextBox210.Size = new System.Drawing.Size(188, 48);
-            this.materialTextBox210.TabIndex = 25;
-            this.materialTextBox210.TabStop = false;
-            this.materialTextBox210.Text = "Type ingredient ...";
-            this.materialTextBox210.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.materialTextBox210.TrailingIcon = null;
-            this.materialTextBox210.UseSystemPasswordChar = false;
-            // 
-            // materialMultiLineTextBox1
-            // 
-            this.materialMultiLineTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialMultiLineTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialMultiLineTextBox1.Depth = 0;
-            this.materialMultiLineTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialMultiLineTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialMultiLineTextBox1.Location = new System.Drawing.Point(422, 20);
-            this.materialMultiLineTextBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.materialMultiLineTextBox1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialMultiLineTextBox1.Name = "materialMultiLineTextBox1";
-            this.materialMultiLineTextBox1.Size = new System.Drawing.Size(198, 78);
-            this.materialMultiLineTextBox1.TabIndex = 24;
-            this.materialMultiLineTextBox1.Text = "";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(548, 123);
+            this.label7.Location = new System.Drawing.Point(497, 67);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(44, 20);
@@ -1835,7 +1791,7 @@
             // label111
             // 
             this.label111.AutoSize = true;
-            this.label111.Location = new System.Drawing.Point(438, 123);
+            this.label111.Location = new System.Drawing.Point(473, 30);
             this.label111.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label111.Name = "label111";
             this.label111.Size = new System.Drawing.Size(68, 20);
@@ -1849,7 +1805,7 @@
             this.materialButton2.Depth = 0;
             this.materialButton2.HighEmphasis = true;
             this.materialButton2.Icon = null;
-            this.materialButton2.Location = new System.Drawing.Point(280, 242);
+            this.materialButton2.Location = new System.Drawing.Point(692, 200);
             this.materialButton2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton2.Name = "materialButton2";
@@ -1860,11 +1816,12 @@
             this.materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.materialButton2.UseAccentColor = false;
             this.materialButton2.UseVisualStyleBackColor = true;
+            this.materialButton2.Click += new System.EventHandler(this.materialButton2_Click);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(344, 123);
+            this.label9.Location = new System.Drawing.Point(477, 101);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(64, 20);
@@ -1874,7 +1831,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(11, 190);
+            this.label8.Location = new System.Drawing.Point(35, 101);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(73, 20);
@@ -1884,7 +1841,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(11, 114);
+            this.label6.Location = new System.Drawing.Point(57, 64);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 20);
@@ -1894,7 +1851,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(344, 44);
+            this.label5.Location = new System.Drawing.Point(19, 140);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 20);
@@ -1904,7 +1861,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(11, 44);
+            this.label4.Location = new System.Drawing.Point(82, 30);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(26, 20);
@@ -4166,6 +4123,67 @@
             this.checkedListBox1.TabIndex = 35;
             this.checkedListBox1.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.newSupplierIngredCheckListBox_ItemChecked);
             // 
+            // textBox47
+            // 
+            this.textBox47.Location = new System.Drawing.Point(123, 24);
+            this.textBox47.Name = "textBox47";
+            this.textBox47.Size = new System.Drawing.Size(261, 26);
+            this.textBox47.TabIndex = 47;
+            // 
+            // textBox48
+            // 
+            this.textBox48.Location = new System.Drawing.Point(123, 58);
+            this.textBox48.Name = "textBox48";
+            this.textBox48.Size = new System.Drawing.Size(261, 26);
+            this.textBox48.TabIndex = 48;
+            // 
+            // textBox49
+            // 
+            this.textBox49.Location = new System.Drawing.Point(123, 95);
+            this.textBox49.Name = "textBox49";
+            this.textBox49.Size = new System.Drawing.Size(261, 26);
+            this.textBox49.TabIndex = 49;
+            // 
+            // textBox51
+            // 
+            this.textBox51.Location = new System.Drawing.Point(552, 24);
+            this.textBox51.Name = "textBox51";
+            this.textBox51.Size = new System.Drawing.Size(261, 26);
+            this.textBox51.TabIndex = 51;
+            // 
+            // textBox52
+            // 
+            this.textBox52.Location = new System.Drawing.Point(552, 61);
+            this.textBox52.Name = "textBox52";
+            this.textBox52.Size = new System.Drawing.Size(261, 26);
+            this.textBox52.TabIndex = 52;
+            // 
+            // textBox53
+            // 
+            this.textBox53.Location = new System.Drawing.Point(552, 98);
+            this.textBox53.Name = "textBox53";
+            this.textBox53.Size = new System.Drawing.Size(261, 26);
+            this.textBox53.TabIndex = 53;
+            // 
+            // richTextBox9
+            // 
+            this.richTextBox9.Location = new System.Drawing.Point(123, 140);
+            this.richTextBox9.Name = "richTextBox9";
+            this.richTextBox9.Size = new System.Drawing.Size(261, 96);
+            this.richTextBox9.TabIndex = 55;
+            this.richTextBox9.Text = "";
+            // 
+            // tabPage22
+            // 
+            this.tabPage22.Location = new System.Drawing.Point(4, 39);
+            this.tabPage22.Name = "tabPage22";
+            this.tabPage22.ImageKey = "icons8-import-100.png";
+            this.tabPage22.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage22.Size = new System.Drawing.Size(1200, 467);
+            this.tabPage22.TabIndex = 5;
+            this.tabPage22.Text = "Ingredient for Product";
+            this.tabPage22.UseVisualStyleBackColor = true;
+            // 
             // fmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4350,7 +4368,6 @@
         private System.Windows.Forms.Label label108;
         private System.Windows.Forms.Label label111;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private MaterialSkin.Controls.MaterialTextBox2 materialTextBox211;
         private MaterialSkin.Controls.MaterialMultiLineTextBox materialMultiLineTextBox2;
@@ -4476,8 +4493,6 @@
         private System.Windows.Forms.TextBox textBox22;
         private System.Windows.Forms.TextBox textBox21;
         private System.Windows.Forms.TextBox textBox20;
-        private MaterialSkin.Controls.MaterialTextBox2 materialTextBox210;
-        private MaterialSkin.Controls.MaterialMultiLineTextBox materialMultiLineTextBox1;
         private MaterialSkin.Controls.MaterialListView supplierListView;
         private System.Windows.Forms.ColumnHeader supplierId;
         private System.Windows.Forms.ColumnHeader supplierName;
@@ -4541,5 +4556,13 @@
         private System.Windows.Forms.TextBox textBox44;
         private System.Windows.Forms.TextBox textBox43;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.TextBox textBox53;
+        private System.Windows.Forms.TextBox textBox52;
+        private System.Windows.Forms.TextBox textBox51;
+        private System.Windows.Forms.TextBox textBox49;
+        private System.Windows.Forms.TextBox textBox48;
+        private System.Windows.Forms.TextBox textBox47;
+        private System.Windows.Forms.RichTextBox richTextBox9;
+        private System.Windows.Forms.TabPage tabPage22;
     }
 }

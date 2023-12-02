@@ -503,6 +503,47 @@ namespace StufoodSystem_ADMIN.Views
             }
         }
 
+        //--- product ------------------
+        //load product list
+        private void materialTabSelector1_Click(object sender, EventArgs e)
+        {
+            resultList = new List<string>();
+        }
+        //add new product
+        private void materialButton2_Click(object sender, EventArgs e)
+        {
+            Product newProduct = new Product();
+
+            newProduct.ProductId = textBox47.Text;
+            newProduct.ProductName = textBox48.Text;
+            newProduct.ProductCategory = textBox49.Text;
+            newProduct.ProductDescription = richTextBox9.Text;
+            newProduct.ProductPrice = Convert.ToDouble(textBox52.Text);
+            newProduct.quantityAvailable = Convert.ToInt32(textBox51.Text);
+            newProduct.ProductRating = Convert.ToDouble(textBox53.Text);
+
+            try
+            {
+
+                ProductController.CreateProduct(newProduct);
+                MessageBox.Show("Thêm sản phẩm thành công!");
+                textBox47.Clear();
+                textBox48.Clear();
+                textBox49.Clear();
+                textBox51.Clear();
+                textBox52.Clear();
+                textBox53.Clear();
+                richTextBox9.Clear(); //address
+
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Có lỗi khi xử lý!");
+                throw new Exception("Error:" + ex.Message);
+            }
+        }
+
         //------------------------- FUNCTION ----------------- //
         private void LoadEmployees()
         {
@@ -583,6 +624,6 @@ namespace StufoodSystem_ADMIN.Views
             }
         }
 
-
+        
     }
 }

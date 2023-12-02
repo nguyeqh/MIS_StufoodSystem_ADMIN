@@ -32,12 +32,12 @@ namespace StufoodSystem_ADMIN.Views
                 MaterialSkin.TextShade.BLACK);
         }
 
+        //--- Employee --------------------
         //load employee list
         private void materialTabSelector7_Click(object sender, EventArgs e)
         {
             LoadEmployees();
         }
-
 
         //LOAD EMPLOYEE TO FIELDS
         private void employeeListView_SelectedIndexChanged(object sender, EventArgs e)
@@ -135,6 +135,7 @@ namespace StufoodSystem_ADMIN.Views
             }
         }
 
+        //--- affiliated schools -------------
         //LOAD AFFILIATED SCHOOLS
         private void materialTabSelector6_Click(object sender, EventArgs e)
         {
@@ -227,12 +228,45 @@ namespace StufoodSystem_ADMIN.Views
             }
         }
 
+        //---suppliers ------------------
         //LOAD SUPPLIERS
         private void materialTabSelector4_Click(object sender, EventArgs e)
         {
             LoadSuppliers();
         }
 
+        //LOAD SUPPLIER TO FIELDS
+        private void supplierListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Check if there is a selected item
+            if (supplierListView.SelectedItems.Count > 0)
+            {
+
+                // Access data from the selected row
+                ListViewItem selectedRow = supplierListView.SelectedItems[0];
+                String supplierID = selectedRow.SubItems[0].Text; //id
+
+                textBox25.Text = supplierID; //id
+                textBox26.Text = selectedRow.SubItems[1].Text; //name
+                textBox27.Text = selectedRow.SubItems[2].Text; //phone
+                textBox28.Text = selectedRow.SubItems[3].Text; //email
+                richTextBox7.Text = selectedRow.SubItems[4].Text; //address
+                textBox29.Text = selectedRow.SubItems[5].Text; //rate
+               
+                supplierIngredListView.Items.Clear();
+               
+                Supplier supplier = SupplierController.GetSupplierByID(supplierID);
+                foreach (Ingredient ingredient in supplier.ingredientProvided)
+                {
+                    ListViewItem item = new ListViewItem(ingredient.ingredientID); //0
+                    item.SubItems.Add(ingredient.ingredientName); //1
+                    item.SubItems.Add(ingredient.price.ToString());//2
+
+                    supplierIngredListView.Items.Add(item);
+
+                }
+            }
+        }
         //LOAD INGREDIENTS
         private void materialTabSelector5_Click(object sender, EventArgs e)
         {

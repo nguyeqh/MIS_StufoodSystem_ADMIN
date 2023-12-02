@@ -291,7 +291,7 @@
             this.materialTabSelector4 = new MaterialSkin.Controls.MaterialTabSelector();
             this.materialTabControl6 = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage20 = new System.Windows.Forms.TabPage();
-            this.materialListView1 = new MaterialSkin.Controls.MaterialListView();
+            this.supplierIngredListView = new MaterialSkin.Controls.MaterialListView();
             this.ingID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ingName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ingPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -3672,7 +3672,7 @@
             // 
             // tabPage20
             // 
-            this.tabPage20.Controls.Add(this.materialListView1);
+            this.tabPage20.Controls.Add(this.supplierIngredListView);
             this.tabPage20.Controls.Add(this.richTextBox7);
             this.tabPage20.Controls.Add(this.textBox29);
             this.tabPage20.Controls.Add(this.textBox28);
@@ -3697,28 +3697,28 @@
             this.tabPage20.Text = "List";
             this.tabPage20.UseVisualStyleBackColor = true;
             // 
-            // materialListView1
+            // supplierIngredListView
             // 
-            this.materialListView1.AutoSizeTable = false;
-            this.materialListView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialListView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.supplierIngredListView.AutoSizeTable = false;
+            this.supplierIngredListView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.supplierIngredListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.supplierIngredListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ingID,
             this.ingName,
             this.ingPrice});
-            this.materialListView1.Depth = 0;
-            this.materialListView1.FullRowSelect = true;
-            this.materialListView1.HideSelection = false;
-            this.materialListView1.Location = new System.Drawing.Point(348, 213);
-            this.materialListView1.MinimumSize = new System.Drawing.Size(200, 100);
-            this.materialListView1.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialListView1.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialListView1.Name = "materialListView1";
-            this.materialListView1.OwnerDraw = true;
-            this.materialListView1.Size = new System.Drawing.Size(400, 100);
-            this.materialListView1.TabIndex = 58;
-            this.materialListView1.UseCompatibleStateImageBehavior = false;
-            this.materialListView1.View = System.Windows.Forms.View.Details;
+            this.supplierIngredListView.Depth = 0;
+            this.supplierIngredListView.FullRowSelect = true;
+            this.supplierIngredListView.HideSelection = false;
+            this.supplierIngredListView.Location = new System.Drawing.Point(348, 213);
+            this.supplierIngredListView.MinimumSize = new System.Drawing.Size(200, 100);
+            this.supplierIngredListView.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.supplierIngredListView.MouseState = MaterialSkin.MouseState.OUT;
+            this.supplierIngredListView.Name = "supplierIngredListView";
+            this.supplierIngredListView.OwnerDraw = true;
+            this.supplierIngredListView.Size = new System.Drawing.Size(400, 100);
+            this.supplierIngredListView.TabIndex = 58;
+            this.supplierIngredListView.UseCompatibleStateImageBehavior = false;
+            this.supplierIngredListView.View = System.Windows.Forms.View.Details;
             // 
             // ingID
             // 
@@ -3775,6 +3775,7 @@
             // 
             this.textBox25.Location = new System.Drawing.Point(100, 181);
             this.textBox25.Name = "textBox25";
+            this.textBox25.ReadOnly = true;
             this.textBox25.Size = new System.Drawing.Size(214, 26);
             this.textBox25.TabIndex = 52;
             // 
@@ -3892,6 +3893,7 @@
             this.supplierListView.TabIndex = 0;
             this.supplierListView.UseCompatibleStateImageBehavior = false;
             this.supplierListView.View = System.Windows.Forms.View.Details;
+            this.supplierListView.SelectedIndexChanged += new System.EventHandler(this.supplierListView_SelectedIndexChanged);
             // 
             // supplierId
             // 
@@ -4566,7 +4568,7 @@
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Label label61;
         private MaterialSkin.Controls.MaterialButton materialButton9;
-        private MaterialSkin.Controls.MaterialListView materialListView1;
+        private MaterialSkin.Controls.MaterialListView supplierIngredListView;
         private System.Windows.Forms.ColumnHeader ingID;
         private System.Windows.Forms.ColumnHeader ingName;
         private System.Windows.Forms.ColumnHeader ingPrice;

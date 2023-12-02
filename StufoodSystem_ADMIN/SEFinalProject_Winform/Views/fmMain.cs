@@ -284,6 +284,45 @@ namespace StufoodSystem_ADMIN.Views
             }
         }
 
+        //UPDATE SUPPLIER
+        private void materialButton9_Click(object sender, EventArgs e)
+        {
+            Supplier newSupplier = new Supplier();
+
+            newSupplier.supplierId = textBox25.Text;
+            newSupplier.supplierName = textBox26.Text;
+            newSupplier.Phone = textBox27.Text;
+            newSupplier.Email = textBox28.Text;
+            newSupplier.rate = Convert.ToDouble(textBox29.Text);
+            newSupplier.Address = richTextBox7.Text;
+
+            Supplier supplier = SupplierController.GetSupplierByID(newSupplier.supplierId);
+            newSupplier.ingredientProvided = supplier.ingredientProvided;
+
+            try
+            {
+
+                SupplierController.UpdateSupplier(newSupplier.supplierId, newSupplier);
+                MessageBox.Show("Chỉnh sửa thông tin nhà bán thành công!");
+                textBox26.Clear();
+                textBox25.Clear();
+                textBox27.Clear();
+                textBox28.Clear();
+                textBox29.Clear(); //number of student
+                richTextBox7.Clear(); //address
+
+                LoadSuppliers();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Có lỗi khi xử lý!");
+                throw new Exception("Error:" + ex.Message);
+            }
+
+
+        
+        }
+
         //--- ingredients-----------------
         //LOAD INGREDIENTS
         private void materialTabSelector5_Click(object sender, EventArgs e)
@@ -460,6 +499,7 @@ namespace StufoodSystem_ADMIN.Views
 
             }
         }
-        
+
+       
     }
 }

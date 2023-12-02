@@ -293,6 +293,42 @@ namespace StufoodSystem_ADMIN.Views
                 throw new Exception("Error:" + ex.Message);
             }
         }
+
+        //ADD NEW INGREDIENT
+        private void materialButton11_Click(object sender, EventArgs e)
+        {
+            Ingredient newIngred = new Ingredient();
+
+            newIngred.ingredientID = textBox36.Text;
+            newIngred.ingredientName = textBox37.Text;
+            newIngred.ingredientCategory = textBox38.Text;
+            newIngred.ingredientPreservation = textBox39.Text;
+            newIngred.price = Convert.ToDouble(textBox40.Text);
+            newIngred.quantityAvailable = Convert.ToInt32(textBox41.Text);
+            newIngred.ingredientDescription = richTextBox1.Text;
+
+            try
+            {
+
+                IngredientController.CreateIngredient(newIngred);
+                MessageBox.Show("Thêm nguyên liệu thành công!");
+                textBox36.Clear();
+                textBox37.Clear();
+                textBox38.Clear();
+                textBox39.Clear();
+                textBox40.Clear();
+                textBox41.Clear();
+                richTextBox1.Clear();
+
+                LoadIngredients();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Có lỗi khi xử lý!");
+                throw new Exception("Error:" + ex.Message);
+            }
+        }
+
         //------------------------- FUNCTION ----------------- //
         private void LoadEmployees()
         {
@@ -372,5 +408,7 @@ namespace StufoodSystem_ADMIN.Views
 
             }
         }
+
+
     }
 }

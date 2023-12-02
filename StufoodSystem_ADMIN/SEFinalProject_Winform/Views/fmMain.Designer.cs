@@ -280,19 +280,11 @@
             this.QuantityAvailable = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage19 = new System.Windows.Forms.TabPage();
             this.label108 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.label69 = new System.Windows.Forms.Label();
-            this.materialTextBox59 = new MaterialSkin.Controls.MaterialTextBox();
             this.label70 = new System.Windows.Forms.Label();
-            this.materialTextBox60 = new MaterialSkin.Controls.MaterialTextBox();
             this.label71 = new System.Windows.Forms.Label();
-            this.materialTextBox61 = new MaterialSkin.Controls.MaterialTextBox();
             this.label72 = new System.Windows.Forms.Label();
-            this.materialTextBox62 = new MaterialSkin.Controls.MaterialTextBox();
             this.label73 = new System.Windows.Forms.Label();
-            this.materialTextBox63 = new MaterialSkin.Controls.MaterialTextBox();
             this.label74 = new System.Windows.Forms.Label();
-            this.materialTextBox64 = new MaterialSkin.Controls.MaterialTextBox();
             this.label75 = new System.Windows.Forms.Label();
             this.materialButton11 = new MaterialSkin.Controls.MaterialButton();
             this.tabPage17 = new System.Windows.Forms.TabPage();
@@ -341,6 +333,13 @@
             this.materialTextBox46 = new MaterialSkin.Controls.MaterialTextBox();
             this.label54 = new System.Windows.Forms.Label();
             this.materialButton8 = new MaterialSkin.Controls.MaterialButton();
+            this.textBox36 = new System.Windows.Forms.TextBox();
+            this.textBox37 = new System.Windows.Forms.TextBox();
+            this.textBox38 = new System.Windows.Forms.TextBox();
+            this.textBox39 = new System.Windows.Forms.TextBox();
+            this.textBox40 = new System.Windows.Forms.TextBox();
+            this.textBox41 = new System.Windows.Forms.TextBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.materialTabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.materialTabControl8.SuspendLayout();
@@ -3513,20 +3512,19 @@
             // 
             // tabPage19
             // 
-            this.tabPage19.Controls.Add(this.label108);
             this.tabPage19.Controls.Add(this.richTextBox1);
-            this.tabPage19.Controls.Add(this.label69);
-            this.tabPage19.Controls.Add(this.materialTextBox59);
+            this.tabPage19.Controls.Add(this.textBox41);
+            this.tabPage19.Controls.Add(this.textBox40);
+            this.tabPage19.Controls.Add(this.textBox39);
+            this.tabPage19.Controls.Add(this.textBox38);
+            this.tabPage19.Controls.Add(this.textBox37);
+            this.tabPage19.Controls.Add(this.textBox36);
+            this.tabPage19.Controls.Add(this.label108);
             this.tabPage19.Controls.Add(this.label70);
-            this.tabPage19.Controls.Add(this.materialTextBox60);
             this.tabPage19.Controls.Add(this.label71);
-            this.tabPage19.Controls.Add(this.materialTextBox61);
             this.tabPage19.Controls.Add(this.label72);
-            this.tabPage19.Controls.Add(this.materialTextBox62);
             this.tabPage19.Controls.Add(this.label73);
-            this.tabPage19.Controls.Add(this.materialTextBox63);
             this.tabPage19.Controls.Add(this.label74);
-            this.tabPage19.Controls.Add(this.materialTextBox64);
             this.tabPage19.Controls.Add(this.label75);
             this.tabPage19.Controls.Add(this.materialButton11);
             this.tabPage19.Location = new System.Drawing.Point(4, 29);
@@ -3541,194 +3539,67 @@
             // label108
             // 
             this.label108.AutoSize = true;
-            this.label108.Location = new System.Drawing.Point(22, 233);
+            this.label108.Location = new System.Drawing.Point(41, 224);
             this.label108.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label108.Name = "label108";
             this.label108.Size = new System.Drawing.Size(89, 20);
             this.label108.TabIndex = 29;
             this.label108.Text = "Description";
             // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(109, 212);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(409, 62);
-            this.richTextBox1.TabIndex = 28;
-            this.richTextBox1.Text = "";
-            // 
-            // label69
-            // 
-            this.label69.AutoSize = true;
-            this.label69.Location = new System.Drawing.Point(274, 16);
-            this.label69.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(114, 20);
-            this.label69.TabIndex = 27;
-            this.label69.Text = "Add Ingredient";
-            // 
-            // materialTextBox59
-            // 
-            this.materialTextBox59.AnimateReadOnly = false;
-            this.materialTextBox59.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox59.Depth = 0;
-            this.materialTextBox59.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox59.LeadingIcon = null;
-            this.materialTextBox59.Location = new System.Drawing.Point(443, 151);
-            this.materialTextBox59.Margin = new System.Windows.Forms.Padding(2);
-            this.materialTextBox59.MaxLength = 50;
-            this.materialTextBox59.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox59.Multiline = false;
-            this.materialTextBox59.Name = "materialTextBox59";
-            this.materialTextBox59.Size = new System.Drawing.Size(198, 50);
-            this.materialTextBox59.TabIndex = 26;
-            this.materialTextBox59.Text = "";
-            this.materialTextBox59.TrailingIcon = null;
-            // 
             // label70
             // 
             this.label70.AutoSize = true;
-            this.label70.Location = new System.Drawing.Point(366, 171);
+            this.label70.Location = new System.Drawing.Point(562, 171);
             this.label70.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label70.Name = "label70";
             this.label70.Size = new System.Drawing.Size(68, 20);
             this.label70.TabIndex = 25;
             this.label70.Text = "Quantity";
             // 
-            // materialTextBox60
-            // 
-            this.materialTextBox60.AnimateReadOnly = false;
-            this.materialTextBox60.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox60.Depth = 0;
-            this.materialTextBox60.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox60.LeadingIcon = null;
-            this.materialTextBox60.Location = new System.Drawing.Point(443, 96);
-            this.materialTextBox60.Margin = new System.Windows.Forms.Padding(2);
-            this.materialTextBox60.MaxLength = 50;
-            this.materialTextBox60.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox60.Multiline = false;
-            this.materialTextBox60.Name = "materialTextBox60";
-            this.materialTextBox60.Size = new System.Drawing.Size(198, 50);
-            this.materialTextBox60.TabIndex = 24;
-            this.materialTextBox60.Text = "";
-            this.materialTextBox60.TrailingIcon = null;
-            // 
             // label71
             // 
             this.label71.AutoSize = true;
-            this.label71.Location = new System.Drawing.Point(366, 116);
+            this.label71.Location = new System.Drawing.Point(586, 116);
             this.label71.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label71.Name = "label71";
             this.label71.Size = new System.Drawing.Size(44, 20);
             this.label71.TabIndex = 23;
             this.label71.Text = "Price";
             // 
-            // materialTextBox61
-            // 
-            this.materialTextBox61.AnimateReadOnly = false;
-            this.materialTextBox61.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox61.Depth = 0;
-            this.materialTextBox61.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox61.LeadingIcon = null;
-            this.materialTextBox61.Location = new System.Drawing.Point(456, 41);
-            this.materialTextBox61.Margin = new System.Windows.Forms.Padding(2);
-            this.materialTextBox61.MaxLength = 50;
-            this.materialTextBox61.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox61.Multiline = false;
-            this.materialTextBox61.Name = "materialTextBox61";
-            this.materialTextBox61.Size = new System.Drawing.Size(185, 50);
-            this.materialTextBox61.TabIndex = 22;
-            this.materialTextBox61.Text = "";
-            this.materialTextBox61.TrailingIcon = null;
-            // 
             // label72
             // 
             this.label72.AutoSize = true;
-            this.label72.Location = new System.Drawing.Point(366, 63);
+            this.label72.Location = new System.Drawing.Point(533, 63);
             this.label72.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label72.Name = "label72";
             this.label72.Size = new System.Drawing.Size(97, 20);
             this.label72.TabIndex = 21;
             this.label72.Text = "Preservation";
             // 
-            // materialTextBox62
-            // 
-            this.materialTextBox62.AnimateReadOnly = false;
-            this.materialTextBox62.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox62.Depth = 0;
-            this.materialTextBox62.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox62.LeadingIcon = null;
-            this.materialTextBox62.Location = new System.Drawing.Point(100, 151);
-            this.materialTextBox62.Margin = new System.Windows.Forms.Padding(2);
-            this.materialTextBox62.MaxLength = 50;
-            this.materialTextBox62.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox62.Multiline = false;
-            this.materialTextBox62.Name = "materialTextBox62";
-            this.materialTextBox62.Size = new System.Drawing.Size(198, 50);
-            this.materialTextBox62.TabIndex = 20;
-            this.materialTextBox62.Text = "";
-            this.materialTextBox62.TrailingIcon = null;
-            // 
             // label73
             // 
             this.label73.AutoSize = true;
-            this.label73.Location = new System.Drawing.Point(22, 171);
+            this.label73.Location = new System.Drawing.Point(57, 171);
             this.label73.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label73.Name = "label73";
             this.label73.Size = new System.Drawing.Size(73, 20);
             this.label73.TabIndex = 19;
             this.label73.Text = "Category";
             // 
-            // materialTextBox63
-            // 
-            this.materialTextBox63.AnimateReadOnly = false;
-            this.materialTextBox63.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox63.Depth = 0;
-            this.materialTextBox63.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox63.LeadingIcon = null;
-            this.materialTextBox63.Location = new System.Drawing.Point(100, 96);
-            this.materialTextBox63.Margin = new System.Windows.Forms.Padding(2);
-            this.materialTextBox63.MaxLength = 50;
-            this.materialTextBox63.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox63.Multiline = false;
-            this.materialTextBox63.Name = "materialTextBox63";
-            this.materialTextBox63.Size = new System.Drawing.Size(198, 50);
-            this.materialTextBox63.TabIndex = 18;
-            this.materialTextBox63.Text = "";
-            this.materialTextBox63.TrailingIcon = null;
-            // 
             // label74
             // 
             this.label74.AutoSize = true;
-            this.label74.Location = new System.Drawing.Point(22, 116);
+            this.label74.Location = new System.Drawing.Point(79, 116);
             this.label74.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label74.Name = "label74";
             this.label74.Size = new System.Drawing.Size(51, 20);
             this.label74.TabIndex = 17;
             this.label74.Text = "Name";
             // 
-            // materialTextBox64
-            // 
-            this.materialTextBox64.AnimateReadOnly = false;
-            this.materialTextBox64.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox64.Depth = 0;
-            this.materialTextBox64.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox64.LeadingIcon = null;
-            this.materialTextBox64.Location = new System.Drawing.Point(100, 41);
-            this.materialTextBox64.Margin = new System.Windows.Forms.Padding(2);
-            this.materialTextBox64.MaxLength = 50;
-            this.materialTextBox64.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox64.Multiline = false;
-            this.materialTextBox64.Name = "materialTextBox64";
-            this.materialTextBox64.Size = new System.Drawing.Size(198, 50);
-            this.materialTextBox64.TabIndex = 16;
-            this.materialTextBox64.Text = "";
-            this.materialTextBox64.TrailingIcon = null;
-            // 
             // label75
             // 
             this.label75.AutoSize = true;
-            this.label75.Location = new System.Drawing.Point(22, 63);
+            this.label75.Location = new System.Drawing.Point(104, 63);
             this.label75.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label75.Name = "label75";
             this.label75.Size = new System.Drawing.Size(26, 20);
@@ -3742,7 +3613,7 @@
             this.materialButton11.Depth = 0;
             this.materialButton11.HighEmphasis = true;
             this.materialButton11.Icon = null;
-            this.materialButton11.Location = new System.Drawing.Point(522, 228);
+            this.materialButton11.Location = new System.Drawing.Point(870, 284);
             this.materialButton11.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.materialButton11.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton11.Name = "materialButton11";
@@ -3753,6 +3624,7 @@
             this.materialButton11.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.materialButton11.UseAccentColor = false;
             this.materialButton11.UseVisualStyleBackColor = true;
+            this.materialButton11.Click += new System.EventHandler(this.materialButton11_Click);
             // 
             // tabPage17
             // 
@@ -4303,6 +4175,56 @@
             this.materialButton8.UseAccentColor = false;
             this.materialButton8.UseVisualStyleBackColor = true;
             // 
+            // textBox36
+            // 
+            this.textBox36.Location = new System.Drawing.Point(135, 57);
+            this.textBox36.Name = "textBox36";
+            this.textBox36.Size = new System.Drawing.Size(222, 26);
+            this.textBox36.TabIndex = 57;
+            // 
+            // textBox37
+            // 
+            this.textBox37.Location = new System.Drawing.Point(135, 110);
+            this.textBox37.Name = "textBox37";
+            this.textBox37.Size = new System.Drawing.Size(302, 26);
+            this.textBox37.TabIndex = 58;
+            // 
+            // textBox38
+            // 
+            this.textBox38.Location = new System.Drawing.Point(135, 165);
+            this.textBox38.Name = "textBox38";
+            this.textBox38.Size = new System.Drawing.Size(302, 26);
+            this.textBox38.TabIndex = 59;
+            // 
+            // textBox39
+            // 
+            this.textBox39.Location = new System.Drawing.Point(635, 57);
+            this.textBox39.Name = "textBox39";
+            this.textBox39.Size = new System.Drawing.Size(302, 26);
+            this.textBox39.TabIndex = 60;
+            // 
+            // textBox40
+            // 
+            this.textBox40.Location = new System.Drawing.Point(635, 110);
+            this.textBox40.Name = "textBox40";
+            this.textBox40.Size = new System.Drawing.Size(302, 26);
+            this.textBox40.TabIndex = 61;
+            // 
+            // textBox41
+            // 
+            this.textBox41.Location = new System.Drawing.Point(635, 165);
+            this.textBox41.Name = "textBox41";
+            this.textBox41.Size = new System.Drawing.Size(302, 26);
+            this.textBox41.TabIndex = 62;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(135, 224);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(302, 96);
+            this.richTextBox1.TabIndex = 63;
+            this.richTextBox1.Text = "";
+            // 
             // fmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4478,18 +4400,11 @@
         private MaterialSkin.Controls.MaterialTextBox materialTextBox46;
         private System.Windows.Forms.Label label54;
         private MaterialSkin.Controls.MaterialButton materialButton8;
-        private System.Windows.Forms.Label label69;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox59;
         private System.Windows.Forms.Label label70;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox60;
         private System.Windows.Forms.Label label71;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox61;
         private System.Windows.Forms.Label label72;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox62;
         private System.Windows.Forms.Label label73;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox63;
         private System.Windows.Forms.Label label74;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox64;
         private System.Windows.Forms.Label label75;
         private MaterialSkin.Controls.MaterialButton materialButton11;
         private MaterialSkin.Controls.MaterialTabSelector materialTabSelector6;
@@ -4498,7 +4413,6 @@
         private System.Windows.Forms.TabPage tabPage26;
         private System.Windows.Forms.TabPage tabPage30;
         private System.Windows.Forms.TabPage tabPage32;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label108;
         private System.Windows.Forms.Label label111;
         private System.Windows.Forms.Label label7;
@@ -4679,5 +4593,12 @@
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.Label label76;
         private System.Windows.Forms.Label label89;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox textBox41;
+        private System.Windows.Forms.TextBox textBox40;
+        private System.Windows.Forms.TextBox textBox39;
+        private System.Windows.Forms.TextBox textBox38;
+        private System.Windows.Forms.TextBox textBox37;
+        private System.Windows.Forms.TextBox textBox36;
     }
 }

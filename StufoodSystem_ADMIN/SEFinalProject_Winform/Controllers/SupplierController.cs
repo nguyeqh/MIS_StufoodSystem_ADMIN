@@ -97,7 +97,7 @@ namespace StufoodSystem_ADMIN.Controllers
             }
 
             String sSQL = "INSERT INTO Suppliers (SupplierID, SupplierName, PHONE, ADDRESS, Rate, IngredientProvided, EMAIL) " +
-                "VALUES (@SupplierID, @SupplierName, @Phone, @Adress,  @Rate, @IngredientProvided, @Email)";
+                "VALUES (@SupplierID, @SupplierName, @Phone, @Address,  @Rate, @IngredientProvided, @Email)";
             SqlConnection conn = new SqlConnection(strConn);
 
             conn.Open();

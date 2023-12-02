@@ -22,6 +22,7 @@ namespace StufoodSystem_ADMIN.Views
         SqlConnection conn;
 
         Supplier ingredientOfSupplier = new Supplier();
+        List<String> resultList = new List<String>();
 
         public fmMain()
         {
@@ -236,6 +237,14 @@ namespace StufoodSystem_ADMIN.Views
         private void materialTabSelector4_Click(object sender, EventArgs e)
         {
             LoadSuppliers();
+            resultList = new List<String>();
+
+            List<Ingredient> providedList = IngredientController.GetAllIgredient();
+            foreach (Ingredient item in providedList)
+            {
+                checkedListBox1.Items.Add(item.ingredientID + ": " + item.ingredientName);
+            }
+            
         }
 
         //LOAD SUPPLIER TO FIELDS
@@ -272,7 +281,7 @@ namespace StufoodSystem_ADMIN.Views
             }
         }
 
-        //ADD INGREDIENT TO SUPPLIERS
+        //UPDATE INGREDIENT TO SUPPLIERS
         private void materialButton10_Click(object sender, EventArgs e)
         {
           if (ingredientOfSupplier != null)
@@ -318,9 +327,83 @@ namespace StufoodSystem_ADMIN.Views
                 MessageBox.Show("Có lỗi khi xử lý!");
                 throw new Exception("Error:" + ex.Message);
             }
+        }
 
+        //ADD INGREDIENT TO LIST FOR NEW SUPPLIERS
+        private void newSupplierIngredCheckListBox_ItemChecked(object sender, ItemCheckEventArgs e)
+        {
+            // Handle checkbox state change
+            if (e.NewValue == CheckState.Checked)
+            {
+                // Item is checked, add to resultList
+                string selectedItem = checkedListBox1.Items[e.Index].ToString();
 
-        
+                int indexOfColon = selectedItem.IndexOf(':');
+                if (indexOfColon != -1)
+                {
+                    // Copy the part of the string before the colon
+                    string result = selectedItem.Substring(0, indexOfColon);
+                    resultList.Add(result);
+                }
+
+            }
+            else
+            {
+                // Item is unchecked, remove from resultList
+                string selectedItem = checkedListBox1.Items[e.Index].ToString();
+
+                int indexOfColon = selectedItem.IndexOf(':');
+                if (indexOfColon != -1)
+                {
+                    // Copy the part of the string before the colon
+                    string result = selectedItem.Substring(0, indexOfColon);
+                    resultList.Remove(result);
+                }
+
+            }
+        }
+
+        //add new supplier
+        private void materialButton8_Click(object sender, EventArgs e)
+        {
+
+            Supplier newSupplier = new Supplier();
+
+            newSupplier.supplierId = textBox42.Text;
+            newSupplier.supplierName = textBox43.Text;
+            newSupplier.Phone = textBox44.Text;
+            newSupplier.Email = textBox45.Text;
+            newSupplier.rate = Convert.ToDouble(textBox46.Text);
+            newSupplier.Address = richTextBox2.Text;
+
+            List<Ingredient> ingredientProvided = new List<Ingredient>();
+            foreach(String item in resultList)
+            {
+                Ingredient ingredient = IngredientController.GetIngredientByID(item);
+                ingredientProvided.Add(ingredient);
+            }
+
+            newSupplier.ingredientProvided = ingredientProvided;
+
+            try
+            {
+
+                SupplierController.CreateSupplier(newSupplier);
+                MessageBox.Show("Thêm thông tin nhà bán thành công!");
+                textBox42.Clear();
+                textBox43.Clear();
+                textBox44.Clear();
+                textBox45.Clear();
+                textBox46.Clear(); //number of student
+                richTextBox2.Clear(); //address
+
+                LoadSuppliers();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Có lỗi khi xử lý!");
+                throw new Exception("Error:" + ex.Message);
+            }
         }
 
         //--- ingredients-----------------
@@ -500,6 +583,6 @@ namespace StufoodSystem_ADMIN.Views
             }
         }
 
-       
+
     }
 }

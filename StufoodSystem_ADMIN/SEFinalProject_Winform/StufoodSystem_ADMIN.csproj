@@ -76,11 +76,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ManufacturingController.cs" />
+    <Compile Include="Controllers\AffiliatedSchoolController.cs" />
+    <Compile Include="Controllers\SupplierController.cs" />
+    <Compile Include="Controllers\PurchaseController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\IngredientController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Models\AffiliatedSchool.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Ingredient.cs" />
     <Compile Include="Models\IngredientPerProduct.cs" />
+    <Compile Include="Models\ManufacturingRecord.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderDetail.cs" />
     <Compile Include="Models\PaymentRecord.cs" />
@@ -97,6 +105,9 @@
     <Compile Include="Views\fmMain.Designer.cs">
       <DependentUpon>fmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\IngredientCollectionCheckbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -109,6 +120,9 @@
     </Compile>
     <EmbeddedResource Include="Views\fmMain.resx">
       <DependentUpon>fmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\IngredientCollectionCheckbox.resx">
+      <DependentUpon>IngredientCollectionCheckbox.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
